@@ -1,6 +1,8 @@
 # AI Moral Code
 
-[![Release](https://img.shields.io/github/v/release/rjhinrichs/aimoralcode)](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/github/v/release/rjhinrichs/aimoralcode)](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.2)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15362376.svg)](https://doi.org/10.5281/zenodo.15362376)
+
 
 A research-driven framework for embedding ethical architecture into AI systems. This project presents the NRBC model—**Normative, Regulatory, Behavioral, and Conceptual**—to operationalize core values such as:
 
