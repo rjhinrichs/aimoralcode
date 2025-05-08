@@ -34,20 +34,20 @@ Access the release archive:
 Please cite this version as:
 
 **APA**  
-Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based on the NRBC framework (Version 1.0.0)* [Software]. GitHub. https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.0
+Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based on the NRBC framework (Version 1.0.2)* [Software]. Zenodo. https://doi.org/10.5281/zenodo.15362376
 
 **BibTeX**
 ```bibtex
-@misc{hinrichs2025aimoralcode,
+@software{hinrichs2025aimoralcode,
   author       = {Ran Hinrichs},
   title        = {AI Moral Code: Ethical architecture for AI systems based on the NRBC framework},
   year         = {2025},
-  month        = {May},
-  version      = {1.0.0},
-  url          = {https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.0},
-  note         = {Initial public release for citation, ICAD 2025, and governance applications}
+  version      = {1.0.2},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.15362376},
+  url          = {https://doi.org/10.5281/zenodo.15362376}
 }
-
+```
 
 ## 📬 Contact
 
