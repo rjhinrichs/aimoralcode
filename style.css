@@ -43,8 +43,13 @@ main {
   margin: 0 auto;
 }
 
+/* Enhanced section styling */
 section {
   margin-bottom: 2.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
 }
 
 section h3 {
@@ -89,4 +94,31 @@ footer {
   margin-top: 4rem;
   border-top: 1px solid #ddd;
   padding-top: 1rem;
+}
+
+/* Responsive styling for smaller devices */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header h2 {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+
+  p, li {
+    font-size: 0.95rem;
+  }
 }
