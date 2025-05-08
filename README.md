@@ -47,3 +47,12 @@ Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based o
   url          = {https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.0},
   note         = {Initial public release for citation, ICAD 2025, and governance applications}
 }
+
+
+## 📬 Contact
+
+Questions, research collaborations, or ethical architecture inquiries are welcome.  
+📧 ran@aimoralcode.org  
+🌐 [https://aimoralcode.org](https://aimoralcode.org)
+GitHub: [@rjhinrichs](https://github.com/rjhinrichs)
+
