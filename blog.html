@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  
+
   <!-- SEO Meta -->
   <meta name="author" content="Ran Hinrichs" />
   <meta name="description" content="A research-driven framework for AI ethics based on the NRBC architecture." />
@@ -39,7 +39,15 @@
   <section>
     <h3>AI Moral Code Blog</h3>
     <ul>
-      <li><a href="/2025/05/04/nrbc-origins.html">The Origins of the NRBC Architecture</a></li>
-      <li><a href="/2025/05/05/moral-drift.html">Moral Drift and Systemic Decay in Deployed AI</a></li>
-      <li><a href="/2025/05/07/ethical-memory.html">Ethical Memory and the Role of Social Values</a></li>
-      <li><a href="/2025/05/07/transparency-design.html">Transparency as a Design Pattern</a></li
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span style="font-size: 0.9em; color: gray;"> – {{ post.date | date: "%B %d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
+
+</body>
+</html>
