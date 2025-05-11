@@ -62,12 +62,19 @@
  <section>
   <h3>Recent Blog Posts</h3>
   <ul>
-    <li><a href="/2025/05/04/nrbc-origins.html">The Origins of the NRBC Architecture</a></li>
-    <li><a href="/2025/05/05/moral-drift.html">Moral Drift and Systemic Decay in Deployed AI</a></li>
-    <li><a href="/2025/05/07/ethical-memory.html">Ethical Memory and the Role of Social Values</a></li>
-    <li><a href="blog.html">View All Posts</a></li>
+    {% assign recent_posts = site.posts | sort: 'date' | reverse | slice: 0, 3 %}
+    {% for post in recent_posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span style="font-size: 0.9em; color: gray;">
+          – {{ post.date | date: "%B %d, %Y" }}
+        </span>
+      </li>
+    {% endfor %}
+    <li><a href="{{ '/blog.html' | relative_url }}">View All Posts</a></li>
   </ul>
 </section>
+
 
 
   <section>
