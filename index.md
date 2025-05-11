@@ -6,7 +6,7 @@ title: Home
 <section>
   <h1>Advancing Ethical AI</h1>
   <h2>A Methodological and Empirical Approach to the AI Moral Code</h2>
-  <p><strong>Author:</strong> Ran Hinrichs, Professor of Practice, Norwich University</p>
+  <p><strong>Author:</strong> Randy J. Hinrichs, Professor of Practice, Norwich University</p>
   <p><strong>Contact:</strong> <a href="mailto:rhinrich@norwich.edu">rhinrich@norwich.edu</a></p>
 </section>
 
@@ -58,11 +58,3 @@ title: Home
     This diagram illustrates the NRBC Architecture for ethical AI agents. It establishes a visual taxonomy linking moral principles, compliance layers, social behaviors, and system-level development practices. Published here as a timestamped IP declaration.
   </p>
 </section>
-
-<footer>
-  <p>&copy; 2025 Ran Hinrichs | AI Moral Code Project</p>
-  <p>
-    <a href="mailto:ran@aimoralcode.org">ran@aimoralcode.org</a> |
-    <a href="https://github.com/rjhinrichs/aimoralcode" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-  </p>
-</footer>
