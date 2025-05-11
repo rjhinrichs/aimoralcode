@@ -7,11 +7,14 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('media/AI_Moral_Code_Background.png'); /* updated path */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+/* Background image temporarily disabled
+background-image: url('media/AI_Moral_Code_Background.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+*/
+
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
