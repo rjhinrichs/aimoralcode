@@ -131,3 +131,19 @@ footer {
     font-size: 0.95rem;
   }
 }
+/* Blog Styling */
+.blog-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.blog-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+.blog-container li {
+  margin-bottom: 1rem;
+}
