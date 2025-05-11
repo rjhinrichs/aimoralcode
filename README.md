@@ -41,7 +41,7 @@ Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based o
 **BibTeX**
 ```bibtex
 @software{hinrichs2025aimoralcode,
-  author       = {Ran Hinrichs},
+  author       = {Randy J. Hinrichs},
   title        = {AI Moral Code: Ethical architecture for AI systems based on the NRBC framework},
   year         = {2025},
   version      = {1.0.2},

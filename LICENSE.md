@@ -16,7 +16,7 @@ This license reflects our commitment to transparency, fairness, and knowledge di
 
 Please credit the original author when reusing material:
 
-**Author:** Ran Hinrichs  
+**Author:** Randy J. Hinrichs  
 **Project:** AI Moral Code – Ethical architecture for AI systems based on the NRBC framework  
 **Version:** 1.0.0  
 **License Year:** 2025
