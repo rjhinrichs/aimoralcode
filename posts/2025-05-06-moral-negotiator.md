@@ -1,11 +1,15 @@
 ---
-layout: post
-title: "AI as a Moral Negotiator in Multicultural Systems"
+title: "The Moral Negotiator: AI's Role in Value Mediation"
 date: 2025-05-06
+layout: post
 categories: blog ai
-tags: [ai-ethics, moral-code, nrbc]
+tags: [value-conflict, ai-mediation, ai-ethics, negotiation]
 ---
 
-AI agents deployed in global environments must navigate cultural pluralism. The role of the AI as a “moral negotiator” is emerging—mediating between diverse value systems without collapsing into relativism or imperialism.
+AI systems are increasingly being placed in roles where they must mediate between competing human values. From content moderation to autonomous decision-making in healthcare or finance, these systems encounter tensions between fairness and efficiency, transparency and security, or freedom and safety.
 
-This post explores how the NRBC framework enables cultural encoding at the normative layer and adaptive reasoning at the conceptual layer, helping AI uphold respect while making reasoned ethical tradeoffs.
+Rather than enforcing a single value, the concept of the moral negotiator positions AI as a reflective agent that weighs, balances, and prioritizes ethical trade-offs based on contextual cues and evolving priorities. This requires an architecture that includes dynamic value resolution mechanisms and stakeholder-aware reasoning processes.
+
+The NRBC model supports this role by establishing a hierarchy of ethical reference points: normative anchors for grounding, regulatory boundaries for compliance, behavioral signals for monitoring, and conceptual pathways for adaptation. A moral negotiator draws from all four to navigate value conflicts with structured accountability.
+
+In practice, this means designing AI systems with embedded ethical scenarios, constraint modeling, and decision audits that allow
