@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}">AI Moral Code</a></h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/values' | relative_url }}">Values</a></li>
+        <li><a href="{{ site.baseurl }}/">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AIMoralCode.org</p>
+  </footer>
+</body>
+</html>
