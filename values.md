@@ -1,68 +1,40 @@
 ---
 layout: default
-title: Home
+title: Values
 ---
 
-<section>
-  <h1>Advancing Ethical AI</h1>
-  <h2>A Methodological and Empirical Approach to the AI Moral Code</h2>
-  <p><strong>Author:</strong> Ran Hinrichs, Professor of Practice, Norwich University</p>
-  <p><strong>Contact:</strong> <a href="mailto:rhinrich@norwich.edu">rhinrich@norwich.edu</a></p>
-</section>
+# The NRBC Ethical Value Layers
 
-<section>
-  <h3>Abstract</h3>
-  <p>
-    This paper presents a methodological and empirical framework for the AI Moral Code, based on the Normative, Regulatory, Behavioral, and Conceptual (NRBC) architecture. Analyzing 291 AI ethics documents (2006–2025), it identifies high-frequency values and forecasts emerging trends. The framework translates ethical priorities into system design and governance, offering evidence-based insights and supporting value alignment across sectors such as healthcare, education, justice, and autonomous vehicle technologies.
-  </p>
-</section>
+This section introduces the **Normative**, **Regulatory**, **Behavioral**, and **Conceptual** value structures that form the backbone of the AI Moral Code. Each image below represents one core component of the NRBC architecture.
 
-<section>
-  <h3>Download White Paper</h3>
-  <p>
-    <a href="AI_Moral_Code_White_Paper.pdf" target="_blank" rel="noopener noreferrer">
-      Download the Full AI Moral Code White Paper (PDF)
-    </a>
-  </p>
-</section>
+---
 
-<section>
-  <h3>Recent Blog Posts</h3>
-  <ul>
-    {% assign recent_posts = site.posts | sort: 'date' | reverse | slice: 0, 3 %}
-    {% for post in recent_posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span style="font-size: 0.9em; color: gray;">
-          – {{ post.date | date: "%B %d, %Y" }}
-        </span>
-      </li>
-    {% endfor %}
-    <li><a href="/blog.html">View All Posts</a></li>
-  </ul>
-</section>
+## Normative Values  
+These define ethical commitments drawn from belief systems, ideals, and universal moral reasoning.
 
-<section>
-  <h3>Access QR Code</h3>
-  <img src="assets/AI_Moral_Code_QR.png" alt="QR Code to AI Moral Code" width="200" />
-</section>
+![Normative Values](/assets/normative-values.jpg)
 
-<section>
-  <h3>NRBC Architecture Diagram</h3>
-  <img 
-    src="assets/AI_Moral_Agent_Architecture.png" 
-    alt="Diagram of the Normative, Regulatory, Behavioral, and Conceptual architecture for AI Moral Agents" 
-    style="max-width: 100%; height: auto;" 
-  />
-  <p style="font-size: 0.9em; color: #555;">
-    This diagram illustrates the NRBC Architecture for ethical AI agents. It establishes a visual taxonomy linking moral principles, compliance layers, social behaviors, and system-level development practices. Published here as a timestamped IP declaration.
-  </p>
-</section>
+---
 
-<footer>
-  <p>&copy; 2025 Ran Hinrichs | AI Moral Code Project</p>
-  <p>
-    <a href="mailto:ran@aimoralcode.org">ran@aimoralcode.org</a> |
-    <a href="https://github.com/rjhinrichs/aimoralcode" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-  </p>
-</footer>
+## Regulatory Values  
+These establish enforceable policies, compliance mechanisms, and localized accountability structures.
+
+![Regulatory Values](/assets/regulatory-values.jpg)
+
+---
+
+## Behavioral Values  
+These illustrate the ethical expectations for AI interaction across social norms, customs, and dispositions.
+
+![Behavioral Values](/assets/behavioral-values.jpg)
+
+---
+
+## Conceptual Values  
+These enable iterative ethical development, model moral prototypes, and govern ethical MLOps over time.
+
+![Conceptual Values](/assets/conceptual_values_2.jpg)
+
+---
+
+_These diagrams are part of the visual taxonomy created to guide the implementation and evaluation of ethically aligned AI systems under the AI Moral Code project._
