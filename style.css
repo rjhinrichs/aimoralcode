@@ -168,4 +168,14 @@ footer {
   padding: 2rem;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 12px
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.blog-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-container li {
+  margin-bottom: 1rem;
+}
