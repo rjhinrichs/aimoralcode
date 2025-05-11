@@ -2,13 +2,21 @@
 layout: post
 title: "Your Blog Title Here"
 date: YYYY-MM-DD
-categories: blog ai
+categories: [blog, ai]
 tags: [ai-ethics, governance, values]
 ---
 
-Start your post content here.
+Write your post content here using **Markdown**.
 
-Use:
-- **Markdown** for formatting
-- `![image alt text](/assets/your-image.jpg)` for diagrams
-- `[link text](/relative-path)` to internal pages
+## Example Formatting
+
+Use headings, bullet points, and links:
+
+- Bullet points for clarity
+- `**Bold text**` for emphasis
+- `![Image alt text](/assets/your-image.jpg)` to include diagrams or graphics
+- `[Link text](/relative/path)` to link to other pages
+
+---
+
+_Replace this content with your own reflection, insight, or ethical analysis._
