@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "The Origins of the NRBC Architecture"
 date: 2025-05-04
+layout: post
 categories: blog ai
 tags: [ai-ethics, moral-code, nrbc]
 ---
