@@ -13,7 +13,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Ran Hinrichs"
+      author: "Randy J. Hinrichs"
 
 markdown: kramdown
 theme: minima
