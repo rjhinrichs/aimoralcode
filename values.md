@@ -38,3 +38,16 @@ These enable iterative ethical development, model moral prototypes, and govern e
 ---
 
 _These diagrams are part of the visual taxonomy created to guide the implementation and evaluation of ethically aligned AI systems under the AI Moral Code project._
+---
+
+_These diagrams are part of the visual taxonomy created to guide the implementation and evaluation of ethically aligned AI systems under the AI Moral Code project._
+
+---
+
+## Intellectual Property & Use License
+
+The content and visual diagrams on this page are © 2025 Ran Hinrichs and the AI Moral Code Project. All rights reserved.
+
+You may cite or reference this material for educational or non-commercial research purposes, but reproduction, modification, or redistribution in whole or in part requires explicit written permission.
+
+To request permissions, contact: [ran@aimoralcode.org](mailto:ran@aimoralcode.org)
