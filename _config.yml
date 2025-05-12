@@ -2,6 +2,9 @@ title: "AI Moral Code"
 baseurl: ""
 url: "https://aimoralcode.org"
 
+include:
+  - admin
+
 collections:
   posts:
     output: true
