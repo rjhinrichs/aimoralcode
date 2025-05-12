@@ -1,0 +1,181 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font and base styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+  /* background-image temporarily disabled
+  background-image: url('media/AI_Moral_Code_Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  */
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 1.4rem;
+  color: #444;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Navigation bar with subtle custom bullets */
+.navbar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.navbar li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.navbar li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007acc;
+  font-size: 0.8rem;
+}
+
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 2.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+section h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  border-left: 5px solid #007acc;
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Typography */
+p, li {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 4rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header h2 {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+
+  p, li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Blog Styling */
+.blog-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.blog-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-container li {
+  margin-bottom: 1rem;
+}
