@@ -9,7 +9,7 @@ collections:
 
 defaults:
   - scope:
-      path: "posts"
+      path: ""
       type: "posts"
     values:
       layout: "post"
@@ -17,3 +17,6 @@ defaults:
 
 markdown: kramdown
 theme: minima
+
+plugins:
+  - jekyll-admin
