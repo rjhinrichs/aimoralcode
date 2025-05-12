@@ -5,16 +5,15 @@ permalink: /blog.html
 ---
 
 <h1>Blog Archive</h1>
-
 <p>Explore recent writings and design reflections from the AI Moral Code project.</p>
 
 <ul>
-  <li><a href="/posts/icad-presentation.md">ICAD Presentation</a> – Overview of AI architecture and ethical resonance</li>
-  <li><a href="/posts/ethical-memory.md">Ethical Memory</a> – Reframing governance through moral permanence</li>
-  <li><a href="/posts/moral-drift.md">Moral Drift</a> – How value detachment creeps into AI systems</li>
-  <li><a href="/posts/moral-negotiator.md">Moral Negotiator</a> – Training AI for values-based decision arbitration</li>
-  <li><a href="/posts/nrbc-origins.md">NRBC Origins</a> – Genesis of the Normative, Regulatory, Behavioral, Conceptual model</li>
-  <li><a href="/posts/transparency-design.md">Transparency by Design</a> – Operationalizing clarity at every stage</li>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      – {{ post.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
 </ul>
 
 <p><em>More posts coming as the Moral Code expands.</em></p>
