@@ -38,7 +38,7 @@ title: Home
         </span>
       </li>
     {% endfor %}
-    <li><a href="/blog.html">View All Posts</a></li>
+    <li><a href="/blog/">View All Posts</a></li>
   </ul>
 </section>
 
