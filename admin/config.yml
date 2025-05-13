@@ -4,8 +4,6 @@ backend:
   branch: main
   auth_scope: repo
   client_id: Ov23liOpWmF7JstCGuH5
-  base_url: https://aimoralcode.org
-  auth_endpoint: /auth
 
 site_url: https://aimoralcode.org
 media_folder: "assets/uploads"
