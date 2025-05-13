@@ -3,7 +3,6 @@ backend:
   repo: rjhinrichs/aimoralcode
   branch: main
   base_url: https://dev-8gs6y65g7spa5sl0.us.auth0.com
-  auth_endpoint: /authorize
   app_id: Fh8PPYzPFGtTZRmMSTEH1KNpLFuTWBOm
 
 site_url: https://aimoralcode.org
