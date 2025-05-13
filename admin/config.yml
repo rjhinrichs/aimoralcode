@@ -2,8 +2,9 @@ backend:
   name: github
   repo: rjhinrichs/aimoralcode
   branch: main
-  auth_scope: repo
-  client_id: Ov23liOpWmF7JstCGuH5
+  base_url: https://auth.netlify-cms.org
+  auth_endpoint: /authorize
+  app_id: Ov23liOpWmF7JstCGuH5
 
 site_url: https://aimoralcode.org
 media_folder: "assets/uploads"
