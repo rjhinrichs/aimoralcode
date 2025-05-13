@@ -1,5 +1,5 @@
 backend:
-  name: git-gatewat
+  name: git-gateway
   repo: rjhinrichs/aimoralcode
   branch: main
 
