@@ -8,39 +8,22 @@ layout: none
     <meta charset="utf-8" />
     <title>Login to AI Moral Code CMS</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <style>
-      body {
-        font-family: system-ui, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f6f8fa;
-      }
-      h1 {
-        margin-bottom: 1rem;
-      }
-    </style>
   </head>
   <body>
-    <h1>Login to AI Moral Code CMS</h1>
+    <h1 style="text-align: center;">Login to AI Moral Code CMS</h1>
     <script>
-      netlifyIdentity.on("init", user => {
-        if (!user) {
-          netlifyIdentity.open("login");
-        } else {
-          window.location.href = "/admin/";
-        }
-      });
-
-      netlifyIdentity.on("login", () => {
-        window.location.href = "/admin/";
-      });
-
-      netlifyIdentity.init();
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          } else {
+            document.location.href = "/admin/";
+          }
+        });
+        window.netlifyIdentity.init();
+      }
     </script>
   </body>
 </html>
-
