@@ -6,9 +6,29 @@ include:
   - admin
 
 collections:
-  posts:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
     output: true
-    permalink: /posts/:name/
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    permalink: /posts/{{year}}-{{month}}-{{day}}-{{slug}}/
+    preview_path: "posts/{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{year}}-{{month}}-{{day}}-{{slug}}.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - label: "Homepage"
+        name: "index"
+        file: "index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
 defaults:
   - scope:
