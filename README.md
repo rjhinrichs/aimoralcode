@@ -1,4 +1,6 @@
-# AI Moral Code
+# AI Moral Code  
+*Ethically Governed. Human Authored. AI Partnered.*
+
 
 [![Release](https://img.shields.io/github/v/release/rjhinrichs/aimoralcode)](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.3)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15362376.svg)](https://doi.org/10.5281/zenodo.15362376)
