@@ -2,6 +2,7 @@
 
 [![Release](https://img.shields.io/github/v/release/rjhinrichs/aimoralcode)](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.3)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15362376.svg)](https://doi.org/10.5281/zenodo.15362376)
+[![HTTPS Secured](https://img.shields.io/badge/secure-https-green.svg)](https://aimoralcode.org)
 
 **AI Moral Code** is a research-driven governance framework designed to embed **ethical architecture into artificial intelligence systems**. It introduces the **NRBC model**—**Normative, Regulatory, Behavioral, and Computational**—which provides an empirically grounded, technically actionable structure for AI moral alignment.
 
@@ -51,17 +52,10 @@ Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based o
 ```bibtex
 @software{hinrichs2025aimoralcode,
   author       = {Randy J. Hinrichs},
-    title        = {AI Moral Code: Ethical architecture for AI systems based on the NRBC framework},
+  title        = {AI Moral Code: Ethical architecture for AI systems based on the NRBC framework},
   year         = {2025},
   version      = {1.0.3},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.15362376},
   url          = {https://doi.org/10.5281/zenodo.15362376}
 }
-
-## 🤝 Contact
-
-For collaboration, integration support, or speaking inquiries:  
-📧 ran@aimoralcode.org  
-🌐 [https://aimoralcode.org](https://aimoralcode.org)  
-GitHub: [@rjhinrichs](https://github.com/rjhinrichs)
