@@ -7,7 +7,7 @@ include:
 
 collections:
   - name: "posts"
-    label: "Blog Posts"
+    label: !!str "Blog Posts"
     folder: "_posts"
     output: true
     create: true
@@ -25,7 +25,7 @@ collections:
         widget: "markdown"
 
   - name: "pages"
-    label: "Site Pages"
+    label: !!str "Site Pages"
     files:
       - label: "Homepage"
         name: "index"
