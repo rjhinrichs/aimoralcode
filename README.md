@@ -51,4 +51,19 @@ Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based o
 ```bibtex
 @software{hinrichs2025aimoralcode,
   author       = {Randy J. Hinrichs},
-  title        =
+    title        = {AI Moral Code: Ethical architecture for AI systems based on the NRBC framework},
+  year         = {2025},
+  version      = {1.0.3},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.15362376},
+  url          = {https://doi.org/10.5281/zenodo.15362376}
+}
+
+**## 🤝 Contact**
+For collaboration, integration support, or speaking inquiries:  
+📧 ran@aimoralcode.org  
+🌐 [https://aimoralcode.org](https://aimoralcode.org)  
+GitHub: [@rjhinrichs](https://github.com/rjhinrichs)
+
+
+
