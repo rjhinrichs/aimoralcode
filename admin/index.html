@@ -9,11 +9,10 @@
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
-
     <script>
-      window.addEventListener("load", function () {
-        if (typeof CMS !== "undefined") {
-          CMS.init({
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof window.CMS !== "undefined") {
+          window.CMS.init({
             config: {
               backend: {
                 name: "github",
