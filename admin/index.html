@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <title>AI Moral Code CMS</title>
-    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+    <script src="https://unpkg.com/netlify-cms-app@2.15.72/dist/netlify-cms-app.js"></script>
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
+    <div id="nc-root"></div>
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
@@ -19,10 +21,10 @@
                 repo: "rjhinrichs/aimoralcode",
                 branch: "main"
               },
-              media_folder: "assets/uploads",
-              public_folder: "/assets/uploads",
               site_url: "https://aimoralcode.org",
               display_url: "https://aimoralcode.org",
+              media_folder: "assets/uploads",
+              public_folder: "/assets/uploads",
               collections: [
                 {
                   name: "blog",
