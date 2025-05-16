@@ -7,8 +7,30 @@
   </head>
   <body>
     <script>
-      window.CMS_MANUAL_INIT = true;
+      CMS.init({
+        config: {
+          backend: {
+            name: "github",
+            repo: "rjhinrichs/aimoralcode",
+            branch: "main"
+          },
+          media_folder: "assets/uploads",
+          public_folder: "/assets/uploads",
+          collections: [
+            {
+              name: "blog",
+              label: "Blog",
+              folder: "_posts",
+              create: true,
+              slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Body", name: "body", widget: "markdown" }
+              ]
+            }
+          ]
+        }
+      });
     </script>
-    <script src="/assets/js/netlify-cms.js"></script>
   </body>
 </html>
