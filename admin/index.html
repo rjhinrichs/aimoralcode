@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>AI Moral Code CMS</title>
-    <script src="https://unpkg.com/netlify-cms@2.15.72/dist/netlify-cms.min.js"></script>
+    <script src="https://unpkg.com/netlify-cms@2.15.72/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+
     <script>
       CMS.init({
         config: {
@@ -16,6 +20,8 @@
           },
           media_folder: "assets/uploads",
           public_folder: "/assets/uploads",
+          site_url: "https://aimoralcode.org",
+          display_url: "https://aimoralcode.org",
           collections: [
             {
               name: "blog",
