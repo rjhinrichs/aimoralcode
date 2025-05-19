@@ -4,6 +4,7 @@ title: "[Contributor Application] Full Name"
 labels: ["contributor-request", "triage"]
 assignees:
   - rjhinrichs
+blank_issues_enabled: false
 
 body:
   - type: input
