@@ -1,12 +1,12 @@
 <nav id="sidebar">
   <ul>
-    {% assign sorted_pages = site.pages | where_exp: "p", "p.layout == 'page'" | sort: "order" %}
-    {% for page in sorted_pages %}
-      {% unless page.title == nil or page.permalink == "/" %}
-        <li>
-          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-        </li>
-      {% endunless %}
-    {% endfor %}
+    <li><a href="/about/">About</a></li>
+    <li><a href="/introduction/">Introduction</a></li>
+    <li><a href="/values/">Canonical Values</a></li>
+    <li><a href="/value-browser/">Canonical Values Browser</a></li>
+    <li><a href="/nrbc-framework/">NRBC Framework</a></li>
+    <li><a href="/simulation-methodology/">Simulation Methodology</a></li>
+    <li><a href="/glossary/">Glossary</a></li>
+    <li><a href="/appendix/">Appendix</a></li>
   </ul>
 </nav>
