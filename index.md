@@ -21,12 +21,11 @@ description: "A Methodological and Empirical Approach to Ethical AI"
 <section>
   <h3>Download White Paper</h3>
   <p>
-    <a href="AI_Moral_Code_White_Paper.pdf" target="_blank" rel="noopener noreferrer">
-      Download the Full AI Moral Code White Paper (PDF)
+    <a href="/AI_Moral_Code_White_Paper.pdf" class="button" target="_blank" rel="noopener noreferrer">
+      📄 Download the Full AI Moral Code White Paper (PDF)
     </a>
   </p>
 </section>
-
 
 <section>
   <h3>Recent Blog Posts</h3>
