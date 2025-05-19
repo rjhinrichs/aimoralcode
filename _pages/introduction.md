@@ -6,29 +6,6 @@ permalink: /introduction/
 description: "An overview of the AI Moral Code’s origin, goals, and ethical foundations."
 ---
 
-ChatGPT said:
-Excellent timing. The Introduction page is your chance to:
-
-Set the ethical, intellectual, and cultural framing for the entire project
-
-Clarify why the AI Moral Code is needed
-
-Define who it’s for: developers, ethicists, policymakers, AGI researchers
-
-Explain the foundational theory behind your NRBC model
-
-Provide a bridge from abstract ethics → operational system
-
-🧠 Recommended Structure for _pages/introduction.md
-markdown
-Copy
-Edit
----
-layout: page
-title: "Introduction"
-permalink: /introduction/
----
-
 <section>
   <h1>Why an AI Moral Code?</h1>
   <p>
