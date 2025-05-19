@@ -18,8 +18,7 @@ jobs:
           subject: "New Blog Contributor Request"
           to: rhinrich@norwich.edu
           from: "AI Moral Code <${{ secrets.EMAIL_USERNAME }}>"
-          content_type: text/html
-          body: |
+          html_body: |
             <h2>New Blog Contributor Application</h2>
             <p><strong>Submitted Title:</strong> ${{ github.event.issue.title }}</p>
             <p><strong>Issue URL:</strong> <a href="${{ github.event.issue.html_url }}">${{ github.event.issue.html_url }}</a></p>
