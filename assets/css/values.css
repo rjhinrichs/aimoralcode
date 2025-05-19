@@ -1,6 +1,39 @@
 .value-card {
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #f9f9f9;
   border-left: 4px solid #007acc;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.value-card h2 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.value-card strong {
+  color: #222;
+  font-weight: 600;
+}
+
+.value-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007acc;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.value-card a:hover {
+  border-bottom: 1px solid #007acc;
 }
