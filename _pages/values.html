@@ -36,6 +36,17 @@ permalink: /values/
     <label><input type="checkbox" value="NGO" class="sector-filter"> NGO</label>
     <label><input type="checkbox" value="Global Governance" class="sector-filter"> Global Governance</label>
   </fieldset>
+
+  <div style="margin-bottom: 1.5rem;">
+    <label for="searchBox"><strong>Keyword Search:</strong></label><br>
+    <input type="text" id="searchBox" placeholder="Search values..." style="width: 100%; padding: 0.5rem; font-size: 1rem;">
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <button id="clearFiltersBtn" style="padding: 0.5rem 1rem; font-size: 1rem; background-color: #eee; border: 1px solid #ccc; border-radius: 4px;">
+      Clear All Filters
+    </button>
+  </div>
 </div>
 
 <div id="value-results"></div>
@@ -46,6 +57,7 @@ async function loadValues() {
   const values = await response.json();
 
   const resultsContainer = document.getElementById('value-results');
+  const searchBox = document.getElementById('searchBox');
 
   function render(filtered) {
     resultsContainer.innerHTML = '';
@@ -70,12 +82,21 @@ async function loadValues() {
     const nrbcFilters = [...document.querySelectorAll('.nrbc-filter:checked')].map(cb => cb.value);
     const coreFilters = [...document.querySelectorAll('.core-filter:checked')].map(cb => cb.value);
     const sectorFilters = [...document.querySelectorAll('.sector-filter:checked')].map(cb => cb.value);
+    const keyword = searchBox.value.toLowerCase().trim();
 
     const filtered = values.filter(val => {
       const nrbcMatch = nrbcFilters.length === 0 || nrbcFilters.includes(val.nrbc);
       const coreMatch = coreFilters.length === 0 || coreFilters.some(tag => val.core_values.includes(tag));
       const sectorMatch = sectorFilters.length === 0 || sectorFilters.some(tag => val.sectors.includes(tag));
-      return nrbcMatch && coreMatch && sectorMatch;
+      const keywordMatch =
+        keyword === '' ||
+        val.title.toLowerCase().includes(keyword) ||
+        val.summary.toLowerCase().includes(keyword) ||
+        val.nrbc.toLowerCase().includes(keyword) ||
+        val.core_values.some(cv => cv.toLowerCase().includes(keyword)) ||
+        val.sectors.some(sc => sc.toLowerCase().includes(keyword));
+
+      return nrbcMatch && coreMatch && sectorMatch && keywordMatch;
     });
 
     render(filtered);
@@ -83,6 +104,16 @@ async function loadValues() {
 
   document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => {
     cb.addEventListener('change', applyFilters);
+  });
+
+  searchBox.addEventListener('input', applyFilters);
+
+  document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+    document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => {
+      cb.checked = false;
+    });
+    searchBox.value = '';
+    applyFilters();
   });
 
   render(values);
