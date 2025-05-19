@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Home
+title: "The AI Moral Code"
+description: "A Methodological and Empirical Approach to Ethical AI"
 ---
 
 <section>
-  <h1>Advancing Ethical AI</h1>
-  <h2>A Methodological and Empirical Approach to the AI Moral Code</h2>
+  <h1 style="margin-bottom: 0.5rem;">The AI Moral Code</h1>
+  <h2 style="font-weight: normal;">A Methodological and Empirical Approach to Ethical AI</h2>
   <p><strong>Author:</strong> Randy J. Hinrichs, Professor of Practice, Norwich University</p>
   <p><strong>Contact:</strong> <a href="mailto:rhinrich@norwich.edu">rhinrich@norwich.edu</a></p>
 </section>
@@ -20,8 +21,8 @@ title: Home
 <section>
   <h3>Download White Paper</h3>
   <p>
-    <a href="AI_Moral_Code_White_Paper.pdf" target="_blank" rel="noopener noreferrer">
-      Download the Full AI Moral Code White Paper (PDF)
+    <a href="/AI_Moral_Code_White_Paper.pdf" class="button" target="_blank" rel="noopener noreferrer">
+      📄 Download Full AI Moral Code White Paper (PDF)
     </a>
   </p>
 </section>
@@ -38,19 +39,19 @@ title: Home
         </span>
       </li>
     {% endfor %}
-    <li><a href="/blog.html/">View All Posts</a></li>
+    <li><a href="/blog.html">View All Posts</a></li>
   </ul>
 </section>
 
 <section>
   <h3>Access QR Code</h3>
-  <img src="assets/AI_Moral_Code_QR.png" alt="QR Code to AI Moral Code" width="200" />
+  <img src="/assets/AI_Moral_Code_QR.png" alt="QR Code to AI Moral Code" width="200" />
 </section>
 
 <section>
   <h3>NRBC Architecture Diagram</h3>
   <img 
-    src="assets/AI_Moral_Agent_Architecture.png" 
+    src="/assets/AI_Moral_Agent_Architecture.png" 
     alt="Diagram of the Normative, Regulatory, Behavioral, and Conceptual architecture for AI Moral Agents" 
     style="max-width: 100%; height: auto;" 
   />
