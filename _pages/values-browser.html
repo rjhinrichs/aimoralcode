@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Canonical Values Browser"
-permalink: /values/
+permalink: /value-browser/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/values.css' | relative_url }}">
@@ -42,6 +42,16 @@ permalink: /values/
     <input type="text" id="searchBox" placeholder="Search values..." style="width: 100%; padding: 0.5rem; font-size: 1rem;">
   </div>
 
+  <div style="margin-bottom: 1.5rem;">
+    <label for="sortSelect"><strong>Sort By:</strong></label><br>
+    <select id="sortSelect" style="padding: 0.5rem; font-size: 1rem;">
+      <option value="default">Default Order</option>
+      <option value="score">Score (High to Low)</option>
+      <option value="weight">Weight (High to Low)</option>
+      <option value="title">Alphabetical (A–Z)</option>
+    </select>
+  </div>
+
   <div style="margin-bottom: 2rem;">
     <button id="clearFiltersBtn" style="padding: 0.5rem 1rem; font-size: 1rem; background-color: #eee; border: 1px solid #ccc; border-radius: 4px;">
       Clear All Filters
@@ -54,10 +64,11 @@ permalink: /values/
 <script>
 async function loadValues() {
   const response = await fetch('/assets/data/canonical-values.json');
-  const values = await response.json();
+  let values = await response.json();
 
   const resultsContainer = document.getElementById('value-results');
   const searchBox = document.getElementById('searchBox');
+  const sortSelect = document.getElementById('sortSelect');
 
   function render(filtered) {
     resultsContainer.innerHTML = '';
@@ -72,19 +83,23 @@ async function loadValues() {
         <h2>${val.title}</h2>
         <p><strong>NRBC:</strong> ${val.nrbc} | <strong>Core:</strong> ${val.core_values.join(', ')} | <strong>Sectors:</strong> ${val.sectors.join(', ')}</p>
         <p>${val.summary}</p>
+        <p><strong>Score:</strong> ${val.score} | <strong>Weight:</strong> ${val.weight}</p>
+        <div class="score-bar-container">
+          <div class="score-bar" style="width: ${val.score * 45}%"></div>
+        </div>
         <p><a href="${val.url}">Read More</a></p>
       `;
       resultsContainer.appendChild(card);
     });
   }
 
-  function applyFilters() {
+  function applyFiltersAndSort() {
     const nrbcFilters = [...document.querySelectorAll('.nrbc-filter:checked')].map(cb => cb.value);
     const coreFilters = [...document.querySelectorAll('.core-filter:checked')].map(cb => cb.value);
     const sectorFilters = [...document.querySelectorAll('.sector-filter:checked')].map(cb => cb.value);
     const keyword = searchBox.value.toLowerCase().trim();
 
-    const filtered = values.filter(val => {
+    let filtered = values.filter(val => {
       const nrbcMatch = nrbcFilters.length === 0 || nrbcFilters.includes(val.nrbc);
       const coreMatch = coreFilters.length === 0 || coreFilters.some(tag => val.core_values.includes(tag));
       const sectorMatch = sectorFilters.length === 0 || sectorFilters.some(tag => val.sectors.includes(tag));
@@ -95,25 +110,36 @@ async function loadValues() {
         val.nrbc.toLowerCase().includes(keyword) ||
         val.core_values.some(cv => cv.toLowerCase().includes(keyword)) ||
         val.sectors.some(sc => sc.toLowerCase().includes(keyword));
-
       return nrbcMatch && coreMatch && sectorMatch && keywordMatch;
     });
+
+    // Apply sorting
+    const sortOption = sortSelect.value;
+    if (sortOption === 'score') {
+      filtered.sort((a, b) => b.score - a.score);
+    } else if (sortOption === 'weight') {
+      filtered.sort((a, b) => b.weight - a.weight);
+    } else if (sortOption === 'title') {
+      filtered.sort((a, b) => a.title.localeCompare(b.title));
+    }
 
     render(filtered);
   }
 
   document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => {
-    cb.addEventListener('change', applyFilters);
+    cb.addEventListener('change', applyFiltersAndSort);
   });
 
-  searchBox.addEventListener('input', applyFilters);
+  searchBox.addEventListener('input', applyFiltersAndSort);
+  sortSelect.addEventListener('change', applyFiltersAndSort);
 
   document.getElementById('clearFiltersBtn').addEventListener('click', () => {
     document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => {
       cb.checked = false;
     });
     searchBox.value = '';
-    applyFilters();
+    sortSelect.value = 'default';
+    applyFiltersAndSort();
   });
 
   render(values);
