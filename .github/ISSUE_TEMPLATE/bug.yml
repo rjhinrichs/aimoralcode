@@ -1,0 +1,26 @@
+name: Bug Report
+description: Report a technical issue with the AI Moral Code website or repository.
+title: "[Bug] Title"
+labels: ["bug"]
+assignees:
+  - rjhinrichs
+body:
+  - type: markdown
+    attributes:
+      value: "Please describe the issue clearly and include steps to reproduce."
+
+  - type: input
+    id: system
+    attributes:
+      label: System Details
+      placeholder: OS, browser, environment
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: Step 1: ..., Step 2: ..., etc.
+    validations:
+      required: true
