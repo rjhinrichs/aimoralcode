@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Innovation",
+    "nrbc": "Conceptual",
+    "core_values": ["Non-Maleficence", "Accountability"],
+    "sectors": ["Technology", "Global Governance"],
+    "summary": "Innovation must elevate human potential, not merely disrupt. It is ethically constrained by purpose, accountability, and long-term social benefit.",
+    "url": "/values/innovation/"
+  },
+  {
+    "title": "Sustainability",
+    "nrbc": "Conceptual",
+    "core_values": ["Non-Maleficence", "Fairness"],
+    "sectors": ["Climate", "Energy", "Disaster Response"],
+    "summary": "Sustainability emphasizes long-term viability across ecological, social, and technical systems, requiring AI to prevent future harm.",
+    "url": "/values/sustainability/"
+  },
+  {
+    "title": "Autonomy",
+    "nrbc": "Normative",
+    "core_values": ["Accountability", "Trust"],
+    "sectors": ["Healthcare", "Education"],
+    "summary": "Autonomy preserves human self-governance by ensuring AI augments decision-making without coercion or manipulation.",
+    "url": "/values/autonomy/"
+  }
+]
