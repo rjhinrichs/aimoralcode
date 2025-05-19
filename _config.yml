@@ -3,6 +3,9 @@ baseurl: ""
 url: "https://aimoralcode.org"
 
 collections:
+  posts:
+    output: true
+    permalink: /posts/:year-:month-:day-:title/
   pages:
     output: true
     permalink: /:path/
@@ -13,6 +16,12 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      author: "Randy J. Hinrichs"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
       author: "Randy J. Hinrichs"
 
 markdown: kramdown
