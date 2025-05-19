@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "The Fifteen: Canonical Ethical Values"
+title: "The 15 Values"
 permalink: /fifteen/
 ---
 
