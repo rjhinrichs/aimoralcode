@@ -1,0 +1,78 @@
+---
+layout: page
+title: "Canonical Values Browser"
+permalink: /values/
+---
+
+<h1>Explore Canonical Values</h1>
+
+<div id="filters">
+  <fieldset>
+    <legend>NRBC Alignment</legend>
+    <label><input type="checkbox" value="Normative" class="nrbc-filter"> Normative</label>
+    <label><input type="checkbox" value="Regulatory" class="nrbc-filter"> Regulatory</label>
+    <label><input type="checkbox" value="Behavioral" class="nrbc-filter"> Behavioral</label>
+    <label><input type="checkbox" value="Conceptual" class="nrbc-filter"> Conceptual</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Core Values</legend>
+    <label><input type="checkbox" value="Trust" class="core-filter"> Trust</label>
+    <label><input type="checkbox" value="Fairness" class="core-filter"> Fairness</label>
+    <label><input type="checkbox" value="Transparency" class="core-filter"> Transparency</label>
+    <label><input type="checkbox" value="Accountability" class="core-filter"> Accountability</label>
+    <label><input type="checkbox" value="Non-Maleficence" class="core-filter"> Non-Maleficence</label>
+  </fieldset>
+</div>
+
+<div id="value-results"></div>
+
+<script>
+async function loadValues() {
+  const response = await fetch('/assets/data/canonical-values.json');
+  const values = await response.json();
+
+  const resultsContainer = document.getElementById('value-results');
+
+  function render(filtered) {
+    resultsContainer.innerHTML = '';
+    if (filtered.length === 0) {
+      resultsContainer.innerHTML = '<p>No matching values found.</p>';
+      return;
+    }
+    filtered.forEach(val => {
+      const card = document.createElement('div');
+      card.className = 'value-card';
+      card.innerHTML = `
+        <h2>${val.title}</h2>
+        <p><strong>NRBC:</strong> ${val.nrbc} | <strong>Core:</strong> ${val.core_values.join(', ')} | <strong>Sectors:</strong> ${val.sectors.join(', ')}</p>
+        <p>${val.summary}</p>
+        <p><a href="${val.url}">Read More</a></p>
+        <hr>
+      `;
+      resultsContainer.appendChild(card);
+    });
+  }
+
+  function applyFilters() {
+    const nrbcFilters = [...document.querySelectorAll('.nrbc-filter:checked')].map(cb => cb.value);
+    const coreFilters = [...document.querySelectorAll('.core-filter:checked')].map(cb => cb.value);
+
+    const filtered = values.filter(val => {
+      const nrbcMatch = nrbcFilters.length === 0 || nrbcFilters.includes(val.nrbc);
+      const coreMatch = coreFilters.length === 0 || coreFilters.some(tag => val.core_values.includes(tag));
+      return nrbcMatch && coreMatch;
+    });
+
+    render(filtered);
+  }
+
+  document.querySelectorAll('.nrbc-filter, .core-filter').forEach(cb => {
+    cb.addEventListener('change', applyFilters);
+  });
+
+  render(values);
+}
+
+document.addEventListener('DOMContentLoaded', loadValues);
+</script>
