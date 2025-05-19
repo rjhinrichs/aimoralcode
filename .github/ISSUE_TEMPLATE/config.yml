@@ -7,7 +7,14 @@ contact_links:
 issue_templates:
   - name: Blog Contributor Request
     description: Apply to write for the AI Moral Code Blog.
-    file: .github/legacy_templates/blog-contributor-request.yml
+    file: ../legacy_templates/blog-contributor-request.yml
   - name: New Blog Post Submission
     description: Submit a markdown draft for review and publication.
-    file: .github/legacy_templates/new-blog-post.yml
+    file: new-blog-post.yml
+  - name: Bug Report
+    description: Report a technical issue.
+    file: bug.yml
+  - name: Feature Request
+    description: Propose a new enhancement or capability.
+    file: feature.yml
+
