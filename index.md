@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "The AI Moral Code"
 description: "A Methodological and Empirical Approach to Ethical AI"
 ---
