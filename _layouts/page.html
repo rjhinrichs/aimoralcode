@@ -1,4 +1,26 @@
-<h1>{{ page.title }}</h1>
-<div class="page-content">
-  {{ content }}
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <h2>{{ page.description }}</h2>
+  </header>
+
+  <main>
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Randy J. Hinrichs | The AI Moral Code Project</p>
+    <p><a href="mailto:rhinrich@norwich.edu">rhinrich@norwich.edu</a></p>
+  </footer>
+</body>
+</html>
