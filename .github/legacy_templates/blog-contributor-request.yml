@@ -1,0 +1,45 @@
+name: Blog Contributor Request
+description: Apply to become a contributor to the AI Moral Code Blog.
+title: "[Contributor Application] Full Name"
+labels: ["contributor-request", "triage"]
+assignees:
+  - rjhinrichs
+body:
+  - type: input
+    id: full_name
+    attributes:
+      label: Full Name
+      description: Enter your full legal name.
+      placeholder: e.g., Abraham Hillburton
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Email Address
+      description: Enter your primary contact email.
+      placeholder: e.g., name@example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Your Background
+      description: Tell us briefly about your expertise, relevant writing experience, or area of interest in AI ethics.
+      placeholder: "I have written for the Journal of AI Governance and research AGI trust metrics..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Consent and Understanding
+      description: Please confirm the following:
+      options:
+        - label: I understand that my submission may be edited for clarity, length, and alignment with the AI Moral Code editorial standards.
+          required: true
+        - label: I agree to receive follow-up communication about my submission.
+          required: true
+

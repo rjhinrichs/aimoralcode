@@ -1,0 +1,36 @@
+name: Create Blog Post from Issue
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  create-post:
+    if: github.event.issue.labels.*.name contains 'new-blog-post'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set Variables
+        id: vars
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          DATE=$(date +'%Y-%m-%d')
+          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g' | sed -E 's/^-+|-+$//g')
+          FILENAME="_posts/${DATE}-${SLUG}.md"
+          echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+
+      - name: Create New Blog Post File
+        run: |
+          cp post-template.md "${{ steps.vars.outputs.filename }}"
+          sed -i "s/TITLE_HERE/${{ github.event.issue.title }}/g" "${{ steps.vars.outputs.filename }}"
+          sed -i "s/DATE_HERE/$(date +'%Y-%m-%d %H:%M:%S %z')/g" "${{ steps.vars.outputs.filename }}"
+
+      - name: Commit and Push
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
+          git add "${{ steps.vars.outputs.filename }}"
+          git commit -m "Create new blog post: ${{ github.event.issue.title }}"
+          git push
