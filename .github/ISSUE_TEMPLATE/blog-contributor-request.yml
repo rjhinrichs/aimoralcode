@@ -27,8 +27,8 @@ body:
     id: background
     attributes:
       label: Your Background
-      description: Tell us briefly about your expertise, relevant writing experience, or area of interest in AI ethics.
-      placeholder: "I have written for the Journal of AI Governance and research AGI trust metrics..."
+      description: Tell us briefly about your expertise, writing experience, or interest in AI ethics.
+      placeholder: I have written for the Journal of AI Governance and work on AGI trust metrics...
     validations:
       required: true
 
@@ -36,9 +36,9 @@ body:
     id: consent
     attributes:
       label: Consent and Understanding
-      description: Please confirm the following:
+      description: Please confirm both items below.
       options:
-        - label: "I understand that my submission may be edited for clarity, length, and alignment with the AI Moral Code editorial standards."
+        - label: I understand my submission may be edited for clarity and style
           required: true
-        - label: "I agree to receive follow-up communication about my submission."
+        - label: I agree to receive follow-up communication
           required: true
