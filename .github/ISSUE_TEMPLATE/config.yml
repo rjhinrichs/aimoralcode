@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General Inquiry
+    url: https://aimoralcode.org/contact
+    about: For questions unrelated to an issue or contribution.
+
+issue_templates:
+  - name: Blog Contributor Request
+    description: Apply to write for the AI Moral Code Blog.
+    file: .github/legacy_templates/blog-contributor-request.yml
+  - name: New Blog Post Submission
+    description: Submit a markdown draft for review and publication.
+    file: .github/legacy_templates/new-blog-post.yml
