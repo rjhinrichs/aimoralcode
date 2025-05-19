@@ -12,14 +12,15 @@
     <h2>{{ page.description }}</h2>
   </header>
 
-  <div style="display: flex; gap: 2rem; align-items: flex-start;">
-    {% include sidebar.html %}
-    <main style="flex: 1;">
-      <div class="page-content">
-        {{ content }}
-      </div>
-    </main>
-  </div>
+ <div style="display: flex; gap: 2rem;">
+  {% include sidebar.html %}
+  <main style="flex: 1;">
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </main>
+</div>
+
 
   <footer>
     <p>&copy; 2025 Randy J. Hinrichs | The AI Moral Code Project</p>
