@@ -1,37 +1,70 @@
-name: Blog Contributor Request
-description: Apply to become a contributor to the AI Moral Code Blog
-title: "[Contributor Request]: Your Full Name"
-labels: [access-request, contributor]
+name: Request Contributor Access
+description: Apply to become a contributor to the AI Moral Code Blog.
+title: "[Contributor Application] Full Name"
+labels: ["contributor-request", "triage"]
+assignees:
+  - rjhinrichs
+
 body:
   - type: input
-    id: full_name
+    id: name
     attributes:
       label: Full Name
+      description: Please enter your full legal name.
       placeholder: e.g., Abraham Hillburton
+    validations:
+      required: true
+
   - type: input
     id: email
     attributes:
       label: Contact Email
+      description: We will use this to follow up on your request.
       placeholder: e.g., avatar@uw.edu
+    validations:
+      required: true
+
   - type: input
-    id: github_handle
+    id: github
     attributes:
       label: GitHub Username
+      description: This must match your GitHub profile.
       placeholder: e.g., abrahamhillburton
+    validations:
+      required: true
+
   - type: textarea
-    id: motivation
+    id: background
     attributes:
-      label: Why do you want to contribute?
-      placeholder: Briefly describe your interest in AI ethics and what you hope to contribute to the blog.
+      label: Background and Expertise
+      description: Briefly describe your academic, technical, or professional background relevant to AI ethics.
+      placeholder: Include affiliations, publications, or fields of interest.
+    validations:
+      required: true
+
   - type: textarea
-    id: sample_topics
+    id: intent
     attributes:
-      label: Sample Blog Topics or Titles
-      placeholder: Propose 2–3 topics or draft titles you would write about.
+      label: Blogging Intent and Themes
+      description: Describe the topics or angles you would bring to the AI Moral Code blog.
+      placeholder: e.g., Conflict between autonomy and fairness in AI deployment, or ethical simulation models in civic tech.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sample
+    attributes:
+      label: Optional Sample or Idea
+      description: Share a sample paragraph or blog idea to demonstrate your writing voice.
+      placeholder: (Optional) Paste a short writing sample or outline here.
+    validations:
+      required: false
+
   - type: checkboxes
     id: agreement
     attributes:
-      label: Contributor Agreement
-      description: Confirm that you agree to abide by the guidelines of the AI Moral Code project.
+      label: Agreement
+      description: Please confirm your understanding and intent to uphold the AI Moral Code publishing guidelines.
       options:
-        - label: I agree to follow the code of conduct and blogging guidelines.
+        - label: I agree to submit original work aligned with the mission of the AI Moral Code.
+          required: true
