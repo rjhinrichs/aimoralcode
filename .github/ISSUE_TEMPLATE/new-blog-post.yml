@@ -1,0 +1,10 @@
+name: ✍️ New Blog Post
+description: Create a new blog post from this issue
+title: "[Post Title Here]"
+labels: [new-blog-post]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        When you submit this issue, a blog post will be created automatically using the post template.
+        You can then edit the markdown file directly in GitHub under the _posts directory.

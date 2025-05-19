@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8" />
+    <title>AI Moral Code CMS</title>
+    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+  </head>
+  <body>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof window.CMS !== "undefined") {
+          window.CMS.init({
+            config: {
+              backend: {
+                name: "github",
+                repo: "rjhinrichs/aimoralcode",
+                branch: "main"
+              },
+              media_folder: "assets/uploads",
+              public_folder: "/assets/uploads",
+              site_url: "https://aimoralcode.org",
+              display_url: "https://aimoralcode.org",
+              collections: [
+                {
+                  name: "blog",
+                  label: "Blog",
+                  folder: "_posts",
+                  create: true,
+                  slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+                  fields: [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Body", name: "body", widget: "markdown" }
+                  ]
+                }
+              ]
+            }
+          });
+        } else {
+          console.error("CMS is not defined.");
+        }
+      });
+    </script>
+  </body>
+</html>
