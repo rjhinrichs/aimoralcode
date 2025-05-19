@@ -2,6 +2,7 @@ title: "The AI Moral Code"
 baseurl: ""
 url: "https://aimoralcode.org"
 timezone: America/Los_Angeles  # or your preferred timezone
+future: true
 collections:
   posts:
     output: true
