@@ -2,42 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/sidebar.css' | relative_url }}">
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
 </head>
 <body>
-  <header>
-    <h1><a href="{{ '/' | relative_url }}">AI Moral Code</a></h1>
-    <nav class="navbar">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/values.html">Values</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
+  {% include sidebar.html %}
+
+  <main style="margin-left: 260px; padding: 2rem;">
     {{ content }}
+
+    <!-- Admin Access Buttons -->
+    <div style="text-align:center; margin: 2rem;">
+      <button id="loginBtn">Login as Admin</button>
+      <button id="adminButton" style="display:none;" onclick="window.location.href='https://github.com/rjhinrichs/aimoralcode/issues/1';">
+        Add New Blog Post
+      </button>
+    </div>
   </main>
 
-  <footer>
+  <footer style="margin-left: 260px; padding: 1rem 2rem; border-top: 1px solid #ccc;">
     <p>&copy; 2025 Randy J. Hinrichs | AI Moral Code Project</p>
     <p>
       <a href="mailto:ran@aimoralcode.org">ran@aimoralcode.org</a> |
       <a href="https://github.com/rjhinrichs/aimoralcode" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
     </p>
   </footer>
-
-  <!-- Admin Access Buttons -->
-  <div style="text-align:center; margin: 2rem;">
-    <button id="loginBtn">Login as Admin</button>
-    <button id="adminButton" style="display:none;" onclick="window.location.href='https://github.com/rjhinrichs/aimoralcode/issues/1';">
-      Add New Blog Post
-    </button>
-  </div>
 
   <!-- Auth0 Login Logic -->
   <script>
