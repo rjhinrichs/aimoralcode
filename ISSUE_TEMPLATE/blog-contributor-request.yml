@@ -1,0 +1,33 @@
+name: Blog Contributor Request
+description: Request to become a blog contributor for the AI Moral Code project.
+title: "[New Contributor] Full Name – Short Motivation"
+labels: [contributor-request]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Full Name
+      placeholder: Jane Doe
+  - type: input
+    id: email
+    attributes:
+      label: Contact Email
+      placeholder: yourname@example.com
+  - type: input
+    id: github
+    attributes:
+      label: GitHub Username
+      placeholder: janedoe
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want to contribute?
+      placeholder: |
+        Share your interest in ethical AI and how your perspective or expertise could enhance the AI Moral Code blog.
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Contributor Expectations
+      options:
+        - label: I understand this is a curated blog and I will receive confirmation before publishing rights are granted.
+          required: true
