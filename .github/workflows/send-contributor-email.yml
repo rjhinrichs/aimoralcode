@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "New Blog Contributor Request"
-          to: rhinrich@norwich.edu
+          to: ranhinrichs@gmail.com, rhinrich@norwich.edu, hinr6383@vandals.uidaho.edu
           from: "AI Moral Code <${{ secrets.EMAIL_USERNAME }}>"
           html_body: |
             <h2>New Blog Contributor Application</h2>
