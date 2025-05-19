@@ -53,9 +53,9 @@ permalink: /value-browser/
   </div>
 
   <div style="margin-bottom: 2rem;">
-    <button id="clearFiltersBtn" style="padding: 0.5rem 1rem; font-size: 1rem; background-color: #eee; border: 1px solid #ccc; border-radius: 4px;">
-      Clear All Filters
-    </button>
+    <button id="clearFiltersBtn" style="padding: 0.5rem 1rem; font-size: 1rem;">Clear All Filters</button>
+    <button id="exportJsonBtn" style="padding: 0.5rem 1rem; font-size: 1rem; margin-left: 1rem;">Export JSON</button>
+    <button id="exportCsvBtn" style="padding: 0.5rem 1rem; font-size: 1rem; margin-left: 1rem;">Export CSV</button>
   </div>
 </div>
 
@@ -65,18 +65,19 @@ permalink: /value-browser/
 async function loadValues() {
   const response = await fetch('/assets/data/canonical-values.json');
   let values = await response.json();
+  let filtered = [...values];
 
   const resultsContainer = document.getElementById('value-results');
   const searchBox = document.getElementById('searchBox');
   const sortSelect = document.getElementById('sortSelect');
 
-  function render(filtered) {
+  function render(data) {
     resultsContainer.innerHTML = '';
-    if (filtered.length === 0) {
+    if (data.length === 0) {
       resultsContainer.innerHTML = '<p>No matching values found.</p>';
       return;
     }
-    filtered.forEach(val => {
+    data.forEach(val => {
       const card = document.createElement('div');
       card.className = 'value-card';
       card.innerHTML = `
@@ -99,7 +100,7 @@ async function loadValues() {
     const sectorFilters = [...document.querySelectorAll('.sector-filter:checked')].map(cb => cb.value);
     const keyword = searchBox.value.toLowerCase().trim();
 
-    let filtered = values.filter(val => {
+    filtered = values.filter(val => {
       const nrbcMatch = nrbcFilters.length === 0 || nrbcFilters.includes(val.nrbc);
       const coreMatch = coreFilters.length === 0 || coreFilters.some(tag => val.core_values.includes(tag));
       const sectorMatch = sectorFilters.length === 0 || sectorFilters.some(tag => val.sectors.includes(tag));
@@ -113,7 +114,6 @@ async function loadValues() {
       return nrbcMatch && coreMatch && sectorMatch && keywordMatch;
     });
 
-    // Apply sorting
     const sortOption = sortSelect.value;
     if (sortOption === 'score') {
       filtered.sort((a, b) => b.score - a.score);
@@ -142,8 +142,34 @@ async function loadValues() {
     applyFiltersAndSort();
   });
 
+  document.getElementById('exportJsonBtn').addEventListener('click', () => {
+    const blob = new Blob([JSON.stringify(filtered, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'canonical-values.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+
+  document.getElementById('exportCsvBtn').addEventListener('click', () => {
+    const headers = Object.keys(filtered[0]).join(',');
+    const rows = filtered.map(obj => Object.values(obj).map(v =>
+      Array.isArray(v) ? `"${v.join('; ')}"` : `"${String(v).replace(/"/g, '""')}"`
+    ).join(','));
+    const csv = [headers, ...rows].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'canonical-values.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
+
   render(values);
 }
-
 document.addEventListener('DOMContentLoaded', loadValues);
 </script>
