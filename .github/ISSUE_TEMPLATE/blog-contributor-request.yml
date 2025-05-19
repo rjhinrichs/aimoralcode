@@ -38,7 +38,8 @@ body:
       label: Consent and Understanding
       description: Please confirm the following:
       options:
-        - label: I understand that my submission may be edited for clarity, length, and alignment with the AI Moral Code editorial standards.
+        - label: "I understand that my submission may be edited for clarity, length, and alignment with the AI Moral Code editorial standards."
           required: true
-        - label: I agree to receive follow-up communication about my submission.
+        - label: "I agree to receive follow-up communication about my submission."
           required: true
+
