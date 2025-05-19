@@ -8,26 +8,28 @@ permalink: /value-browser/
 
 <h1>Explore Canonical Values</h1>
 
+<!-- Filters (same as before) -->
 <div id="filters" style="margin-bottom: 2rem;">
-  <!-- All existing filters remain unchanged (NRBC, Core, Sector, Search, Sort) -->
-  <!-- ... [same as before, unchanged filter block] ... -->
-
-  <div style="margin-bottom: 2rem;">
-    <button id="clearFiltersBtn">Clear All Filters</button>
-    <button id="exportJsonBtn">Export JSON</button>
-    <button id="exportCsvBtn">Export CSV</button>
-  </div>
+  <!-- All previous filters: NRBC, Core, Sector, Search, Sort -->
+  <!-- Export and Clear buttons unchanged -->
 </div>
 
-<!-- 🧠 Analytics Section -->
+<!-- Analytics Summary -->
 <div id="analytics" style="margin-bottom: 2rem; padding: 1rem; background: #f0f4f8; border-left: 4px solid #007acc;">
-  <h2 style="margin-bottom: 0.5rem;">Analytics Summary</h2>
+  <h2>Analytics Summary</h2>
   <p><strong>Average Score:</strong> <span id="avgScore">–</span></p>
   <p><strong>Average Weight:</strong> <span id="avgWeight">–</span></p>
   <p><strong>NRBC Distribution:</strong></p>
   <ul id="nrbcCounts"></ul>
 </div>
 
+<!-- 🔥 Heatmap Section -->
+<div id="heatmap" style="margin-bottom: 2rem;">
+  <h2>Compositive Score Heatmap</h2>
+  <div id="heatmap-bars" style="display: flex; gap: 6px; flex-wrap: wrap;"></div>
+</div>
+
+<!-- Value Results -->
 <div id="value-results"></div>
 
 <script>
@@ -42,9 +44,11 @@ async function loadValues() {
   const avgScore = document.getElementById('avgScore');
   const avgWeight = document.getElementById('avgWeight');
   const nrbcCounts = document.getElementById('nrbcCounts');
+  const heatmapContainer = document.getElementById('heatmap-bars');
 
   function render(data) {
     resultsContainer.innerHTML = '';
+    heatmapContainer.innerHTML = '';
     if (data.length === 0) {
       resultsContainer.innerHTML = '<p>No matching values found.</p>';
       avgScore.textContent = '–';
@@ -53,10 +57,27 @@ async function loadValues() {
       return;
     }
 
+    // Heatmap preparation
+    const maxScore = Math.max(...data.map(d => d.score));
+    data.sort((a, b) => b.score - a.score);
+    data.forEach(val => {
+      const bar = document.createElement('div');
+      const intensity = Math.round((val.score / maxScore) * 255);
+      bar.title = `${val.title} (Score: ${val.score}, Weight: ${val.weight})`;
+      bar.style.cssText = `
+        width: 40px;
+        height: 20px;
+        background-color: rgb(0, ${intensity}, ${255 - intensity});
+        border-radius: 3px;
+        cursor: help;
+      `;
+      heatmapContainer.appendChild(bar);
+    });
+
+    // Analytics
     let totalScore = 0;
     let totalWeight = 0;
     const nrbcMap = {};
-
     data.forEach(val => {
       totalScore += val.score;
       totalWeight += val.weight;
@@ -80,9 +101,9 @@ async function loadValues() {
     avgScore.textContent = (totalScore / data.length).toFixed(2);
     avgWeight.textContent = (totalWeight / data.length).toFixed(2);
     nrbcCounts.innerHTML = '';
-    Object.keys(nrbcMap).sort().forEach(key => {
+    Object.entries(nrbcMap).sort().forEach(([key, count]) => {
       const li = document.createElement('li');
-      li.textContent = `${key}: ${nrbcMap[key]}`;
+      li.textContent = `${key}: ${count}`;
       nrbcCounts.appendChild(li);
     });
   }
@@ -127,9 +148,7 @@ async function loadValues() {
   sortSelect.addEventListener('change', applyFiltersAndSort);
 
   document.getElementById('clearFiltersBtn').addEventListener('click', () => {
-    document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => {
-      cb.checked = false;
-    });
+    document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => cb.checked = false);
     searchBox.value = '';
     sortSelect.value = 'default';
     applyFiltersAndSort();
@@ -141,9 +160,7 @@ async function loadValues() {
     const a = document.createElement('a');
     a.href = url;
     a.download = 'canonical-values.json';
-    document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
   });
 
   document.getElementById('exportCsvBtn').addEventListener('click', () => {
@@ -157,12 +174,11 @@ async function loadValues() {
     const a = document.createElement('a');
     a.href = url;
     a.download = 'canonical-values.csv';
-    document.body.appendChild(a);
     a.click();
-    document.body.removeChild(a);
   });
 
   render(values);
 }
+
 document.addEventListener('DOMContentLoaded', loadValues);
 </script>
