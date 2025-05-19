@@ -6,7 +6,7 @@ on:
 
 jobs:
   create-post:
-    if: github.event.issue.labels.*.name contains 'new-blog-post'
+  if: contains(join(github.event.issue.labels.*.name, ','), 'new-blog-post')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
