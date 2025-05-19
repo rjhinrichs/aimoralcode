@@ -1,0 +1,255 @@
+[
+  {
+    "title": "Justice",
+    "nrbc": NaN,
+    "core_values": [
+      "Justice"
+    ],
+    "sectors": [
+      "Government",
+      "Law",
+      "Public Policy"
+    ],
+    "summary": NaN,
+    "score": 2.21,
+    "weight": 0.66,
+    "url": "/values/justice/"
+  },
+  {
+    "title": "Transparency",
+    "nrbc": "Canonical Value | Moral Drive of Accountability and Trust",
+    "core_values": [
+      "Transparency",
+      "Accountability"
+    ],
+    "sectors": [
+      "Government",
+      "Technology",
+      "NGO",
+      "Education"
+    ],
+    "summary": "Definition (Stanford + Oxford Synthesis):\nTransparency is the ethical and procedural commitment to making information, decisions, intentions, and systems visible, comprehensible, and reviewable to relevant stakeholders. It requires that data flows, algorithms, institutional logic, and outcomes are not hidden behind obfuscation or complexity. In moral terms, it serves as a prerequisite for informed consent, accountability, and meaningful oversight.\n\nAI Ethics Implications:\nIn AI systems, transparency enables:\n\nInterpretability of algorithmic decisions\n\nAuditing of system behavior and outcomes\n\nDetection of bias, drift, or misuse\n\nDemocratization of knowledge, reducing power imbalances between developers, regulators, and users\nIt is often operationalized through explainable AI (XAI), documentation standards, model cards, and transparent governance logs.",
+    "score": 2.06,
+    "weight": 1.0,
+    "url": "/values/transparency/"
+  },
+  {
+    "title": "Responsibility",
+    "nrbc": "Canonical Value | Regulatory and Behavioral Drive",
+    "core_values": [
+      "Responsibility",
+      "Transparency"
+    ],
+    "sectors": [
+      "Government",
+      "Industry",
+      "Academia"
+    ],
+    "summary": "Responsibility refers to the obligation of agents\u2014human or artificial\u2014to account for their actions, outcomes, and influence. In AI ethics, this includes role-based accountability, liability chains, and clearly attributed decision pathways.",
+    "score": 1.88,
+    "weight": 0.33,
+    "url": "/values/responsibility/"
+  },
+  {
+    "title": "Non-Maleficence",
+    "nrbc": "Canonical Value | Normative Foundation of Safety and Precaution",
+    "core_values": [
+      "Non-Maleficence"
+    ],
+    "sectors": [
+      "Healthcare",
+      "Military",
+      "Transport",
+      "AI Safety"
+    ],
+    "summary": "Non-Maleficence is the principle of 'do no harm.' In AI systems, it guides safety constraints, precautionary design, and harm-avoidance in autonomous and high-stakes environments such as healthcare, transport, and law",
+    "score": 1.79,
+    "weight": 1.0,
+    "url": "/values/non-maleficence/"
+  },
+  {
+    "title": "Inclusivity",
+    "nrbc": "Canonical Value | Social Ethics Drive",
+    "core_values": [
+      "Fairness",
+      "Inclusion"
+    ],
+    "sectors": [
+      "Education",
+      "NGOs",
+      "Tech"
+    ],
+    "summary": "Inclusivity is the proactive effort to ensure representation, access, and participation across diverse populations. In AI, it mandates inclusive data sets, accessibility standards, and the prevention of exclusionary or biased system outputs.",
+    "score": 1.65,
+    "weight": 0.33,
+    "url": "/values/inclusivity/"
+  },
+  {
+    "title": "Trust",
+    "nrbc": "Canonical Value | Relational and Trustworthiness Norm",
+    "core_values": [
+      "Trust",
+      "Transparency"
+    ],
+    "sectors": [
+      "Healthcare",
+      "Industry",
+      "Government"
+    ],
+    "summary": "Trust involves justified reliance on an entity's competence, intention, and consistency. In AI, it relates to user confidence in system reliability, predictability, and alignment with human values.",
+    "score": 1.43,
+    "weight": 0.33,
+    "url": "/values/trust/"
+  },
+  {
+    "title": "Ethical Responsibility",
+    "nrbc": "Canonical Value | Meta-Governance and Lifecyce Justification",
+    "core_values": [
+      "Accountability",
+      "Responsibility"
+    ],
+    "sectors": [
+      "Corporate",
+      "NGO",
+      "Academia"
+    ],
+    "summary": "Ethical Responsibility captures the duty to act in morally appropriate ways within the lifecycle of AI. This includes ethical design, deployment, oversight, and decision justification across all actors and stages.",
+    "score": 1.36,
+    "weight": 0.66,
+    "url": "/values/ethical-responsibility/"
+  },
+  {
+    "title": "Privacy",
+    "nrbc": "Canonical Value | Privacy Ethics Foundation and System Boundary Enforce",
+    "core_values": [
+      "Privacy"
+    ],
+    "sectors": [
+      "Government",
+      "Civil Society",
+      "Industry"
+    ],
+    "summary": "Privacy is the right to control personal information and be protected from unwarranted surveillance. In AI ethics, it frames data minimization, consent-based models, and protection against profiling and behavioral inference.",
+    "score": 1.29,
+    "weight": 0.66,
+    "url": "/values/privacy/"
+  },
+  {
+    "title": "Innovation",
+    "nrbc": "Canonical Value | Conceptual and System-Level Driver",
+    "core_values": [
+      "Innovation",
+      "Prudence"
+    ],
+    "sectors": [
+      "Industry",
+      "Academia",
+      "Gov"
+    ],
+    "summary": "Innovation is the value that drives creative transformation, progress, and responsible experimentation. In AI, it supports the ethical exploration of new capabilities while ensuring alignment with societal values and human oversight.",
+    "score": 1.15,
+    "weight": 0.66,
+    "url": "/values/innovation/"
+  },
+  {
+    "title": "Sustainability",
+    "nrbc": "Canonical Value | Environmental and Futures Alignment Layer",
+    "core_values": [
+      "Sustainability",
+      "Stewardship"
+    ],
+    "sectors": [
+      "UN",
+      "NGO",
+      "Indigenous",
+      "Corporate"
+    ],
+    "summary": "Sustainability ensures that the development, deployment, and impact of AI systems preserve ecological, economic, and social viability over time. It guides long-term thinking, resource stewardship, and intergenerational responsibility.",
+    "score": 1.07,
+    "weight": 0.66,
+    "url": "/values/sustainability/"
+  },
+  {
+    "title": "Dignity",
+    "nrbc": "Canonical Value | Identity and Dignity Protection Layer",
+    "core_values": [
+      "Dignity"
+    ],
+    "sectors": [
+      "Health",
+      "Education",
+      "Law",
+      "NGO"
+    ],
+    "summary": "Dignity upholds the inherent worth of every individual. In AI ethics, it governs design practices that avoid dehumanization, preserve self-respect, and enable equitable treatment regardless of background or status.",
+    "score": 1.01,
+    "weight": 0.66,
+    "url": "/values/dignity/"
+  },
+  {
+    "title": "Collaboration",
+    "nrbc": "Canonical Value | Relational and Cooperative Governance Layer",
+    "core_values": [
+      "Collaboration",
+      "Shared Purpose"
+    ],
+    "sectors": [
+      "Tech",
+      "NGO",
+      "Academia"
+    ],
+    "summary": "Collaboration fosters cooperative intelligence, shared agency, and interdependent decision-making. In AI, it facilitates teamwork between humans and machines, interdisciplinary design, and multistakeholder governance.",
+    "score": 0.95,
+    "weight": 0.33,
+    "url": "/values/collaboration/"
+  },
+  {
+    "title": "Autonomy",
+    "nrbc": "Canonical Value | Personal Agency and Consent Enabler",
+    "core_values": [
+      "Autonomy"
+    ],
+    "sectors": [
+      "Health",
+      "Civic Tech",
+      "Education"
+    ],
+    "summary": "Autonomy is the capacity of individuals to act with self-governance and informed consent. In AI, it supports systems that respect user choices, cognitive liberty, and personal sovereignty in interaction.",
+    "score": 0.93,
+    "weight": 0.33,
+    "url": "/values/autonomy/"
+  },
+  {
+    "title": "Human Rights",
+    "nrbc": "Canonical Value | Universal Rights Enforcement Layer",
+    "core_values": [
+      "Human Rights"
+    ],
+    "sectors": [
+      "Government",
+      "UN",
+      "NGO",
+      "Faith-based"
+    ],
+    "summary": "Human Rights frame the universal entitlements to liberty, privacy, protection, and participation. In AI ethics, they are invoked in algorithmic fairness, surveillance boundaries, and inclusion in decision processes.",
+    "score": 0.88,
+    "weight": 0.66,
+    "url": "/values/human-rights/"
+  },
+  {
+    "title": "Beneficence",
+    "nrbc": "Canonical Value | Human Welfare and Well-being Driver",
+    "core_values": [
+      "Beneficence"
+    ],
+    "sectors": [
+      "Health",
+      "Education",
+      "NGO"
+    ],
+    "summary": "Beneficence commits to promoting well-being, welfare, and positive outcomes. In AI design, this principle underlies systems that enhance health, education, prosperity, and human flourishing.",
+    "score": 0.82,
+    "weight": 0.33,
+    "url": "/values/beneficence/"
+  }
+]
