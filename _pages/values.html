@@ -25,6 +25,17 @@ permalink: /values/
     <label><input type="checkbox" value="Accountability" class="core-filter"> Accountability</label>
     <label><input type="checkbox" value="Non-Maleficence" class="core-filter"> Non-Maleficence</label>
   </fieldset>
+
+  <fieldset style="margin-bottom: 1.5rem;">
+    <legend><strong>Sectors</strong></legend>
+    <label><input type="checkbox" value="Healthcare" class="sector-filter"> Healthcare</label>
+    <label><input type="checkbox" value="Education" class="sector-filter"> Education</label>
+    <label><input type="checkbox" value="Government" class="sector-filter"> Government</label>
+    <label><input type="checkbox" value="Technology" class="sector-filter"> Technology</label>
+    <label><input type="checkbox" value="Climate" class="sector-filter"> Climate</label>
+    <label><input type="checkbox" value="NGO" class="sector-filter"> NGO</label>
+    <label><input type="checkbox" value="Global Governance" class="sector-filter"> Global Governance</label>
+  </fieldset>
 </div>
 
 <div id="value-results"></div>
@@ -58,17 +69,19 @@ async function loadValues() {
   function applyFilters() {
     const nrbcFilters = [...document.querySelectorAll('.nrbc-filter:checked')].map(cb => cb.value);
     const coreFilters = [...document.querySelectorAll('.core-filter:checked')].map(cb => cb.value);
+    const sectorFilters = [...document.querySelectorAll('.sector-filter:checked')].map(cb => cb.value);
 
     const filtered = values.filter(val => {
       const nrbcMatch = nrbcFilters.length === 0 || nrbcFilters.includes(val.nrbc);
       const coreMatch = coreFilters.length === 0 || coreFilters.some(tag => val.core_values.includes(tag));
-      return nrbcMatch && coreMatch;
+      const sectorMatch = sectorFilters.length === 0 || sectorFilters.some(tag => val.sectors.includes(tag));
+      return nrbcMatch && coreMatch && sectorMatch;
     });
 
     render(filtered);
   }
 
-  document.querySelectorAll('.nrbc-filter, .core-filter').forEach(cb => {
+  document.querySelectorAll('.nrbc-filter, .core-filter, .sector-filter').forEach(cb => {
     cb.addEventListener('change', applyFilters);
   });
 
