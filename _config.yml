@@ -2,27 +2,21 @@ title: "The AI Moral Code"
 baseurl: ""
 url: "https://aimoralcode.org"
 
-include:
-  - admin
-
 collections:
-  posts:
-    output: true
-    permalink: /posts/:year-:month-:day-:title/
   pages:
     output: true
+    permalink: /:path/
 
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: "pages"
     values:
-      layout: "post"
+      layout: "page"
       author: "Randy J. Hinrichs"
 
 markdown: kramdown
 theme: minima
 
 plugins:
-  - jekyll-admin
   - jekyll-paginate
