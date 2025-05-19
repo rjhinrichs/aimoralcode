@@ -33,7 +33,7 @@ body:
       required: true
 
   - type: checkboxes
-    id: permissions
+    id: consent
     attributes:
       label: Consent and Understanding
       description: Please confirm the following:
