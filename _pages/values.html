@@ -4,19 +4,21 @@ title: "Canonical Values Browser"
 permalink: /values/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/values.css' | relative_url }}">
+
 <h1>Explore Canonical Values</h1>
 
-<div id="filters">
-  <fieldset>
-    <legend>NRBC Alignment</legend>
+<div id="filters" style="margin-bottom: 2rem;">
+  <fieldset style="margin-bottom: 1.5rem;">
+    <legend><strong>NRBC Alignment</strong></legend>
     <label><input type="checkbox" value="Normative" class="nrbc-filter"> Normative</label>
     <label><input type="checkbox" value="Regulatory" class="nrbc-filter"> Regulatory</label>
     <label><input type="checkbox" value="Behavioral" class="nrbc-filter"> Behavioral</label>
     <label><input type="checkbox" value="Conceptual" class="nrbc-filter"> Conceptual</label>
   </fieldset>
 
-  <fieldset>
-    <legend>Core Values</legend>
+  <fieldset style="margin-bottom: 1.5rem;">
+    <legend><strong>Core Values</strong></legend>
     <label><input type="checkbox" value="Trust" class="core-filter"> Trust</label>
     <label><input type="checkbox" value="Fairness" class="core-filter"> Fairness</label>
     <label><input type="checkbox" value="Transparency" class="core-filter"> Transparency</label>
@@ -48,7 +50,6 @@ async function loadValues() {
         <p><strong>NRBC:</strong> ${val.nrbc} | <strong>Core:</strong> ${val.core_values.join(', ')} | <strong>Sectors:</strong> ${val.sectors.join(', ')}</p>
         <p>${val.summary}</p>
         <p><a href="${val.url}">Read More</a></p>
-        <hr>
       `;
       resultsContainer.appendChild(card);
     });
