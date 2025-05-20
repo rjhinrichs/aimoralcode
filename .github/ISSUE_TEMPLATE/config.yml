@@ -1,19 +1,20 @@
 blank_issues_enabled: false
+
 contact_links:
   - name: General Inquiry
     url: https://aimoralcode.org/contact
-    about: For questions unrelated to an issue or contribution.
+    about: For questions unrelated to a GitHub issue or contribution.
 
 issue_templates:
   - name: Blog Contributor Request
     description: Apply to write for the AI Moral Code Blog.
     file: blog-contributor-request.yml
-  - name: New Blog Post Submission
-    description: Submit a markdown draft for review and publication.
-    file: new-blog-post.yml
-  - name: Bug Report
-    description: Report a technical issue.
-    file: bug.yml
   - name: Feature Request
     description: Propose a new enhancement or capability.
-    file: feature.yml
+    file: feature-request.yml
+  - name: Bug Report
+    description: Report a technical issue with the site or repository.
+    file: bug-report.yml
+  - name: General Inquiry
+    description: Submit documentation notes, conceptual ideas, or questions.
+    file: general-inquiry.yml
