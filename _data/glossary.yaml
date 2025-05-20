@@ -1,0 +1,48 @@
+- canonical_value: Justice
+  synonyms: ["fairness", "equity", "rule of law"]
+  opposing_concepts: ["injustice", "bias", "lawlessness", "discrimination"]
+  definition: null
+  governance_function: null
+  nrbc_alignment: null
+
+- canonical_value: Transparency
+  synonyms: ["openness", "explainability", "explicability", "clarity"]
+  opposing_concepts: ["secrecy", "obfuscation", "deception", "opacity"]
+  definition: Canonical Value | Moral Drive of Accountability and System Explainability.
+  governance_function: >
+    Normative Layer
+    Moral Imperative: Truthful disclosure and traceability.
+  nrbc_alignment: >
+    Sectoral Variation:
+    Government: Open data laws.
+    Industry: Explainable AI audits.
+
+- canonical_value: Responsibility
+  synonyms: ["duty", "ownership", "answerability"]
+  opposing_concepts: ["neglect", "blame-shifting", "apathy", "irresponsibility"]
+  definition: Canonical Value | Regulatory and Behavioral Drive
+  governance_function: >
+    Moral Imperative: Obligation and answerability at individual and system levels.
+  nrbc_alignment: >
+    Government: Public sector role clarity;
+    Industry: Auditable model chains.
+
+- canonical_value: Non-Maleficence
+  synonyms: ["do no harm", "caution", "protection", "precaution"]
+  opposing_concepts: ["harm", "recklessness", "abuse"]
+  definition: Canonical Value | Normative Foundation of Safety and AI Restraint.
+  governance_function: >
+    Moral Imperative: Avoiding harm is central to ethical design, especially under uncertainty.
+  nrbc_alignment: >
+    Healthcare: AI triage, risk scoring;
+    Military: Lethal autonomy constraints.
+
+- canonical_value: Inclusivity
+  synonyms: ["participation", "access", "representation"]
+  opposing_concepts: ["exclusion", "marginalization", "discrimination"]
+  definition: Canonical Value | Social Ethics Drive
+  governance_function: >
+    Moral Imperative: Justice in access and representation.
+  nrbc_alignment: >
+    Education: Equitable access in adaptive systems;
+    Policy: Representation in dataset composition.
