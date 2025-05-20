@@ -1,0 +1,49 @@
+name: Feature Request
+description: Propose a new capability, enhancement, or milestone for the AI Moral Code project.
+title: "[Feature] "
+labels: ["feature", "enhancement", "needs-triage"]
+assignees:
+  - rjhinrichs
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a new feature, milestone, or capability. This includes backend functionality, contributor workflows, publication enhancements, or architectural refinements.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: Briefly describe the proposed feature or improvement.
+      placeholder: e.g., Add AI Ethics Timeline navigation to sidebar
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this feature important?
+      description: State the purpose, justification, or design philosophy behind this feature.
+      placeholder: e.g., Helps visualize AI moral lineage and clarify historical ethical anchors.
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation ideas
+      description: List any technical or architectural suggestions for implementing this feature.
+      placeholder: e.g., Use markdown YAML frontmatter to generate nested sidebar entries.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority level
+      options:
+        - High – Needed before next publication cycle
+        - Medium – Important, but not time-critical
+        - Low – Nice to have / Future iteration
+    validations:
+      required: false
