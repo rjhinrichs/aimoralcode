@@ -1,0 +1,40 @@
+name: General Inquiry
+description: Submit questions, research notes, design commentary, or documentation.
+title: "[Inquiry] "
+labels: ["discussion", "documentation", "inquiry"]
+assignees:
+  - rjhinrichs
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for ongoing questions, documentation efforts, philosophical notes, or repository-level planning. This is the living archive of thought behind the AI Moral Code.
+
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      description: Enter the subject area or focus of this inquiry.
+      placeholder: e.g., NRBC Layer Documentation or Publishing Pipeline Notes
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Main Text
+      description: Enter your idea, question, or note here. Markdown supported.
+      placeholder: e.g., I propose we use a multi-level taxonomy to connect cultural values to personal agency across versions.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: reference
+    attributes:
+      label: Related Domains
+      options:
+        - label: Philosophy
+        - label: Ethics
+        - label: AI System Design
+        - label: Governance & Policy
+        - label: Contributor Workflow
