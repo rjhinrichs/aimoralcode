@@ -1,7 +1,6 @@
 # AI Moral Code  
 *Ethically Governed. Human Authored. AI Partnered.*
 
-
 [![Release](https://img.shields.io/github/v/release/rjhinrichs/aimoralcode)](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.3)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15362376.svg)](https://doi.org/10.5281/zenodo.15362376)
 [![HTTPS Secured](https://img.shields.io/badge/secure-https-green.svg)](https://aimoralcode.org)
@@ -28,14 +27,19 @@ This framework was developed through a **semantic synthesis of 291+ global AI et
 
 These values inform sector-specific modeling practices for education, healthcare, digital governance, and autonomous systems. The framework prioritizes **practical alignment**, **cross-cultural adaptability**, and **long-term ethical accountability**.
 
+---
+
 ## 🔗 Live Site
 
 Explore the live deployment:  
 👉 [https://aimoralcode.org](https://aimoralcode.org)
 
+---
+
 ## 📦 Public Release
 
 **Current Release – v1.0.3** includes:
+
 - Full HTML site (index, about, blog, contact)
 - Six published blog essays grounded in AI ethics research
 - Visual architecture diagram of the NRBC model
@@ -44,6 +48,8 @@ Explore the live deployment:
 - Complete source bundles (`.zip`, `.tar.gz`)
 
 🔖 [View Release v1.0.3](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.3)
+
+---
 
 ## 📖 Citation
 
