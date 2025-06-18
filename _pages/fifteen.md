@@ -6,7 +6,7 @@ permalink: /fifteen/
 
 # From 15 to 12: Finalizing the Canonical Values of the AI Moral Code
 
-Between 2006–2025, over 291 AI ethics documents were reviewed in constructing the AI Moral Code. Early drafts included up to 15 candidate values. Through statistical validation, ethical pruning, and frequency weighting, a final set of **12 Canonical Values** emerged.
+Between 2006–2025, over 291 AI ethics documents were reviewed in constructing the AI Moral Code. Early drafts included up to 15 candidate values. Through statistical validation, ethical pruning, and frequency weighting, a final set of **12 Canonical Values** emerged. Canonical, as used here, does not imply fixed or universal values, but those with consistent ethical relevance, frequency, and institutional recognition across 291+ AI ethics documents (2006–2025).
 
 This list replaces the earlier "Fifteen" page and represents the core ethical spine of the NRBC (Normative, Regulatory, Behavioral, and Conceptual) framework. Each value below is listed with its conceptual definition and its canonical rank.
 
