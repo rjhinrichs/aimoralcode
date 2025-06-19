@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Introduction"
+permalink: /introduction/
+---
+
 ## Canonical Values: A Three-Tier Ethical Structure
 
 The AI Moral Code is rooted in twelve empirically derived values, stratified through cross-sectoral analysis of over 291 global AI ethics documents (2006–2025). These values are not aspirational slogans—they are semantically grounded, statistically weighted, and designed to evolve alongside technology and society.
@@ -5,6 +11,7 @@ The AI Moral Code is rooted in twelve empirically derived values, stratified thr
 We organize them into three concentric tiers, each with a distinct ethical function:
 
 ### 1. Moral Core Values
+
 These are foundational, intrinsic commitments that appear consistently across all sectors. They represent non-negotiable ethical imperatives in the design and governance of AI:
 
 - **Justice** – Procedural fairness and distributive integrity  
@@ -17,6 +24,7 @@ These are foundational, intrinsic commitments that appear consistently across al
 These values form the gravitational center of ethical AI—an inner compass through which all other values must align.
 
 ### 2. Instrumental Values
+
 These values activate the Core—making ethics not only meaningful, but actionable. They are the engineering principles of moral resilience:
 
 - **Innovation** – Responsible creativity for long-term societal benefit  
@@ -25,6 +33,7 @@ These values activate the Core—making ethics not only meaningful, but actionab
 They are not merely extensions of efficiency or performance, but reflect value-sensitive design that scales across time, ecosystems, and generations.
 
 ### 3. Conditional Values
+
 These values are context-sensitive. They rise in relevance depending on the domain, risk profile, use case, or sociocultural conditions:
 
 - **Accountability** – Enforcement, traceability, and recourse  
