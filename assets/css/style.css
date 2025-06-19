@@ -195,3 +195,14 @@ footer {
 .blog-container li {
   margin-bottom: 1rem;
 }
+/* Floating Logo in Top Right */
+#header-logo-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+#header-logo {
+  height: 60px;
+}

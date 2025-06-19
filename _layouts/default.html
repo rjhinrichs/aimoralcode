@@ -11,12 +11,13 @@
 </head>
 <body>
 
-<!-- Logo in upper right -->
-<div style="position: fixed; top: 1rem; right: 1rem; z-index: 1000;">
+<!-- Logo in upper right using external CSS -->
+<div id="header-logo-container">
   <a href="/">
-    <img src="{{ '/assets/ai_moral_code_logo.png' | relative_url }}" alt="AI Moral Code Logo" style="height: 60px;">
+    <img id="header-logo" src="{{ '/assets/ai_moral_code_logo.png' | relative_url }}" alt="AI Moral Code Logo">
   </a>
 </div>
+
 
 <!-- Sidebar Navigation -->
 {% include sidebar.html %}
