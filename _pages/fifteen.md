@@ -1,49 +1,28 @@
 ---
 layout: page
-title: "Canonical Values"
+title: "The Canonical Values"
 permalink: /fifteen/
 ---
 
-# From 15 to 12: Finalizing the Canonical Values of the AI Moral Code
+### The Twelve Canonical Values of the AI Moral Code
 
-Between 2006–2025, over 291 AI ethics documents were reviewed in constructing the AI Moral Code. Early drafts included up to 15 candidate values. Through statistical validation, ethical pruning, and frequency weighting, a final set of **12 Canonical Values** emerged. Canonical, as used here, does not imply fixed or universal values, but those with consistent ethical relevance, frequency, and institutional recognition across 291+ AI ethics documents (2006–2025).
+These twelve values emerged through a longitudinal analysis of 291+ global AI ethics documents from 2006–2025. While the original framework referenced 15 moral anchors, this refined set is statistically validated using frequency analysis, ethical anchoring, and NRBC domain mapping. Definitions are derived from the `MASTER_Canonical_Value_Analysis.xlsx` dataset.
 
-This list replaces the earlier "Fifteen" page and represents the core ethical spine of the NRBC (Normative, Regulatory, Behavioral, and Conceptual) framework. Each value below is listed with its conceptual definition and its canonical rank.
+| Value        | Definition | AI Ethics Implication | NRBC Domain |
+|--------------|------------|------------------------|--------------|
+| **Beneficence** | Promote the well-being of humanity through AI outcomes and policies. | Anchors the moral obligation of AI to improve quality of life. | Normative |
+| **Dignity** | Recognize intrinsic worth and moral standing of human beings. | Prevents objectification and reduction of persons to data points. | Regulatory |
+| **Fairness** | Ensure just treatment and absence of bias in AI systems. | Ties to algorithmic parity, distributive justice, and procedural equity. | Regulatory |
+| **Justice** | Uphold the equitable distribution of benefits and burdens. | Guides redress and recourse mechanisms in AI deployments. | Regulatory |
+| **Responsibility** | Accept accountability for AI decisions, actions, and outcomes. | Grounds ethical traceability and organizational liability. | Behavioral |
+| **Trust** | Foster justified reliance on AI through transparency and integrity. | Enables user confidence and system credibility. | Behavioral |
+| **Innovation** | Advance beneficial technical progress with moral foresight. | Balances experimentation with societal stewardship. | Normative |
+| **Sustainability** | Align AI with long-term ecological, economic, and social well-being. | Prevents short-termism and reinforces future-proof design. | Normative |
+| **Accountability** | Enforce answerability through oversight and governance structures. | Supports auditability and meaningful consequence frameworks. | Regulatory |
+| **Autonomy** | Respect individual agency and consent in AI interactions. | Prevents overreach, nudging, and manipulation. | Personal |
+| **Inclusivity** | Integrate diverse voices in AI design and policy formation. | Safeguards pluralism and mitigates systemic exclusion. | Cultural |
+| **Privacy** | Protect personal information and decisional boundaries. | Operationalizes data minimization and ethical surveillance limits. | Regulatory |
 
 ---
 
-### 1. Beneficence
-*Promoting well-being and the good of others through AI systems.*
-
-### 2. Dignity
-*Upholding the inherent worth and respectful treatment of all persons.*
-
-### 3. Fairness
-*Ensuring just and impartial treatment in AI outcomes and processes.*
-
-### 4. Justice
-*Embedding distributive and procedural justice into AI design.*
-
-### 5. Responsibility
-*Assigning clear moral and operational accountability.*
-
-### 6. Trust
-*Fostering confidence in the reliability and moral integrity of AI.*
-
-### 7. Innovation
-*Encouraging progress without compromising moral safeguards.*
-
-### 8. Sustainability
-*Aligning AI development with long-term planetary stewardship.*
-
-### 9. Accountability
-*Guaranteeing that decision-makers answer for AI's actions.*
-
-### 10. Autonomy
-*Respecting agency and informed choice in human-AI interaction.*
-
-### 11. Inclusivity
-*Broadening participatory voices and access to AI benefits.*
-
-### 12. Privacy
-*Safeguarding personal data and boundaries of surveillance.*
+_This canonical structure is designed for implementation within the NRBC (Normative–Regulatory–Behavioral–Cultural) Framework. Further refinements may evolve as public deliberation and ethical scrutiny expand._
