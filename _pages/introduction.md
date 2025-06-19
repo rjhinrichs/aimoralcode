@@ -1,58 +1,37 @@
----
-title: "Introduction"
-layout: page
-order: 1
-permalink: /introduction/
-description: "An overview of the AI Moral Code’s origin, goals, and ethical foundations."
----
 
 <section>
-  <h1>Why an AI Moral Code?</h1>
+  <h2>Canonical Values: A Three-Tier Ethical Structure</h2>
   <p>
-    As artificial intelligence transitions from narrow tools to autonomous systems,
-    it becomes clear that technical performance alone is not enough. AI must not only make decisions—it must make moral ones.
+    The AI Moral Code is rooted in twelve empirically derived values, stratified through cross-sectoral analysis of over 291 global AI ethics documents (2006–2025). These values are not aspirational slogans—they are semantically grounded, statistically weighted, and designed to evolve alongside technology and society.
   </p>
-</section>
 
-<section>
-  <h2>The Problem</h2>
-  <p>
-    Existing ethical frameworks are fragmented across disciplines. Developers lack operational tools.
-    Regulators lag behind innovation. Philosophers warn of existential risks, while users face algorithmic opacity.
-    We need a unifying moral architecture—one that is rigorous, adaptive, and machine-readable.
-  </p>
-</section>
-
-<section>
-  <h2>The Solution: NRBC Architecture</h2>
-  <p>
-    The AI Moral Code offers a multi-layered framework rooted in four ethical domains:
-  </p>
+  <h3>1. Moral Core Values</h3>
+  <p>These are foundational, intrinsic commitments that appear consistently across all sectors. They represent non-negotiable ethical imperatives in the design and governance of AI.</p>
   <ul>
-    <li><strong>Normative:</strong> moral imperatives, duties, and universal values</li>
-    <li><strong>Regulatory:</strong> law, compliance, governance mechanisms</li>
-    <li><strong>Behavioral:</strong> expected norms in social and cultural contexts</li>
-    <li><strong>Conceptual:</strong> adaptive logic for AI development and iteration</li>
+    <li><strong>Justice</strong> – Procedural fairness and distributive integrity</li>
+    <li><strong>Dignity</strong> – Recognition of inherent human worth</li>
+    <li><strong>Responsibility</strong> – Ownership of outcomes, intentions, and impacts</li>
+    <li><strong>Trust</strong> – A social contract for safe and transparent systems</li>
+    <li><strong>Fairness</strong> – Equity across individuals and groups</li>
+    <li><strong>Beneficence</strong> – Proactive promotion of well-being</li>
   </ul>
-  <p>
-    Together, these layers support ethical alignment across design, deployment, and system evolution.
-  </p>
-</section>
+  <p>These values form the inner gravitational center of ethical AI.</p>
 
-<section>
-  <h2>How to Use This Site</h2>
+  <h3>2. Instrumental Values</h3>
+  <p>These values activate the Core—making ethics not only meaningful, but actionable. They’re the engineering principles of moral resilience.</p>
   <ul>
-    <li>📊 <a href="/value-browser/">Canonical Values Browser</a> — Explore and filter ethical values</li>
-    <li>📚 <a href="/values/">NRBC Taxonomy</a> — See the structural diagrams</li>
-    <li>🧠 <a href="/simulation-methodology/">Simulation Methodology</a> — Understand how values are tested</li>
-    <li>🔍 <a href="/glossary/">Glossary</a> — Define key ethical and AI terms</li>
+    <li><strong>Innovation</strong> – Responsible creativity for long-term societal benefit</li>
+    <li><strong>Sustainability</strong> – Commitment to environmental and systemic longevity</li>
   </ul>
-</section>
+  <p>These values bridge principled design with future-readiness.</p>
 
-<section>
-  <h2>Who This Is For</h2>
-  <p>
-    The AI Moral Code serves developers, ethicists, researchers, policy architects, and educators.
-    It is especially relevant for those working in autonomous systems, AGI alignment, cybersecurity, and applied AI governance.
-  </p>
+  <h3>3. Conditional Values</h3>
+  <p>Context-sensitive and sector-dependent, these values rise in relevance based on use case, risk profile, or cultural variation.</p>
+  <ul>
+    <li><strong>Accountability</strong> – Enforcement, traceability, and recourse</li>
+    <li><strong>Autonomy</strong> – Protection of agency and informed consent</li>
+    <li><strong>Privacy</strong> – Control over data, identity, and personal boundaries</li>
+    <li><strong>Inclusivity</strong> – Representational and procedural equity</li>
+  </ul>
+  <p>These values adapt the Code to dynamic real-world conditions.</p>
 </section>
