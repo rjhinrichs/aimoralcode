@@ -195,14 +195,10 @@ footer {
 .blog-container li {
   margin-bottom: 1rem;
 }
-/* Floating Logo in Top Right */
-#header-logo-container {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-}
-
+/* Override global image style for floating logo */
 #header-logo {
+  display: inline;
+  margin: 0;
+  max-width: none;
   height: 60px;
 }
