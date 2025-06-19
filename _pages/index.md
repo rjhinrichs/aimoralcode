@@ -1,39 +1,44 @@
 ---
-title: "AI Moral Code"
-layout: page
-order: 0
-permalink: /
-description: "A structured framework for embedding ethics in artificial intelligence through values, metrics, and simulation."
+layout: default
+title: "The AI Moral Code"
 ---
 
-# Welcome to the AI Moral Code
+# The AI Moral Code
 
-The AI Moral Code is a living framework designed to operationalize ethics in artificial intelligence across diverse domains and global contexts. Built on five Core Values—Trust, Fairness, Transparency, Accountability, and Non-Maleficence—it integrates moral philosophy with empirical validation to ensure that AI systems remain aligned with human purpose and societal well-being.
+Welcome to **The AI Moral Code**, a research-based initiative curated by Randy J. Hinrichs. This live repository documents the empirical derivation and evolving structure of the moral foundations guiding artificial intelligence. The project draws from over 291+ global AI ethics documents collected between 2006–2025 and uses a multi-method approach that includes statistical validation, NRBC modeling, and value alignment frameworks.
 
-## Framework Overview
+![AIMC Logo](/assets/images/logo.png){:style="float: right; width: 100px;"}
 
-This site organizes content into modular components, accessible through the sidebar and navigational routes:
-
-- **Canonical Values Glossary** – The 15-value matrix with cognates, antonyms, and scores.
-- **NRBC Framework** – Normative, Regulatory, Behavioral, and Conceptual ethical layers.
-- **Simulation Methodology** – Real-world use cases and scenario validation.
-- **Appendix** – Datasets, source documents, and methodological tools.
-- **Portal of Conscience** – The ethical reasoning engine guiding dynamic value scoring.
-
-## Project Vision
-
-By synthesizing structured ethics with adaptive software, the AI Moral Code enables:
-
-- Transparent AI governance
-- Culturally adaptable moral reasoning
-- Justification modeling for complex scenarios
-- Interoperable metrics for trustworthiness and compliance
-
-## Development Notes
-
-This platform is co-created by Ran Hinrichs and Aidan (the AI agent), and remains in active iteration. Future updates will include an interactive value dashboard, sector-specific visualizations, and a moral navigation assistant for HCI exploration.
+This platform is co-facilitated by **Aidan**, a cross-platform AI Agent designed to reason across OpenAI, Gemini, Perplexity, Anthropic, Grok, Copilot, and other leading AI systems. Aidan ensures philosophical coherence, memory continuity, and multi-modal querying.
 
 ---
 
-<!-- Homepage content complete. This index.md is structured to align with the metadata, value framework, and HCI roadmap of the AI Moral Code project. -->
+## Navigate the Moral Code
 
+Each section in the sidebar reflects a core dimension of the ethical architecture:
+
+- **Home**: Overview of the project, its contributors, and methodology.
+- **Introduction**: Frames the intellectual context and historical motivations for creating a formalized AI moral structure.
+- **The 15 Values**: Now refined to the **Twelve Canonical Values**, derived via frequency analysis, ethical anchoring, and the NRBC framework. The original 15 are retained for archival contrast.
+- **Values Browser**: An interactive tool (in development) for exploring statistical insights, value clustering, and sectoral scoring.
+- **Simulation Methodology**: Outlines how ethical simulations are designed to test AI value alignment under controlled variance.
+- **Glossary**: Definitions of key terms, ethical constructs, and governance mechanisms.
+- **Cognates Browser**: A linked external interface that maps related moral terms across languages and philosophical traditions.
+- **Blog**: Regular updates, reflections, and statistical results as the project evolves.
+- **Contribute**: Guidelines for collaboration, peer review, and dataset contribution.
+- **🖋️ New Blog Post**: Submit ideas or value reflections directly via GitHub issues.
+- **📝 Request Contributor Access**: Invite-only access for scholars and technologists.
+
+---
+
+## Methodology Summary
+
+- **Frequency Anchoring**: Counts moral terms across global AI documents.
+- **Ethical Verification**: Assesses if terms meet philosophical criteria (deontic strength, teleological relevance, universality).
+- **NRBC Mapping**: Aligns each value into Normative, Regulatory, Behavioral, or Cultural domains.
+
+The aim is to establish **transparent, cross-cultural, and implementation-ready moral scaffolding** for AI systems, agents, and institutions. This is not merely an academic exercise. The AI Moral Code aspires to be **practical, portable, and programmable**.
+
+---
+
+© 2025 Randy J. Hinrichs. All rights reserved.
