@@ -11,9 +11,7 @@ description: "A Methodological and Empirical Approach to Ethical AI"
     <p><strong>Author:</strong> Randy J. Hinrichs, Professor of Practice, Norwich University</p>
     <p><strong>Contact:</strong> <a href="mailto:rhinrich@norwich.edu">rhinrich@norwich.edu</a></p>
   </div>
-  <div>
-    <img src="/assets/ai_moral_code_logo.png" alt="AI Moral Code Logo" style="max-width: 150px; height: auto; margin-left: 2rem;" />
-  </div>
+
 </section>
 
 <section>
