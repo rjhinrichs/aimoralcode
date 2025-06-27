@@ -8,6 +8,7 @@ author: Randy J. Hinrichs
 featured: true
 ---
 
+
 ## Overview
 
 Following the IEEE ICAD 2025 Conference, I am releasing an updated derivation of the **12 Canonical Values of the AI Moral Code**. This marks a significant refinement from the earlier 2024 version, supported by deeper semantic modeling and simulation resilience analysis.
@@ -60,4 +61,10 @@ This refined canonical set enables a more **robust, empirically grounded moral c
 
 ---
 
-*Download the full report: "Deriving the 12 Canonical Values of the AI Moral Code Update 1.0" (June 2025).*
+[📄 Download the full white paper (PDF)](/docs/papers/Deriving_the_12_Canonical_Values_of_the_AI_Moral_Code_Update_1.0.pdf)
+)
+This paper is part of the AI Moral Code research series and is under consideration for formal publication.  
+
+© 2025 Randy J. Hinrichs. Citation and academic use permitted with attribution.  
+Commercial use, derivative works, or redistribution prohibited without written consent.
+
