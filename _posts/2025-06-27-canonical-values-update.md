@@ -19,6 +19,19 @@ The update draws on over 291 AI ethics documents spanning from 2006 to 2025. Usi
 
 Each value’s **Composite Value Score (CVS)** was computed using:
 
+CVS = ∑ (TF × IDF × SWI × CM)
+
+Where:
+•	TF x IDF anchors frequency context
+•	SWI calibrates sectoral legitimacy
+•	CM (Contextual Multiplier) boosts terms in high-impact zones (titles, principle clauses), and incorporates confidence scoring and simulation relevance.
+
+Legend:
+TF = Term Frequency
+IDF = Inverse Document Frequency.
+SWI = Sector Weight Index
+CM = Contextual Multiplier
+
 
 This formula grounds the values in linguistic relevance, sectoral legitimacy, and ethical utility.
 
