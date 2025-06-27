@@ -10,6 +10,7 @@ tags: \[AI Moral Code, IEEE ICAD, canonical values, ethical AI]
 
 author: Randy J. Hinrichs
 
+featured: true
 ---
 
 
