@@ -1,7 +1,15 @@
+name: Create Blog Post
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_posts/**'
+
 jobs:
   commit-post:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
