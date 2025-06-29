@@ -1,0 +1,34 @@
+name: New Blog Post
+description: Submit a new blog post for automated publishing
+title: "[Blog] "
+labels: [blog]
+body:
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: Who wrote this post?
+      placeholder: Ran Hinrichs
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated tags (e.g., ai-ethics, governance, icad)
+      placeholder: ai-ethics, governance, icad
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Blog Content
+      description: Use Markdown. Avoid frontmatter or date stamps.
+      placeholder: |
+        ## How the AI Moral Code Learned from the IEEE ICAD Conference
+
+        The IEEE ICAD event in Boston gave us...
+    validations:
+      required: true
