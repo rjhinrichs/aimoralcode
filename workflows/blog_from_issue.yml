@@ -1,4 +1,4 @@
-name: Create Blog Post from Issue
+name: Create Blog Post from Issue by Ran
 
 on:
   issues:
