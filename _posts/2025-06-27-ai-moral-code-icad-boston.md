@@ -21,3 +21,5 @@ This aligns directly with the AI Moral Code’s **Reflexive Layer**—the layer 
 ICAD forced the question: Can AI ethics evolve in real time?
 
 Our answer: Only if the values are *coded to evolve*. That is the bet the AI Moral Code makes—and ICAD showed us we are not alone.
+
+Blog back or write me at rhinrich@norwich.edu.
