@@ -13,15 +13,18 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Set up Node.js (for slugify)
+    - name: Set up Node.js for slugify
       uses: actions/setup-node@v4
       with:
         node-version: '18'
 
-    - name: Install slugify
-      run: npm install slugify
+    - name: Install slugify and GitHub CLI
+      run: |
+        npm install slugify
+        sudo apt-get update
+        sudo apt-get install gh -y
 
-    - name: Extract metadata and generate post
+    - name: Extract metadata and generate blog post
       id: create_post
       run: |
         TITLE="${{ github.event.issue.title }}"
@@ -31,26 +34,27 @@ jobs:
         ISSUE_NUMBER=${{ github.event.issue.number }}
         FILENAME="_posts/${DATE}-${ISSUE_NUMBER}-${SLUG}.md"
 
-        # Extract metadata if present
+        mkdir -p _posts
+
+        # Metadata extraction
         AUTHOR=$(echo "$BODY" | grep -i '^author:' | sed 's/^author:[ ]*//I' || echo "Unknown")
         TAGS=$(echo "$BODY" | grep -i '^tags:' | sed 's/^tags:[ ]*//I' || echo "")
 
         echo "Creating $FILENAME"
-        echo "---" > "$FILENAME"
-        echo "title: \"$TITLE\"" >> "$FILENAME"
-        echo "date: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> "$FILENAME"
-        echo "layout: post" >> "$FILENAME"
-        echo "author: \"$AUTHOR\"" >> "$FILENAME"
-        if [ ! -z "$TAGS" ]; then
-          echo "tags: [$TAGS]" >> "$FILENAME"
-        fi
-        echo "---" >> "$FILENAME"
-        echo "" >> "$FILENAME"
-
-        # Remove metadata lines from body and append clean content
-        echo "$BODY" | grep -viE '^(author|tags):' >> "$FILENAME"
+        {
+          echo "---"
+          echo "title: \"$TITLE\""
+          echo "date: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          echo "layout: post"
+          echo "author: \"$AUTHOR\""
+          if [ ! -z "$TAGS" ]; then echo "tags: [$TAGS]"; fi
+          echo "---"
+          echo ""
+          echo "$BODY" | grep -viE '^(author|tags):'
+        } > "$FILENAME"
 
         echo "FILENAME=$FILENAME" >> $GITHUB_ENV
+        echo "SLUG=$SLUG" >> $GITHUB_ENV
 
     - name: Commit blog post
       uses: stefanzweifel/git-auto-commit-action@v5
@@ -64,12 +68,10 @@ jobs:
       run: |
         REPO=${{ github.repository }}
         ISSUE_NUMBER=${{ github.event.issue.number }}
-        SLUG=$(npx slugify "${{ github.event.issue.title }}" --lower --separator "-")
-        DATE=$(date +%Y-%m-%d)
-        POST_URL="https://${REPO#*/}.github.io/${SLUG}"
+        POST_URL="https://rjhinrichs.github.io/aimoralcode/${{ env.SLUG }}"
 
         gh api repos/$REPO/issues/$ISSUE_NUMBER/comments \
-          -f body="✅ Blog post published at [$POST_URL]($POST_URL) and saved as \`$FILENAME\`"
+          -f body="✅ Blog post published at [$POST_URL]($POST_URL) and saved as \`${{ env.FILENAME }}\`"
 
         gh api repos/$REPO/issues/$ISSUE_NUMBER \
           -X PATCH -F state=closed
