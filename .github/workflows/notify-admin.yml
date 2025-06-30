@@ -1,15 +1,15 @@
-name: Notify Admin on Contributor Blog Submission
+name: Notify Admin of New Blog Contribution
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened]
 
 jobs:
-  notify-admin:
-    if: github.event.label.name == 'blog'
+  send-email:
+    if: contains(github.event.issue.labels.*.name, 'blog')
     runs-on: ubuntu-latest
     steps:
-      - name: Send email to admin
+      - name: Send admin notification email
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -17,10 +17,11 @@ jobs:
           username: ${{ secrets.ADMIN_EMAIL_USERNAME }}
           password: ${{ secrets.ADMIN_EMAIL_PASSWORD }}
           subject: "New Blog Contribution Received"
-          to: hinr6383@vandals.uidaho.edu
-          from: AI Moral Code Bot <${{ secrets.ADMIN_EMAIL_USERNAME }}>
+          to: ${{ secrets.ADMIN_EMAIL_USERNAME }}
+          from: "AI Moral Code Notifier <${{ secrets.ADMIN_EMAIL_USERNAME }}>"
+          secure: true
           body: |
-            A new blog post was submitted and labeled 'blog'.
-            Repository: ${{ github.repository }}
-            Title: ${{ github.event.issue.title }}
-            URL: ${{ github.event.issue.html_url }}
+            A new blog post has been submitted to the AI Moral Code repository:
+            👉 https://github.com/rjhinrichs/aimoralcode/issues
+
+            Please review the submission and determine whether to publish, respond, or move it to the wiki queue.
