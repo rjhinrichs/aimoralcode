@@ -1,71 +1,66 @@
-name: Create Blog Post from Issue
+
+name: Create Blog Post
 
 on:
   issues:
     types: [opened, edited]
 
 jobs:
-  blog_post_generator:
+  create-blog-post:
     if: contains(github.event.issue.labels.*.name, 'blog')
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js (for slugify)
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: Set up Node.js for slugify
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-    - name: Install slugify
-      run: npm install slugify
+      - name: Install slugify
+        run: npm install -g slugify
 
-    - name: Extract metadata and generate post
-      id: create_post
-      run: |
-        TITLE="${{ github.event.issue.title }}"
-        BODY="${{ github.event.issue.body }}"
-        DATE=$(date +%Y-%m-%d)
-        SLUG=$(npx slugify "$TITLE" --lower --separator "-")
-        ISSUE_NUMBER=${{ github.event.issue.number }}
-        FILENAME="_posts/${DATE}-${SLUG}.md"
+      - name: Generate blog post from issue
+        id: generate
+        run: |
+          TITLE="${{ github.event.issue.title }}"
+          BODY="${{ github.event.issue.body }}"
+          ISSUE_NUMBER="${{ github.event.issue.number }}"
+          REPO="${{ github.repository }}"
+          AUTHOR="${{ github.event.issue.user.login }}"
+          DATE=$(date +'%Y-%m-%d')
+          SLUG=$(slugify "$TITLE" --lower --separator "-")
+          FILENAME="_posts/${DATE}-${SLUG}.md"
 
-        # Extract metadata
-        AUTHOR=$(echo "$BODY" | grep -i '^author:' | sed 's/^author:[ ]*//I' || echo "Unknown")
-        TAGS=$(echo "$BODY" | grep -i '^tags:' | sed 's/^tags:[ ]*//I' || echo "")
+          echo "TITLE=$TITLE" >> $GITHUB_ENV
+          echo "BODY<<EOF" >> $GITHUB_ENV
+          echo "$BODY" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          echo "FILENAME=$FILENAME" >> $GITHUB_ENV
+          echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
+          echo "POST_URL=https://aimoralcode.org/posts/${DATE}-${SLUG}/" >> $GITHUB_ENV
 
-        # Begin writing file
-        {
-          echo "---"
-          echo "title: \"$TITLE\""
-          echo "date: $DATE"
-          echo "tags: [$TAGS]"
-          echo "author: \"$AUTHOR\""
-          echo "layout: post"
-          echo "---"
-          echo ""
-          echo "$BODY" | grep -viE '^(author|tags):'
-        } > "$FILENAME"
+          echo "---" > "$FILENAME"
+          echo "title: \"$TITLE\"" >> "$FILENAME"
+          echo "date: $DATE" >> "$FILENAME"
+          echo "author: $AUTHOR" >> "$FILENAME"
+          echo "tags:" >> "$FILENAME"
+          echo "  - blog" >> "$FILENAME"
+          echo "---" >> "$FILENAME"
+          echo "" >> "$FILENAME"
 
-        echo "FILENAME=$FILENAME" >> $GITHUB_ENV
+          echo "$BODY" >> "$FILENAME"
 
-    - name: Commit blog post
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "New blog post from issue #${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
-        file_pattern: '_posts/*.md'
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Create ${{ env.FILENAME }}"
+          file_pattern: _posts/*.md
 
-    - name: Comment with preview link and close issue
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        REPO=${{ github.repository }}
-        ISSUE_NUMBER=${{ github.event.issue.number }}
-        SLUG=$(npx slugify "${{ github.event.issue.title }}" --lower --separator "-")
-        DATE=$(date +%Y-%m-%d)
-        POST_URL="https://${REPO#*/}.github.io/posts/${DATE}-${SLUG}"
-
-        gh api repos/$REPO/issues/$ISSUE_NUMBER/comments           -f body="✅ Blog post published at [$POST_URL]($POST_URL) and saved as \`$FILENAME\`"
-
-        gh api repos/$REPO/issues/$ISSUE_NUMBER           -X PATCH -F state=closed
+      - name: Comment and close issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments             -f body="✅ Blog post published at [${{ env.POST_URL }}](${{ env.POST_URL }}) and saved as \`${{ env.FILENAME }}\`"
+          gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}             -X PATCH -F state=closed
