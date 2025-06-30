@@ -65,6 +65,15 @@ description: "A Publishing Platform for Evaluating and Debating AI Ethics"
 </section>
 
 <section>
+  <h3>Governance for Submitting a Contributor Blog Post</h3>
+  <p>
+    This is a complete and functional governance process for your blog contribution and our publication process. We will intake and label your blog. It will pass through editorial stages from submission to canonical post. It will handle email notifications and contributor communication. The objective is to have a managed blog process driving for AI Moral Clarity, created by a field of experts:
+    <a href="/policies/governance" class="nav-link">Governance</a>
+  </p>
+</section>
+
+
+<section>
   <h3>Access QR Code</h3>
   <img src="/assets/AI_Moral_Code_QR.png" alt="QR Code to AI Moral Code" width="200" />
 </section>
