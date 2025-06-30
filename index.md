@@ -1,24 +1,29 @@
 ---
 layout: page
 title: "The AI Moral Code"
-description: "A Methodological and Empirical Approach to Ethical AI"
+description: "A Publishing Platform for Evaluating and Debating AI Ethics"
 ---
 
 <section style="display: flex; align-items: center; justify-content: space-between;">
   <div>
     <h1 style="margin-bottom: 0.5rem;">The AI Moral Code</h1>
-    <h2 style="font-weight: normal;">A Methodological and Empirical Approach to Ethical AI</h2>
+    <h2 style="font-weight: normal;">A Publishing Platform for Ethical AI Evaluation and Engagement</h2>
     <p><strong>Author:</strong> Randy J. Hinrichs, Professor of Practice, Norwich University</p>
     <p><strong>Contact:</strong> <a href="mailto:rhinrich@norwich.edu">rhinrich@norwich.edu</a></p>
   </div>
-
 </section>
 
 <section>
-  <h3>Abstract</h3>
+  <h3>What is This Site?</h3>
   <p>
-    This paper presents a methodological and empirical framework for the AI Moral Code, based on the Normative, Regulatory, Behavioral, and Conceptual (NRBC) architecture. Analyzing 291 AI ethics documents (2006–2025), it identifies high-frequency values and forecasts emerging trends. The framework translates ethical priorities into system design and governance, offering evidence-based insights and supporting value alignment across sectors such as healthcare, education, justice, and autonomous vehicle technologies.
+    This website is a publishing and evaluation environment for exploring, debating, and applying the <strong>AI Moral Code</strong>. Whether you are an academic, engineer, policy maker, or student, you can:
   </p>
+  <ul>
+    <li>Read and respond to blog posts using the AI Moral Code as a lens for analysis</li>
+    <li>Submit your own content to test how values interact with real-world AI research</li>
+    <li>Apply the NRBC framework to evaluate papers, technologies, or policies</li>
+    <li>Track how value alignment changes over time across sectors</li>
+  </ul>
 </section>
 
 <section>
@@ -44,6 +49,14 @@ description: "A Methodological and Empirical Approach to Ethical AI"
     {% endfor %}
     <li><a href="/blog.html">View All Posts</a></li>
   </ul>
+</section>
+
+<section>
+  <h3>Submit a Blog Post</h3>
+  <p>
+    Want to contribute? You can submit a blog post using the AI Moral Code template and it will be auto-published to our platform:
+    <a href="https://github.com/rjhinrichs/aimoralcode/issues/new?template=new-blogpost.yml">Submit a New Blog Post</a>
+  </p>
 </section>
 
 <section>
