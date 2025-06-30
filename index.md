@@ -27,10 +27,15 @@ description: "A Publishing Platform for Evaluating and Debating AI Ethics"
 </section>
 
 <section>
-  <h3>Download White Paper</h3>
+  <h3>Download the White Papers</h3>
   <p>
     <a href="/AI_Moral_Code_White_Paper.pdf" class="button" target="_blank" rel="noopener noreferrer">
       📄 Download the Full AI Moral Code White Paper (PDF)
+    </a>
+  </p>
+  <p>
+    <a href="/Deriving_the_12_Canonical_Values_of_the_AI_Moral_Code_Update_1.0.pdf" class="button" target="_blank" rel="noopener noreferrer">
+      📄 Download the AI Moral Code ICAD Applications & Challenge (PDF)
     </a>
   </p>
 </section>
