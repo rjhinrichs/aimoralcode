@@ -1,34 +1,36 @@
 name: New Blog Post
-description: Submit a new blog post for automated publishing
-title: "[Blog] "
-labels: [blog]
+description: Submit a new blog post for publication
+title: "[BLOG] "
+labels: ["blog"]
 body:
+  - type: input
+    id: title
+    attributes:
+      label: Blog Post Title
+      description: The title of your blog post
+    validations:
+      required: true
+
   - type: input
     id: author
     attributes:
-      label: Author
-      description: Who wrote this post?
-      placeholder: Ran Hinrichs
+      label: Author Name
+      description: Your name (as you want it credited)
     validations:
       required: true
 
   - type: input
     id: tags
     attributes:
-      label: Tags
-      description: Comma-separated tags (e.g., ai-ethics, governance, icad)
-      placeholder: ai-ethics, governance, icad
+      label: Tags (comma-separated)
+      description: Example: ai-ethics, simulation, moral-code
     validations:
       required: false
 
   - type: textarea
-    id: content
+    id: body
     attributes:
       label: Blog Content
-      description: Use Markdown. Avoid frontmatter or date stamps.
-      placeholder: |
-        ## How the AI Moral Code Learned from the IEEE ICAD Conference
-
-        The IEEE ICAD event in Boston gave us...
+      description: Write your full blog post in Markdown format
     validations:
       required: true
