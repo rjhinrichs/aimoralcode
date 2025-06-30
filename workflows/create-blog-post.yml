@@ -1,66 +1,77 @@
 
-name: Create Blog Post
+nname: Create Blog Post from Issue
 
 on:
   issues:
     types: [opened, edited]
 
 jobs:
-  create-blog-post:
+  create_blog_or_wiki_draft:
     if: contains(github.event.issue.labels.*.name, 'blog')
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js for slugify
-        uses: actions/setup-node@v3
+      - name: Set up Node.js (for slugify)
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
 
       - name: Install slugify
-        run: npm install -g slugify
+        run: npm install slugify
 
-      - name: Generate blog post from issue
-        id: generate
+      - name: Create filename and folder
+        id: vars
         run: |
           TITLE="${{ github.event.issue.title }}"
-          BODY="${{ github.event.issue.body }}"
-          ISSUE_NUMBER="${{ github.event.issue.number }}"
-          REPO="${{ github.repository }}"
-          AUTHOR="${{ github.event.issue.user.login }}"
-          DATE=$(date +'%Y-%m-%d')
-          SLUG=$(slugify "$TITLE" --lower --separator "-")
-          FILENAME="_posts/${DATE}-${SLUG}.md"
-
+          DATE=$(date +%Y-%m-%d)
+          SLUG=$(npx slugify "$TITLE" --lower --separator "-")
+          FILENAME="${DATE}-${SLUG}.md"
           echo "TITLE=$TITLE" >> $GITHUB_ENV
-          echo "BODY<<EOF" >> $GITHUB_ENV
-          echo "$BODY" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo "DATE=$DATE" >> $GITHUB_ENV
+          echo "SLUG=$SLUG" >> $GITHUB_ENV
           echo "FILENAME=$FILENAME" >> $GITHUB_ENV
-          echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
-          echo "POST_URL=https://aimoralcode.org/posts/${DATE}-${SLUG}/" >> $GITHUB_ENV
 
-          echo "---" > "$FILENAME"
-          echo "title: \"$TITLE\"" >> "$FILENAME"
-          echo "date: $DATE" >> "$FILENAME"
-          echo "author: $AUTHOR" >> "$FILENAME"
-          echo "tags:" >> "$FILENAME"
-          echo "  - blog" >> "$FILENAME"
-          echo "---" >> "$FILENAME"
-          echo "" >> "$FILENAME"
+      - name: Create markdown file in wiki-drafts
+        run: |
+          mkdir -p wiki-drafts
+          BODY="${{ github.event.issue.body }}"
+          AUTHOR=$(echo "$BODY" | grep -i '^author:' | sed 's/^author:[ ]*//I' || echo "Unknown")
+          TAGS=$(echo "$BODY" | grep -i '^tags:' | sed 's/^tags:[ ]*//I' || echo "")
 
-          echo "$BODY" >> "$FILENAME"
+          echo "---" > wiki-drafts/$FILENAME
+          echo "title: \"$TITLE\"" >> wiki-drafts/$FILENAME
+          echo "date: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> wiki-drafts/$FILENAME
+          echo "layout: post" >> wiki-drafts/$FILENAME
+          echo "author: \"$AUTHOR\"" >> wiki-drafts/$FILENAME
+          if [ ! -z "$TAGS" ]; then
+            echo "tags: [$TAGS]" >> wiki-drafts/$FILENAME
+          fi
+          echo "---" >> wiki-drafts/$FILENAME
+          echo "" >> wiki-drafts/$FILENAME
+          echo "$BODY" | grep -viE '^(author|tags):' >> wiki-drafts/$FILENAME
 
-      - name: Commit and push changes
+      - name: Commit wiki draft
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Create ${{ env.FILENAME }}"
-          file_pattern: _posts/*.md
+          commit_message: "Staged new wiki draft for admin review: $TITLE"
+          file_pattern: 'wiki-drafts/*.md'
 
-      - name: Comment and close issue
+      - name: Comment for admin review
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments             -f body="✅ Blog post published at [${{ env.POST_URL }}](${{ env.POST_URL }}) and saved as \`${{ env.FILENAME }}\`"
-          gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}             -X PATCH -F state=closed
+          REPO=${{ github.repository }}
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          gh api repos/$REPO/issues/$ISSUE_NUMBER/comments \
+            -f body="📝 Draft saved to \`wiki-drafts/${{ env.FILENAME }}\`.  
+            
+A maintainer (e.g., @ranhinrichs) must:
+- ✅ Add the \`admin-approved\` label to publish this to the blog
+- ✏️ Add \`needs-revision\` for feedback
+- 📄 Leave as-is to keep it in the wiki
+
+This process keeps our front page canonical while supporting community learning."
+
