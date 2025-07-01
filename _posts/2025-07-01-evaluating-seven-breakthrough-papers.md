@@ -7,12 +7,13 @@ author: Ran Hinrichs
 layout: post
 ---
 
+### 🧠 The AI Moral Code Evaluates Seven Breakthrough AI Papers  
+*By Ran Hinrichs, Norwich University – Vermont*
 
-🧠** The AI Moral Code evaluates seven breakthrough AI Papers
-By Ran Hinrichs, Norwich University – Vermont
 At this year’s IEEE ICAD Conference in Boston, where adaptive systems and ethical AI design took center stage, we conducted a real-time field test of the AI Moral Code. For the first time, a moral framework was applied not retrospectively, but during conference sessions. From across four tracks, seven papers were evaluated for ethical salience, structural embedding, and design foresight.
 
-In my presentation, _Advancing Ethical AI: A Methodological and Empirical Approach to the AI Moral Code_, I introduced a values-based framework drawn from nearly two decades of AI ethics literature. But what marked a turning point was the use of the Code not as post hoc critique, but as a live instrument for analyzing technical artifacts as _ethical test cases.
+In my presentation, _Advancing Ethical AI: A Methodological and Empirical Approach to the AI Moral Code_, I introduced a values-based framework drawn from nearly two decades of AI ethics literature. But what marked a turning point was the use of the Code not as post hoc critique, but as a live instrument for analyzing technical artifacts as _ethical test cases_.
+
 
 📄 **Full Presentation Now Available**  
 You can access the slides from my IEEE ICAD 2025 talk here:  
