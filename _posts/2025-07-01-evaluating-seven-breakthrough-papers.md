@@ -2,9 +2,11 @@
 title: "From Framework to Field Test: The AI Moral Code in Action at IEEE ICAD 2025"
 date: 2025-07-01
 tags: [ICAD, ai-ethics, ai-moral-code, conference-insights]
-author: Randy J. Hinrichs
+categories: blog
+author: Ran Hinrichs
 layout: post
 ---
+
 
 ## 🧠****
 By Ran Hinrichs, Norwich University – Vermont
