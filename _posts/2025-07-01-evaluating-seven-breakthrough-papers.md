@@ -8,7 +8,7 @@ layout: post
 ---
 
 
-## 🧠****
+## 🧠The AI Moral Code Launches at the IEEE ICAD Conference in Boston
 By Ran Hinrichs, Norwich University – Vermont
 At this year’s IEEE ICAD Conference in Boston, where adaptive systems and ethical AI design took center stage, we conducted a real-time field test of the AI Moral Code. For the first time, a moral framework was applied not retrospectively, but during conference sessions. From across four tracks, seven papers were evaluated for ethical salience, structural embedding, and design foresight.
 
