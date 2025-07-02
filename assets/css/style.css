@@ -78,6 +78,7 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  margin-left: 260px;
 }
 
 /* Sections */
@@ -126,10 +127,6 @@ section h3 {
 #sidebar li a:hover {
   background-color: #495057;
   border-radius: 4px;
-}
-
-main {
-  margin-left: 260px;
 }
 
 /* About Section */
@@ -205,6 +202,7 @@ main {
     margin-top: 0.5rem;
   }
 }
+
 /* Optional: Auto-adapt to user's system theme (dark mode) */
 @media (prefers-color-scheme: dark) {
   .header-logo {
