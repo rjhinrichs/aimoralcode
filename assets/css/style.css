@@ -150,3 +150,44 @@ main {
     margin-left: 0;
   }
 }
+
+
+/* New Header Redesign */
+.site-header {
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #007acc;
+  flex-wrap: wrap;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  height: 60px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #d1d5db;
+  margin-top: 0.2rem;
+}
+
+.global-nav a {
+  margin-left: 1rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.global-nav a:hover {
+  color: #ffffff;
+}
