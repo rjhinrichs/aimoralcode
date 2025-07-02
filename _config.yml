@@ -30,3 +30,4 @@ theme: null
 
 plugins:
   - jekyll-paginate
+
