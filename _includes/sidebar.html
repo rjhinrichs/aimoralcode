@@ -1,4 +1,10 @@
 <nav id="sidebar">
+  <div class="logo-container">
+    <a href="/">
+      <img src="/assets/img/ai-moral-code-logo.png" alt="AI Moral Code Logo" class="sidebar-logo">
+    </a>
+  </div>
+
   <ul class="sidebar-menu">
     <li><a href="/index.html">Home</a></li>
     <li><a href="/about/">About</a></li>
@@ -38,47 +44,8 @@
       toggle.addEventListener("click", function () {
         this.classList.toggle("active");
         const panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
+        if (panel) {
+          panel.style.display = panel.style.display === "block" ? "none" : "block";
         }
       });
-    });
-  });
-</script>
-
-<style>
-  .accordion-toggle {
-    background: none;
-    border: none;
-    color: #0366d6;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 0.5rem 0;
-    width: 100%;
-    text-align: left;
-  }
-
-  .accordion-toggle:hover {
-    text-decoration: underline;
-  }
-
-  .accordion-panel {
-    display: none;
-    padding-left: 1rem;
-  }
-
-  .accordion-toggle.active + .accordion-panel {
-    display: block;
-  }
-
-  #sidebar ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  #sidebar li {
-    margin-bottom: 0.5rem;
-  }
-</style>
+    }
