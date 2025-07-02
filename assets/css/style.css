@@ -185,14 +185,6 @@ main {
   border-radius: 0 0 8px 8px;
 }
 
-.header-logo {
-  max-width: 160px;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  filter: brightness(0) saturate(100%) invert(13%) sepia(2%) saturate(1268%) hue-rotate(152deg) brightness(96%) contrast(92%);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   #sidebar {
