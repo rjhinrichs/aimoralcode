@@ -26,7 +26,7 @@ defaults:
       author: "Randy J. Hinrichs"
 
 markdown: kramdown
-theme: minima
+theme: null
 
 plugins:
   - jekyll-paginate
