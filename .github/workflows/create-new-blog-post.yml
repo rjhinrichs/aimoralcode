@@ -1,89 +1,66 @@
-name: Create Blog Post from Issue
+name: Create New Blog Post
 
 on:
-  issues:
-    types: [opened, edited]
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Post title'
+        required: true
+        type: string
+      date:
+        description: 'Publish date in ISO format (e.g., 2025-07-05T12:00:00Z)'
+        required: true
+        type: string
+      author:
+        description: 'Author name'
+        required: true
+        type: string
+      tags:
+        description: 'Comma-separated list of tags (no brackets)'
+        required: true
+        type: string
+      summary:
+        description: 'Short post summary'
+        required: true
+        type: string
+      content:
+        description: 'Full Markdown body content'
+        required: true
+        type: string
 
 jobs:
-  blog_post_generator:
-    if: |
-      contains(github.event.issue.labels.*.name, 'blog')
+  build-post:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js (for slugify)
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: Set up filename and slug
+        id: vars
+        run: |
+          SLUG=$(echo "${{ github.event.inputs.title }}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -dc '[:alnum:]-')
+          FILENAME="_posts/${{ github.event.inputs.date | cut -c1-10 }}-${SLUG}.md"
+          echo "slug=${SLUG}" >> $GITHUB_OUTPUT
+          echo "filename=${FILENAME}" >> $GITHUB_OUTPUT
 
-    - name: Install slugify
-      run: npm install slugify
+      - name: Create blog post file
+        run: |
+          FILE="${{ steps.vars.outputs.filename }}"
+          echo "---" > "$FILE"
+          echo "title: \"${{ github.event.inputs.title }}\"" >> "$FILE"
+          echo "date: ${{ github.event.inputs.date }}" >> "$FILE"
+          echo "author: ${{ github.event.inputs.author }}" >> "$FILE"
+          echo "tags: [${{ github.event.inputs.tags }}]" >> "$FILE"
+          echo "layout: post" >> "$FILE"
+          echo "summary: \"${{ github.event.inputs.summary }}\"" >> "$FILE"
+          echo "---" >> "$FILE"
+          echo "${{ github.event.inputs.content }}" >> "$FILE"
 
-    - name: Extract metadata and generate post
-      id: create_post
-      run: |
-        TITLE="${{ github.event.issue.title }}"
-        BODY="${{ github.event.issue.body }}"
-        DATE=$(date +%Y-%m-%d)
-        SLUG=$(npx slugify "$TITLE" --lower --separator "-")
-        ISSUE_NUMBER=${{ github.event.issue.number }}
-
-        # Determine destination folder
-        if echo "${{ github.event.issue.labels.*.name }}" | grep -q "contributor"; then
-          TARGET_DIR="wiki-drafts"
-        else
-          TARGET_DIR="_posts"
-        fi
-
-        FILENAME="$TARGET_DIR/${DATE}-${ISSUE_NUMBER}-${SLUG}.md"
-
-        AUTHOR=$(echo "$BODY" | grep -i '^author:' | sed 's/^author:[ ]*//I' || echo "Unknown")
-        TAGS=$(echo "$BODY" | grep -i '^tags:' | sed 's/^tags:[ ]*//I' || echo "")
-
-        mkdir -p "$TARGET_DIR"
-        echo "Creating $FILENAME"
-        echo "---" > "$FILENAME"
-        echo "title: \"$TITLE\"" >> "$FILENAME"
-        echo "date: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> "$FILENAME"
-        echo "layout: post" >> "$FILENAME"
-        echo "author: \"$AUTHOR\"" >> "$FILENAME"
-        if [ ! -z "$TAGS" ]; then
-          echo "tags: [$TAGS]" >> "$FILENAME"
-        fi
-        echo "---" >> "$FILENAME"
-        echo "" >> "$FILENAME"
-
-        echo "$BODY" | grep -viE '^(author|tags):' >> "$FILENAME"
-
-        echo "FILENAME=$FILENAME" >> $GITHUB_ENV
-
-    - name: Commit blog post
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "New blog post from issue #${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
-        file_pattern: '**/*.md'
-
-    - name: Comment with status
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        REPO=${{ github.repository }}
-        ISSUE_NUMBER=${{ github.event.issue.number }}
-        SLUG=$(npx slugify "${{ github.event.issue.title }}" --lower --separator "-")
-        DATE=$(date +%Y-%m-%d)
-
-        if echo "${{ github.event.issue.labels.*.name }}" | grep -q "contributor"; then
-          LOCATION="wiki-drafts/${DATE}-${ISSUE_NUMBER}-${SLUG}.md"
-          STATUS="✍️ Your post has been saved for editorial review and is in the draft folder."
-        else
-          LOCATION="_posts/${DATE}-${ISSUE_NUMBER}-${SLUG}.md"
-          STATUS="✅ Blog post published at [https://${REPO#*/}.github.io/posts/${DATE}-${ISSUE_NUMBER}-${SLUG}](https://${REPO#*/}.github.io/posts/${DATE}-${ISSUE_NUMBER}-${SLUG})"
-        fi
-
-        gh api repos/$REPO/issues/$ISSUE_NUMBER/comments \
-          -f body="$STATUS\nSaved as \`$LOCATION\`"
-
-        gh api repos/$REPO/issues/$ISSUE_NUMBER -X PATCH -F state=closed
+      - name: Commit and push blog post
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add _posts/
+          git commit -m "New blog post: ${{ github.event.inputs.title }}"
+          git push
