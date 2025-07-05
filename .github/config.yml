@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Blog Contributor Access Request
+    url: https://github.com/rjhinrichs/aimoralcode/issues/new?template=blog-contributor-request.yml
+    about: Request permission to publish posts directly

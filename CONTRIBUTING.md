@@ -1,72 +1,29 @@
-# Contributing to the AI Moral Code
+# Contributing to The AI Moral Code Blog
 
-Thank you for your interest in contributing to the AI Moral Code project. This initiative exists to advance ethical AI governance through evidence-based architecture rooted in transparency, fairness, trust, accountability, and non-maleficence.
+We welcome both internal contributors and invited guests to submit blog posts that advance the mission of ethical AI.
 
-This is not just an open repository — it is a moral commitment. Contributions are welcomed if they align with the following principles.
+## Lane 1 – Trusted Contributors
 
-## 🧭 Core Values
+**Who:** Ran Hinrichs and approved collaborators  
+**How:** Submit blog posts directly using our internal tool (`localhost:3000`) connected to the GitHub API.
 
-All contributors agree to uphold the NRBC framework:
-- **Normative**: Uphold ethical first principles  
-- **Regulatory**: Acknowledge legal constraints and governance standards  
-- **Behavioral**: Respect moral conduct in code, content, and collaboration  
-- **Conceptual**: Advance structured thought in the service of societal good
+### To publish:
+- Use the submission form hosted locally.
+- Ensure your `.env` contains a valid GitHub Token.
+- Posts are committed to `_posts/YYYY-MM-DD-title.md` on the `main` branch.
 
-## 🤝 Contribution Guidelines
+## Lane 2 – Guest Contributors
 
-- Fork the repo and create your branch (`feature-name`)  
-- Submit focused pull requests with clear descriptions  
-- Reference source material or justification when adding values or principles  
-- Prefer clarity over complexity in both code and concepts  
+**Who:** Scholars, ethicists, and technologists invited to contribute  
+**How:** Submit a blog post for peer review via GitHub Issue Template
 
-### Documentation & Research
+👉 [Submit Here](https://github.com/rjhinrichs/aimoralcode/issues/new?template=new-blogpost.yml)
 
-- Contributions to the white paper, blog, or ethical use cases are encouraged  
-- Cite your sources and include rationale where applicable  
-- Ensure language reflects academic rigor and moral responsibility  
-
-### Design & Accessibility
-
-- Maintain the integrity of the public site (https://aimoralcode.org)  
-- Avoid inaccessible or stylistically elitist code — this is for all  
-- Preserve readability, citation clarity, and ethical usability  
-
-## ✍️ Submitting a Blog Post
-
-To contribute a blog post to the AI Moral Code:
-
-1. Open a new post using this form:  
-   [Submit Blog Post](https://github.com/rjhinrichs/aimoralcode/issues/new?template=new-blogpost.yml)
-
-2. Complete all required fields:
-   - `Author` (your full name)  
-   - `Tags` (e.g., ai-ethics, icad, governance)  
-   - `Blog Content` in Markdown format (do not include YAML frontmatter)
-
-3. Once submitted:
-   - Your post will be processed by an automated GitHub Action  
-   - A `.md` file will be generated in the `_posts/` directory  
-   - A comment will appear in your issue with a link to the live preview  
-   - The issue will then be automatically closed
-
-4. Please do not submit blog posts via pull request. Only use the issue-based form.
-
-Ran Hinrichs or a designated editor may make light revisions post-publication to ensure clarity, ethical alignment, and formatting consistency.
-
-
-## 🛡 Code of Conduct
-
-We do not tolerate:
-- Harassment, bias, or discriminatory input  
-- Ethical misrepresentation or AI hype without substance  
-- Behavior that contradicts the foundational values of this project
-
-## 📝 Licensing
-
-All contributions will be licensed under the MIT License and may be cited in academic and public discourse. You retain credit for your work; by contributing, you agree it can be shared with attribution.
+### Review Process:
+1. Submit the blog post using the issue form.
+2. The editorial team will review and label the post `ready-to-post`.
+3. A GitHub Action will publish your submission to the site.
 
 ---
 
-If you are contributing as a student, researcher, or institution, feel free to email [ran@aimoralcode.org](mailto:ran@aimoralcode.org) to coordinate research-level collaboration.
-
-Together, let’s make AI governance ethically grounded and technically implementable.
+Thank you for contributing to the moral discourse shaping the future of AI.

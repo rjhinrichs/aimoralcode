@@ -1,0 +1,25 @@
+name: "Guest Blog Submission"
+description: "Submit a guest blog post for review and possible publication"
+title: "[BLOG SUBMISSION] TITLE OF YOUR POST"
+labels: [guest-blog]
+body:
+  - type: input
+    id: author
+    attributes:
+      label: Author Name
+  - type: input
+    id: date
+    attributes:
+      label: Submission Date (YYYY-MM-DD)
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags (comma-separated)
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+  - type: textarea
+    id: content
+    attributes:
+      label: Full Blog Content (Markdown supported)
