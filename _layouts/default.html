@@ -6,24 +6,20 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Canonical stylesheet link -->
+  <!-- Failsafe root-level stylesheet links -->
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/values.css?v=2' | relative_url }}">
 
-  <!-- Auth0 -->
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
 </head>
 <body>
 
   {% include header.html %}
-
   <div class="layout">
     {% include sidebar.html %}
 
     <main>
       {{ content }}
-
-      <!-- Admin Access -->
       <div style="text-align:center; margin: 2rem;">
         <button id="loginBtn">Login as Admin</button>
         <button id="adminButton" style="display:none;" onclick="window.location.href='https://github.com/rjhinrichs/aimoralcode/issues/1';">
@@ -41,7 +37,6 @@
     </p>
   </footer>
 
-  <!-- Auth0 Login Logic -->
   <script>
   document.addEventListener("DOMContentLoaded", async () => {
     const auth0 = await createAuth0Client({
@@ -51,7 +46,6 @@
     });
 
     const isAuthenticated = await auth0.isAuthenticated();
-
     const loginBtn = document.getElementById("loginBtn");
     const logoutBtn = document.createElement("button");
     logoutBtn.textContent = "Logout";

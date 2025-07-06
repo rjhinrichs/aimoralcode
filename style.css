@@ -1,24 +1,29 @@
-
-/* === AI Moral Code: Canonical Stylesheet ===
-   Author: Ran Hinrichs | aimoralcode.org
-   Purpose: Production version with font + ethical color structure */
-
-/* = Reset & Base Setup = */
+/* Reset margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Font and base styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
-  font-family: Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
   padding: 2rem;
+  /* Optional background image 
+  background-image: url('media/AI_Moral_Code_Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  */
 }
 
-/* = Header = */
+/* Header styling */
 header {
   text-align: center;
   padding-bottom: 2rem;
@@ -44,14 +49,49 @@ header p {
   color: #555;
 }
 
-.header-logo {
-  max-width: 160px;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
+/* Navigation bullets */
+.navbar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
 }
 
-/* = Sidebar = */
+.navbar li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.navbar li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007acc;
+  font-size: 0.8rem;
+}
+
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+section h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  border-left:
+/* Sidebar Integration */
 #sidebar {
   width: 240px;
   background-color: #343a40;
@@ -85,27 +125,85 @@ header p {
   border-radius: 4px;
 }
 
-/* = Main Content = */
+.sidebar-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+/* Override existing main margin for sidebar space */
 main {
   margin-left: 260px;
   padding: 2rem;
   max-width: 800px;
 }
 
-section {
-  margin-bottom: 2.5rem;
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+/* Optional mobile responsiveness */
+@media (max-width: 768px) {
+  #sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-section h3 {
+/* Font and base styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem;
+  /* Optional background image 
+  background-image: url('media/AI_Moral_Code_Background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  */
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
   font-size: 1.4rem;
-  color: #1a1a1a;
+  color: #444;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 
-/* = Navigation = */
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Navigation bullets */
 .navbar ul {
   list-style: none;
   padding-left: 0;
@@ -120,7 +218,7 @@ section h3 {
 }
 
 .navbar li::before {
-  content: "\2022";
+  content: "●";
   position: absolute;
   left: 0;
   top: 0;
@@ -128,7 +226,74 @@ section h3 {
   font-size: 0.8rem;
 }
 
-/* = Responsive Design = */
+/* Main content */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+section h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  border-left:
+/* Sidebar Integration */
+#sidebar {
+  width: 240px;
+  background-color: #343a40;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 2rem;
+  z-index: 1000;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  padding: 0.75rem 1.25rem;
+}
+
+#sidebar li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+#sidebar li a:hover {
+  background-color: #495057;
+  border-radius: 4px;
+}
+
+.sidebar-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+/* Override existing main margin for sidebar space */
+main {
+  margin-left: 260px;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+/* Optional mobile responsiveness */
 @media (max-width: 768px) {
   #sidebar {
     position: relative;
@@ -140,19 +305,4 @@ section h3 {
   main {
     margin-left: 0;
   }
-
-  .header-logo {
-    max-width: 120px;
-    margin-top: 0.5rem;
-  }
 }
-
-/* = Value Domain Colors = */
-.core-values      { border-left: 6px solid #203864; }
-.social-values    { border-left: 6px solid #6E4B97; }
-.cultural-values   { border-left: 6px solid #D4914E; }
-.personal-values   { border-left: 6px solid #C74B3C; }
-.futuristic-values { border-left: 6px solid #248B79; }
-
-/* Example usage:
-   <section class="core-values"> ... </section> */
