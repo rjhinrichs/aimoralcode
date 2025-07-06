@@ -1,3 +1,4 @@
 _site/
 assets/.gitkeep
 .envblog-ai/.env
+/vendor

@@ -1,0 +1,8 @@
+---
+layout: default
+title: Submit Page
+permalink: /submit/
+---
+
+<h1>Submit Your Entry</h1>
+<p>This is where your AI moral code submission would be handled.</p>
