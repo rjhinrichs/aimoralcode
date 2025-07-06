@@ -1,8 +1,10 @@
-title: "The AI Moral Code"
-baseurl: ""
+title: The AI Moral Code
+description: A Publishing Platform for Ethical AI Evaluation
 url: "https://aimoralcode.org"
-timezone: America/Los_Angeles  # or your preferred timezone
+baseurl: ""  # leave empty if deployed at root of domain
+timezone: America/Los_Angeles
 future: true
+
 collections:
   posts:
     output: true
@@ -30,4 +32,3 @@ theme: null
 
 plugins:
   - jekyll-paginate
-
