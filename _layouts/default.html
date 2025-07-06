@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Unified styles -->
- <!-- Unified styles -->
-<link rel="stylesheet" href="{{ '/assets/css/values.css?v=2' | relative_url }}">
+  <!-- Canonical stylesheet link -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/values.css?v=2' | relative_url }}">
 
   <!-- Auth0 -->
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
@@ -41,11 +42,11 @@
   </footer>
 
   <!-- Auth0 Login Logic -->
-   <script>
+  <script>
   document.addEventListener("DOMContentLoaded", async () => {
     const auth0 = await createAuth0Client({
-      domain: "dev-8gs6y65g7spa5sl0.us.auth0.com",  // from your screenshot
-      client_id: "0EzPNcUnF90rZtyqL9JtTqlu11lZGhgE",  // from your application config
+      domain: "dev-8gs6y65g7spa5sl0.us.auth0.com",
+      client_id: "0EzPNcUnF90rZtyqL9JtTqlu11lZGhgE",
       cacheLocation: "localstorage"
     });
 
@@ -87,4 +88,7 @@
       }
     }
   });
-</script>
+  </script>
+
+</body>
+</html>
