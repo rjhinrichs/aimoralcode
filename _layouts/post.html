@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/sidebar.css' | relative_url }}" />
   <link rel="stylesheet" href="{{ '/assets/css/values.css' | relative_url }}" />
 
-  <!-- Open Graph for sharing -->
   <meta property="og:title" content="{{ page.title }} | AI Moral Code" />
   <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
@@ -18,42 +18,35 @@
 
 <body>
 
-<header>
-  <nav class="navbar">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/contact/">Contact</a></li>
-      <li><a href="/AI_Moral_Code_White_Paper.pdf" target="_blank">White Paper</a></li>
-    </ul>
-  </nav>
-</header>
+  {% include header.html %}
 
-<main>
-  <article>
-    <p><a href="/blog/">← Back to Blog</a></p>
-    <h2>{{ page.title }}</h2>
-    <p style="font-size: 0.9em; color: gray;">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+  <div class="layout">
+    {% include sidebar.html %}
 
-    <div>
-      {{ content }}
-    </div>
+    <main>
+      <article>
+        <p><a href="/blog/">← Back to Blog</a></p>
+        <h2>{{ page.title }}</h2>
+        <p style="font-size: 0.9em; color: gray;">Published on {{ page.date | date: "%B %d, %Y" }}</p>
 
-    <hr />
+        <div>
+          {{ content }}
+        </div>
 
-    <footer>
-      <p style="font-size: 0.85em;">
-        View or edit this post on 
-        <a href="https://github.com/rjhinrichs/aimoralcode/blob/main/_posts/{{ page.name }}" target="_blank" rel="noopener noreferrer">GitHub</a>.
-      </p>
+        <hr />
 
-      <p style="text-align: center; font-style: italic; color: gray; margin-top: 2em;">
-        Ethically Governed. Human Authored. AI Partnered.
-      </p>
-    </footer>
-  </article>
-</main>
+        <footer>
+          <p style="font-size: 0.85em;">
+            View or edit this post on 
+            <a href="https://github.com/rjhinrichs/aimoralcode/blob/main/_posts/{{ page.name }}" target="_blank" rel="noopener noreferrer">GitHub</a>.
+          </p>
+          <p style="text-align: center; font-style: italic; color: gray; margin-top: 2em;">
+            Ethically Governed. Human Authored. AI Partnered.
+          </p>
+        </footer>
+      </article>
+    </main>
+  </div>
 
 </body>
 </html>
