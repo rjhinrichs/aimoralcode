@@ -1,22 +1,24 @@
-/* Reset margin and padding */
+
+/* === AI Moral Code: Canonical Stylesheet ===
+   Author: Ran Hinrichs | aimoralcode.org
+   Purpose: Production version with font + ethical color structure */
+
+/* = Reset & Base Setup = */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Font and base styling */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
 body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
   padding: 2rem;
 }
 
-/* Header styling */
+/* = Header = */
 header {
   text-align: center;
   padding-bottom: 2rem;
@@ -47,55 +49,9 @@ header p {
   height: auto;
   display: block;
   margin: 1rem auto;
-  filter: brightness(0) saturate(100%) invert(13%) sepia(2%) saturate(1268%) hue-rotate(152deg) brightness(96%) contrast(92%);
 }
 
-/* Navigation bullets */
-.navbar ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1rem;
-}
-
-.navbar li {
-  position: relative;
-  padding-left: 1.2rem;
-  margin-bottom: 0.6rem;
-  font-size: 1rem;
-}
-
-.navbar li::before {
-  content: "●";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #007acc;
-  font-size: 0.8rem;
-}
-
-/* Main content */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  margin-left: 260px;
-}
-
-/* Sections */
-section {
-  margin-bottom: 2.5rem;
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
-}
-
-section h3 {
-  font-size: 1.4rem;
-  color: #1a1a1a;
-}
-
-/* Sidebar Integration */
+/* = Sidebar = */
 #sidebar {
   width: 240px;
   background-color: #343a40;
@@ -129,60 +85,50 @@ section h3 {
   border-radius: 4px;
 }
 
-/* About Section */
-#about {
-  background-color: #fffaf0;
-  border-left: 6px solid #007acc;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
+/* = Main Content = */
+main {
+  margin-left: 260px;
+  padding: 2rem;
+  max-width: 800px;
 }
 
-#about h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+section {
+  margin-bottom: 2.5rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+section h3 {
+  font-size: 1.4rem;
   color: #1a1a1a;
 }
 
-#about p {
+/* = Navigation = */
+.navbar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.navbar li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
   font-size: 1rem;
-  color: #444;
 }
 
-/* Accordion Component */
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 1rem;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-  margin-bottom: 0.5rem;
-  border-radius: 5px;
+.navbar li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007acc;
+  font-size: 0.8rem;
 }
 
-.accordion:hover,
-.accordion.active {
-  background-color: #ccc;
-}
-
-.panel {
-  padding: 0 1rem;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  border-left: 2px solid #007acc;
-  border-right: 2px solid #007acc;
-  border-bottom: 2px solid #007acc;
-  border-radius: 0 0 8px 8px;
-}
-
-/* Responsive Design */
+/* = Responsive Design = */
 @media (max-width: 768px) {
   #sidebar {
     position: relative;
@@ -196,16 +142,17 @@ section h3 {
   }
 
   .header-logo {
-    /* Simplified filter for mobile for better visibility and performance */
-    filter: brightness(1) contrast(100%) saturate(80%);
     max-width: 120px;
     margin-top: 0.5rem;
   }
 }
 
-/* Optional: Auto-adapt to user's system theme (dark mode) */
-@media (prefers-color-scheme: dark) {
-  .header-logo {
-    filter: invert(100%);
-  }
-}
+/* = Value Domain Colors = */
+.core-values      { border-left: 6px solid #203864; }
+.social-values    { border-left: 6px solid #6E4B97; }
+.cultural-values   { border-left: 6px solid #D4914E; }
+.personal-values   { border-left: 6px solid #C74B3C; }
+.futuristic-values { border-left: 6px solid #248B79; }
+
+/* Example usage:
+   <section class="core-values"> ... </section> */
