@@ -1,26 +1,47 @@
-title: AI Moral Code
-description: A canonical taxonomy of AI values and ethical frameworks
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://aimoralcode.org" # the base hostname & protocol for your site
+title: The AI Moral Code
+description: A Publishing Platform for Ethical AI Evaluation
+url: "https://aimoralcode.org"
+baseurl: ""  # Deployed at root
+timezone: America/Los_Angeles
+future: true
+
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year-:month-:day-:title/
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      author: "Randy J. Hinrichs"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Randy J. Hinrichs"
 
 markdown: kramdown
 permalink: pretty
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
 
 exclude:
-  - README.md
+  - vendor
+  - .bundle
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
+  - README.md
+  - LICENSE
+  - .gitignore
+  - netlify.toml
+  - "*.sh"
