@@ -1,20 +1,34 @@
-blank_issues_enabled: false
+title: The AI Moral Code
+description: A Publishing Platform for Ethical AI Evaluation
+url: "https://aimoralcode.org"
+baseurl: ""  # leave empty if deployed at root of domain
+timezone: America/Los_Angeles
+future: true
 
-contact_links:
-  - name: General Inquiry
-    url: https://aimoralcode.org/contact
-    about: For questions unrelated to a GitHub issue or contribution.
+collections:
+  posts:
+    output: true
+    permalink: /posts/:year-:month-:day-:title/
+  pages:
+    output: true
+    permalink: /:path/
 
-issue_templates:
-  - name: Blog Contributor Request
-    description: Apply to write for the AI Moral Code Blog.
-    file: blog-contributor-request.yml
-  - name: Feature Request
-    description: Propose a new enhancement or capability.
-    file: feature-request.yml
-  - name: Bug Report
-    description: Report a technical issue with the site or repository.
-    file: bug-report.yml
-  - name: General Inquiry
-    description: Submit documentation notes, conceptual ideas, or questions.
-    file: general-inquiry.yml
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      author: "Randy J. Hinrichs"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Randy J. Hinrichs"
+
+markdown: kramdown
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-paginate
