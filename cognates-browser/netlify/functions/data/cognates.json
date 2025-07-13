@@ -1,0 +1,653 @@
+[
+  {
+    "canonical": "Virtue Ethics\nAristotle, Kierkegaard",
+    "cognate": "Authenticity",
+    "tradition": "Integrity",
+    "justification": "Consistency between internal values and external actions aligns with Integrity. Often cited in virtue ethics and organizational codes.",
+    "notes": "Academia, Industry"
+  },
+  {
+    "canonical": "Normative Ethics",
+    "cognate": "Beliefs",
+    "tradition": "NRBC - Normative Layer",
+    "justification": "Beliefs structure foundational moral frameworks but are not value claims in themselves. Should remain as a normative reference point, not a canonical value.",
+    "notes": "Religious, Academia"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Benefit Maximization",
+    "tradition": "Sustainability",
+    "justification": "Appears in impact forecasting and scenario planning models",
+    "notes": "Industry, NGO"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Collective Good",
+    "tradition": "Sustainability",
+    "justification": "Appears in collective benefit frameworks and climate AI policy",
+    "notes": "NGO, Gov"
+  },
+  {
+    "canonical": "Social Contract Theory\n(Rousseau, Rawls)",
+    "cognate": "Community",
+    "tradition": "Collaboration",
+    "justification": "Compliance refers to external enforcement of duties—regulatory or contractual. Common in AI audits, corporate risk frameworks, and algorithmic accountability.",
+    "notes": "Industry, Gov, Academia"
+  },
+  {
+    "canonical": "Deontological Ethics\n(rules, duties)",
+    "cognate": "Compliance",
+    "tradition": "Responsibility",
+    "justification": "Used in compliance frameworks and professional codes",
+    "notes": "Industry, Gov, Academia"
+  },
+  {
+    "canonical": "Virtue Ethics\n(culturally mediated virtues)",
+    "cognate": "Contextual ideals",
+    "tradition": "Justice",
+    "justification": "Contextual ideals inform how justice is localized. Frequently invoked in ethics for indigenous AI, global frameworks, and non-Western moral paradigms.",
+    "notes": "NGO, Religious, Gov"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Cost-effectiveness",
+    "tradition": "Innovation",
+    "justification": "Industrial and cost-efficient optimization",
+    "notes": "Industry"
+  },
+  {
+    "canonical": "Aristotle\nVirtue Ethics",
+    "cognate": "Courage",
+    "tradition": "Ethical Responsibility",
+    "justification": "Relevant to moral courage under ethical pressure",
+    "notes": "Gov, Religious"
+  },
+  {
+    "canonical": "Virtue Ethics\nAristotle: fortitude",
+    "cognate": "Courage in the moment",
+    "tradition": "Ethical Responsibility",
+    "justification": "This term refers to immediate, value-driven action under pressure. Relevant in autonomous systems, crisis response AI, and live simulations.",
+    "notes": "Gov, Academia"
+  },
+  {
+    "canonical": "Innovation Ethics",
+    "cognate": "Creativity",
+    "tradition": "Innovation",
+    "justification": "Creativity is often foundational in ethical deliberation about generative models, AI design, and adaptation. Especially prominent in R&D and design sprints.",
+    "notes": "Industry, Academia"
+  },
+  {
+    "canonical": "Cultural Relatives",
+    "cognate": "Cultural Customs",
+    "tradition": "Inclusivity",
+    "justification": "Found in tribal/indigenous and national identity documents. Cultural customs reflect embedded value systems that guide access, roles, and expectations. Key for ethical AI localization and human-AI interaction norms.",
+    "notes": "NGO, Religious"
+  },
+  {
+    "canonical": "Natural Law\nAquinas",
+    "cognate": "Customs",
+    "tradition": "Inclusivity",
+    "justification": "Broader than “cultural customs,” this refers to traditional practices guiding societal inclusion and legitimacy. Relevant in multi-jurisdictional ethics.",
+    "notes": "Gov"
+  },
+  {
+    "canonical": "Social Justice Ethics",
+    "cognate": "Diversity",
+    "tradition": "Inclusivity",
+    "justification": "Diversity represents equity in access, voice, and participation. Common in ethical audits, demographic models, and stakeholder analysis in AI ethics.",
+    "notes": "Academia, NGO, Gov"
+  },
+  {
+    "canonical": "Liberal Humanism",
+    "cognate": "Education",
+    "tradition": "Autonomy",
+    "justification": "Education enables informed agency and moral reasoning. Central to AI literacy, capacity-building, and ethical empowerment strategies.",
+    "notes": "Academia, Gov"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Efficiency",
+    "tradition": "Innovation",
+    "justification": "Industrial and cost-effective design focus; common in scalable tech applications",
+    "notes": "Industry"
+  },
+  {
+    "canonical": "Care Ethics\nGilligan, Noddings",
+    "cognate": "Empathy",
+    "tradition": "Beneficence",
+    "justification": "Empathy is a motivational emotion that drives prosocial behavior. Though not a canonical value, it supports action under Beneficence—particularly in health AI, therapeutic bots, and relational systems.",
+    "notes": "NGO, Religious"
+  },
+  {
+    "canonical": "Justice Theory\nRawls, Aristotle",
+    "cognate": "Equality",
+    "tradition": "Justice",
+    "justification": "Equality is a foundational dimension of distributive and procedural justice. It appears in fairness algorithms, resource allocation frameworks, and anti-discrimination clauses.",
+    "notes": "Gov, NGO"
+  },
+  {
+    "canonical": "Resotrative Justice",
+    "cognate": "Equity",
+    "tradition": "Justice",
+    "justification": "Equity refers to the distribution of opportunity in proportion to need. It is central in ethical AI audits, model bias evaluations, and stakeholder risk analysis.",
+    "notes": "NGO, GOV, Academia"
+  },
+  {
+    "canonical": "Meta-Ethics",
+    "cognate": "Ethics",
+    "tradition": "Ethical Responsibility",
+    "justification": "“Ethics” as a term operates at a meta-level. However, in usage it often points to the systems and processes of governing right action—hence mapping to Ethical Responsibility as its operational expression.",
+    "notes": "Gov, Academia, NGO, Religious"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Expected Value",
+    "tradition": "Innovation",
+    "justification": "Used in actuarial and outcome driven AI strategies",
+    "notes": "Gov"
+  },
+  {
+    "canonical": "Transparency Ethics",
+    "cognate": "Explainability",
+    "tradition": "Transparency",
+    "justification": "Explainability is the technical counterpart of ethical transparency. It focuses on model interpretability, traceable outputs, and user understanding—critical in high-risk systems (e.g., healthcare, criminal justice).",
+    "notes": "Industry, Gov, Academia"
+  },
+  {
+    "canonical": "Confucian Ethics\nVirtue Ethics",
+    "cognate": "Family",
+    "tradition": "Dignity",
+    "justification": "Family appears in ethics involving caregiving, children’s rights, elder care, and identity. It supports the moral worth of persons across lifespan and lineage.",
+    "notes": "Religious, NGO"
+  },
+  {
+    "canonical": "Situational Ethics\n(Joseph Fletcher)",
+    "cognate": "Flexibility",
+    "tradition": "Responsibility",
+    "justification": "Flexibility denotes the adaptive judgment required when rigid rules are insufficient. Often cited in AI-human teaming, edge-case governance, and morally uncertain contexts.",
+    "notes": "Industry, Academia, Gov"
+  },
+  {
+    "canonical": "Religious, Restorative",
+    "cognate": "Forgiveness",
+    "tradition": "Beneficence",
+    "justification": "Forgiveness as restorative justice mechanism",
+    "notes": "NGO, Religious"
+  },
+  {
+    "canonical": "Deontological Ethics\n(rules, duties)",
+    "cognate": "Freedom",
+    "tradition": "Autonomy",
+    "justification": "Freedom underpins autonomy in AI ethics—especially in user consent, self-determination, and freedom from manipulation. Central in human-AI interaction, informed choice design, and rights-based governance.",
+    "notes": "Gov, Religious, Academia, NGO"
+  },
+  {
+    "canonical": "Aristotle",
+    "cognate": "Friendship",
+    "tradition": "Collaboration",
+    "justification": "Found in philosophical discussion of mutual growth and social harmony",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Christian",
+    "cognate": "Grace",
+    "tradition": "Beneficence",
+    "justification": "Undeserved favor and mercy aligned with compassionate governance",
+    "notes": "Religious, NGO"
+  },
+  {
+    "canonical": "Virtual Ethics\nAristotle's reciprocal justice",
+    "cognate": "Gratitude",
+    "tradition": "Beneficence",
+    "justification": "Gratitude reinforces social cohesion and mutual recognition, especially in systems of care, reciprocity, and restorative relationships. It appears in ethical training models, therapeutic AI, and moral reinforcement.",
+    "notes": "Religious, NGO"
+  },
+  {
+    "canonical": "Theological Virtuals (Christinaity, Judaism, Islam)",
+    "cognate": "Hope",
+    "tradition": "Sustainability",
+    "justification": "Hope is the affective orientation toward future flourishing. It appears in ethical roadmaps, intergenerational justice discourse, and planetary health models—especially in climate-aligned AI strategies.",
+    "notes": "NGO, Academia, Religious"
+  },
+  {
+    "canonical": "Christian Charity, Islamic Welcome Ethics",
+    "cognate": "Hospitality",
+    "tradition": "Collaboration",
+    "justification": "Hospitality bridges difference, fostering shared engagement and ethical receptivity. It supports inclusive human-AI teaming, service design, and refugee/immigration-facing technologies.",
+    "notes": "NGO, Gov, Religious"
+  },
+  {
+    "canonical": "Aristotle, Secular Humanism",
+    "cognate": "Human Flourishng\n(eudaimonia)",
+    "tradition": "Beneficence, Dignity",
+    "justification": "Philosophically Aristotelian; operationally linked to outcomes",
+    "notes": "Academia, Religious"
+  },
+  {
+    "canonical": "Christian \nVirtue Ethics",
+    "cognate": "Humility",
+    "tradition": "NRBC Behavioral Virtue Layer",
+    "justification": "",
+    "notes": "Industry, GOv"
+  },
+  {
+    "canonical": "Normative Ethics",
+    "cognate": "Ideals",
+    "tradition": "NRBC - Normative Layer",
+    "justification": "Ideals guide the moral vision of systems but are not operational values themselves. They appear in long-term declarations, institutional mission statements, and speculative AI ethics.",
+    "notes": "Academia, Religious"
+  },
+  {
+    "canonical": "Social Contract Theory\n(Rawls, Habermas)",
+    "cognate": "Institutional Justice",
+    "tradition": "Justice",
+    "justification": "Institutional Justice refers to fairness embedded within systems—e.g., due process, equal access, and administrative redress. Prominent in AI for social services, courts, and hiring platforms.",
+    "notes": "Gov, NGO"
+  },
+  {
+    "canonical": "Virtue Ethics",
+    "cognate": "Integrity",
+    "tradition": "Integrity",
+    "justification": "Integrity refers to ethical consistency, moral wholeness, and principled behavior. Commonly cited in AI audit systems, leadership codes, and research ethics protocols.",
+    "notes": "Academia, Industry, Gov"
+  },
+  {
+    "canonical": "Islamic",
+    "cognate": "Intellect ('Aql)",
+    "tradition": "Autonomy",
+    "justification": "Legal framing in rules-based reasoning and preservation of mind",
+    "notes": "Academia, Islamic"
+  },
+  {
+    "canonical": "Legal Positivism, Natural Law (Aquinas)",
+    "cognate": "Law",
+    "tradition": "Justice",
+    "justification": "Law is the enforcement mechanism for ethical rules. It supports fairness, redress, and due process—especially in AI regulation, international policy, and platform accountability.",
+    "notes": "Gov, Academia"
+  },
+  {
+    "canonical": "Autonomy Theory (Kant, Mill)",
+    "cognate": "Liberty",
+    "tradition": "Autonomy, Human Rights",
+    "justification": "Liberty represents both freedom from coercion and the right to self-determination. Prominent in user rights design, platform choice architectures, and freedom of expression ethics.",
+    "notes": "Gov, NGO, Religious"
+  },
+  {
+    "canonical": "Islamic",
+    "cognate": "Life (Nafs)",
+    "tradition": "Non-Maleficence",
+    "justification": "Right to life underlies safety and harm prevention",
+    "notes": "Global Human Rights"
+  },
+  {
+    "canonical": "Islamic",
+    "cognate": "Lineage (Nasl)",
+    "tradition": "Human Rights",
+    "justification": "Inheritance and generational ethics",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Christian",
+    "cognate": "Love (Agape)",
+    "tradition": "Beneficence",
+    "justification": "Unconditional love central to dignity and well-being ethics",
+    "notes": "Faith-based"
+  },
+  {
+    "canonical": "Aristotle\nConsequentialist",
+    "cognate": "Magnanimity",
+    "tradition": "Dignity",
+    "justification": "Enlarged virtue in leadership and ethical generosity",
+    "notes": "All sectors\nLeadership"
+  },
+  {
+    "canonical": "Christian",
+    "cognate": "Meekness",
+    "tradition": "Dignity",
+    "justification": "Meekness associated with dignifified constraint",
+    "notes": ""
+  },
+  {
+    "canonical": "Religius, Deontological",
+    "cognate": "Mercy",
+    "tradition": "Beneficence",
+    "justification": "Mercy in restorative and humanitarian applications",
+    "notes": "Religious, NGO"
+  },
+  {
+    "canonical": "Deontological Ethics\n(Kant)",
+    "cognate": "Moral Duty",
+    "tradition": "Responsibility",
+    "justification": "Moral Duty underlines obligation grounded in role, position, or principle. It appears in policy codes, AI role definition, and chain-of-responsibility frameworks.",
+    "notes": "Gov, Academia, Industry"
+  },
+  {
+    "canonical": "Cognitive Moral Development \n(Kohlberg, Rest)",
+    "cognate": "Moral Reasoning",
+    "tradition": "Ethical Responsibility",
+    "justification": "Refers to the structured process of evaluating ethical dilemmas. Appears in AI agent design, decision tree logic, and value-sensitive design for explainability and alignment.",
+    "notes": "Academia"
+  },
+  {
+    "canonical": "Religious Ethics \n(Gandhi, Jesus, Buddhism, Jainism)",
+    "cognate": "Nonviolence",
+    "tradition": "Non-Maleficence",
+    "justification": "Nonviolence is an applied ethic of harm avoidance. Found in peace-tech, non-lethal AI design, and humanitarian algorithm constraints.",
+    "notes": "Religious, NGO, Gov"
+  },
+  {
+    "canonical": "Cultural Ethics, Sociology of Morality",
+    "cognate": "Norms",
+    "tradition": "Ethical Responsibility",
+    "justification": "Norms operate as informal governance mechanisms. Frequently appear in AI alignment, scenario simulation, and community moderation protocols.",
+    "notes": "Gov, Industry, Academia, NGO"
+  },
+  {
+    "canonical": "Liberal Ethics\n(Berlin, Mill)",
+    "cognate": "Open Mindedness",
+    "tradition": "Autonomy",
+    "justification": "Open-mindedness reflects cognitive liberty and epistemic humility. It informs learning systems, user feedback loops, and ethical adaptability in AI interactions.",
+    "notes": "Academia"
+  },
+  {
+    "canonical": "Virtue Ethics, Care Ethics",
+    "cognate": "Patience",
+    "tradition": "Beneficence",
+    "justification": "Patience is critical in caregiving, deliberation, and AI response timing (e.g., elder care agents). Appears in design for empathy, social latency, and resilience.",
+    "notes": "Religious"
+  },
+  {
+    "canonical": "Christian\nGlobal Ethics",
+    "cognate": "Peace / Peacemaking",
+    "tradition": "Collaboration, Non-Maleficence",
+    "justification": "Appears in foundational ystematic and deliberate process of evaluating ethical dilemmas. Appears in AI agent design, decision tree logic, and value-sensitive design for explainability and alignment.",
+    "notes": "Academia"
+  },
+  {
+    "canonical": "Religious Ethics \n(Gandhi, Jesus, Buddhism, Jainism)",
+    "cognate": "Nonviolence",
+    "tradition": "Non-Maleficence",
+    "justification": "Nonviolence is an applied ethic of harm avoidance. Found in peace-tech, non-lethal AI design, and humanitarian algorithm constraints.",
+    "notes": "Religious, NGO, Gov"
+  },
+  {
+    "canonical": "Cultural Ethics, Sociology of Morality",
+    "cognate": "Norms",
+    "tradition": "Ethical Responsibility",
+    "justification": "Norms operate as informal governance mechanisms. Frequently appear in AI alignment, scenario simulation, and community moderation protocols.",
+    "notes": "Gov, Industry, Academia, NGO"
+  },
+  {
+    "canonical": "Liberal Ethics\n(Berlin, Mill)",
+    "cognate": "Open Mindedness",
+    "tradition": "Autonomy",
+    "justification": "Open-mindedness reflects cognitive liberty and epistemic humility. It informs learning systems, user feedback loops, and ethical adaptability in AI interactions.",
+    "notes": "Academia"
+  },
+  {
+    "canonical": "Virtue Ethics, Care Ethics",
+    "cognate": "Patience",
+    "tradition": "Beneficence",
+    "justification": "Patience is critical in caregiving, deliberation, and AI response timing (e.g., elder care agents). Appears in design for empathy, social latency, and resilience.",
+    "notes": "Religious"
+  },
+  {
+    "canonical": "Christian\nGlobal Ethics",
+    "cognate": "Peace / Peacemaking",
+    "tradition": "Collaboration, Non-Maleficence",
+    "justification": "Appears in foundational ethics documents related to global stability and restorative action",
+    "notes": "NGO, Religious"
+  },
+  {
+    "canonical": "Deontological Ethics",
+    "cognate": "Principles",
+    "tradition": "Ethical Responsibility",
+    "justification": "Principles are foundational in institutional ethics, AI governance charters, and professional conduct rules. Anchors normative coherence in systems.",
+    "notes": "Academia, Gov"
+  },
+  {
+    "canonical": "Rule of Law",
+    "cognate": "Procedural Safeguards",
+    "tradition": "Justice",
+    "justification": "Safeguards are structural tools to ensure due process, auditability, and redress. Present in policy frameworks, public sector AI, and AI procurement.",
+    "notes": "Gov, NGO"
+  },
+  {
+    "canonical": "Islamic",
+    "cognate": "Property (Mal)",
+    "tradition": "Privacy, Security, Non-Maleficence",
+    "justification": "Property ethics tied to privacy and asset protection",
+    "notes": "Gov"
+  },
+  {
+    "canonical": "Islamic",
+    "cognate": "Protection of Faith (Din)",
+    "tradition": "Ethical Responsibility",
+    "justification": "Defense of belief systems under moral agency and AI bias safeguards",
+    "notes": "Religious"
+  },
+  {
+    "canonical": "Aristotle",
+    "cognate": "Prudence (phronesis)",
+    "tradition": "Ethical Responsibility",
+    "justification": "Used in decision quality, situational awareness, and ethical foresight",
+    "notes": "Academia, Gov"
+  },
+  {
+    "canonical": "Risk Ethics",
+    "cognate": "Protection",
+    "tradition": "Privacy, Security, Non-Maleficence",
+    "justification": "Protection refers to shielding individuals or systems from harm—whether physical, informational, or emotional. Common in compliance, consent, and human rights modeling.",
+    "notes": "Gov, Religious"
+  },
+  {
+    "canonical": "Utilitarianism",
+    "cognate": "Public Good",
+    "tradition": "Sustainability",
+    "justification": "Public good is invoked in climate-aligned AI, open-source governance, and data sharing policies. Supports intergenerational and communal benefit over profit maximization.",
+    "notes": "Gov, NGO, Academia"
+  },
+  {
+    "canonical": "Restorative Justice",
+    "cognate": "Redress",
+    "tradition": "Justice",
+    "justification": "Redress ensures individuals can seek correction for harms. Essential in AI bias cases, wrongful algorithmic decisions, and systemic discrimination audits.",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Dignity-based Ethics\n(Kant, Nussbaum)",
+    "cognate": "Respect",
+    "tradition": "Dignity",
+    "justification": "Respect is foundational to how humans should treat one another and interact with AI systems. Appears in consent frameworks, relational AI, and dignity-preserving models.",
+    "notes": "Religious"
+  },
+  {
+    "canonical": "Deontological Ethics\nConfucian Ethics",
+    "cognate": "Respect for Authority",
+    "tradition": "Responsibility",
+    "justification": "Acknowledges legitimate institutional, legal, or familial authority. Appears in law enforcement AI, command systems, and governance frameworks.",
+    "notes": "Gov, Religious"
+  },
+  {
+    "canonical": "Environmental Ethics",
+    "cognate": "Respect for Nature",
+    "tradition": "Sustainability",
+    "justification": "Expresses reverence for ecosystems and intergenerational responsibility. Prominent in AI for conservation, climate forecasting, and planetary boundaries frameworks.",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Relational Ethics",
+    "cognate": "Reciprocity",
+    "tradition": "Collaboration",
+    "justification": "Reciprocity structures ethical exchange, peer fairness, and AI-human trust loops. Found in algorithmic fairness, collective bargaining platforms, and co-creation models.",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Christian",
+    "cognate": "Righteousness (Justice aligned)",
+    "tradition": "Justice",
+    "justification": "Righteousness used as a proxy for procedural and distributive justice",
+    "notes": "Faith-based"
+  },
+  {
+    "canonical": "Human Rights Ethics\n(UN, Rawls)",
+    "cognate": "Rights",
+    "tradition": "Human Rights",
+    "justification": "Rights are ethical entitlements embedded in law and moral reasoning. Central in AI policy, digital rights, and protections from surveillance or discrimination.",
+    "notes": "Gov, NGO"
+  },
+  {
+    "canonical": "Legal Positivism",
+    "cognate": "Rule of Law",
+    "tradition": "Justice",
+    "justification": "Rule of Law ensures legal equality and procedural fairness. Frequently cited in AI regulation, algorithmic due process, and democratic accountability models.",
+    "notes": "Gov, NGO"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Rules",
+    "tradition": "Justice",
+    "justification": "Policy enforcement framing. Rules invoked in formal legal and ethical procedure",
+    "notes": "Gov"
+  },
+  {
+    "canonical": "Risk Management Ethics",
+    "cognate": "Safeguards",
+    "tradition": "Non-Maleficence",
+    "justification": "Safeguards are technical and procedural mechanisms that prevent harm. Appear in AI audits, red-teaming, and oversight architecture (e.g., kill-switches, rollback functions).",
+    "notes": "Industry, Gov"
+  },
+  {
+    "canonical": "Engineering Ethics",
+    "cognate": "Safety",
+    "tradition": "Non-Maleficence",
+    "justification": "Safety is a design imperative in high-risk AI: autonomous vehicles, surgery bots, weapons systems, and public utilities. It ensures physical and systemic harm avoidance.",
+    "notes": "Gov"
+  },
+  {
+    "canonical": "Communitarian Ethics",
+    "cognate": "Shared Purpose",
+    "tradition": "Collaboration",
+    "justification": "Shared Purpose refers to alignment among stakeholders—AI-human teaming, multi-agent design, and community goal-setting. Anchors values-based governance models.",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Collective Ethics",
+    "cognate": "Shared Responsibility",
+    "tradition": "Ethical Responsibility",
+    "justification": "This refers to distributed moral accountability in AI—e.g., among developers, deployers, regulators, and users. Appears in co-regulation frameworks and algorithmic impact assessments.",
+    "notes": "Academia, Gov, Industry, NGO"
+  },
+  {
+    "canonical": "Civic Ethics",
+    "cognate": "Social Cohesion",
+    "tradition": "Collaboration",
+    "justification": "Social cohesion refers to the stability and trust necessary for collective functioning. Appears in post-conflict AI design, civic platforms, and community-moderated systems.",
+    "notes": "NGO, Gov, Religious"
+  },
+  {
+    "canonical": "Behavioral Ethics",
+    "cognate": "Social Norms",
+    "tradition": "Ethical Responsibility",
+    "justification": "Social norms govern acceptable behavior and social compliance. They shape AI training data, alignment strategies, and contextual sensitivity in deployment.",
+    "notes": "Gov, Academia, Religious"
+  },
+  {
+    "canonical": "Catholic Social Teaching",
+    "cognate": "Solidarity",
+    "tradition": "Inclusivity",
+    "justification": "Solidarity is a moral and social commitment to stand with others—particularly the marginalized. Common in equitable design, participatory justice, and value distribution frameworks.",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Professional Ethics",
+    "cognate": "Standards",
+    "tradition": "Ethical Responsibility",
+    "justification": "Standards formalize principles into enforceable metrics. Found in IEEE, ISO, NIST, and OECD guidelines for safe and ethical AI deployment.",
+    "notes": "Industry, Gov, Academia"
+  },
+  {
+    "canonical": "Environmental Ethics",
+    "cognate": "Stewardship",
+    "tradition": "Ethical Responsibility, Sustainability",
+    "justification": "Stewardship refers to intergenerational, fiduciary, and ecological care—appearing in AI for climate, biosphere intelligence, and long-term policy ethics.",
+    "notes": "Religious, NGO, Academia"
+  },
+  {
+    "canonical": "Islamic, Aristotle",
+    "cognate": "Temperance",
+    "tradition": "Responsibility",
+    "justification": "Temperance as moderation in applied autonomy or decision limits",
+    "notes": "Gov"
+  },
+  {
+    "canonical": "Consequentialist\nAristotle",
+    "cognate": "Usefulness",
+    "tradition": "Innovation",
+    "justification": "Usefulness applied to deployment scalability and impact",
+    "notes": "Industry"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Utility",
+    "tradition": "Innovation",
+    "justification": "Utilitarian frameworks tied to benefit maximization and AI optimization",
+    "notes": "Industry, Gov"
+  },
+  {
+    "canonical": "Meta Ethics",
+    "cognate": "Values",
+    "tradition": "NRBC - Normative Layer",
+    "justification": "“Values” is a meta-category encompassing foundational beliefs that guide ethical systems. In your architecture, this term belongs to the structural reasoning layer, not the operational canon. It functions as the container or framework within which canonical values are prioritized.",
+    "notes": "Academia, Gov, NGO"
+  },
+  {
+    "canonical": "Consequentialism (Mill, Singer)",
+    "cognate": "Well Being",
+    "tradition": "Beneficence",
+    "justification": "Well-being is a widely accepted proxy for the good. It appears in health AI, psychological profiling, policy prioritization, and long-term impact modeling. Beneficence operationalizes this goal through welfare-improving actions.",
+    "notes": "NGO"
+  },
+  {
+    "canonical": "Consequentialist",
+    "cognate": "Welfare",
+    "tradition": "Beneficence",
+    "justification": "Well-being as human-centered outcome in applied governance",
+    "notes": "Gov\nHealth & Social"
+  },
+  {
+    "canonical": "Protestant Work Ethic",
+    "cognate": "Work Ethic",
+    "tradition": "Responsibility",
+    "justification": "Work ethic reflects diligence, discipline, and reliability—frequently invoked in workforce automation ethics, job displacement debates, and digital labor rights.",
+    "notes": "Industry"
+  },
+  {
+    "canonical": 1,
+    "cognate": "↑↑",
+    "tradition": "Critical",
+    "justification": "Value appears in ≥10% of total documents (≥29) AND in ≥4 sectors AND in title/principles",
+    "notes": "Primary ethical driver; foundational to document purpose and policy"
+  },
+  {
+    "canonical": 0.66,
+    "cognate": "↑",
+    "tradition": "Elevated",
+    "justification": "Appears in 5–10% of total documents AND in ≥3 sectors, referenced in ethics/governance sections",
+    "notes": "Important but not leading the framing; often secondary or contextual"
+  },
+  {
+    "canonical": 0.33,
+    "cognate": "→",
+    "tradition": "Neutral/Baseline",
+    "justification": "Appears in <5% of documents, not sectorally widespread, mostly in recommendations or support notes",
+    "notes": "Present and relevant, but not emphasized as critical to document intent"
+  },
+  {
+    "canonical": "0.00 or omitted",
+    "cognate": "↓",
+    "tradition": "Suppressed",
+    "justification": "Appears ≤2 times or only within narrow domain; may be conceptually latent or future-oriented",
+    "notes": "Suppressed or de-emphasized value, possibly present in future work"
+  }
+]

@@ -3,3 +3,4 @@ assets/.gitkeep
 .envblog-ai/.env
 /vendor
 .bundle/config
+vendor/bundle
