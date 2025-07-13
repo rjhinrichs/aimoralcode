@@ -31,4 +31,5 @@ markdown: kramdown
 theme: jekyll-theme-cayman
 
 plugins:
-  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
