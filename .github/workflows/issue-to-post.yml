@@ -1,0 +1,75 @@
+name: Issue → Blog Post (Auto PR)
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  convert:
+    if: github.event.label.name == 'publish-post'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up variables
+        id: vars
+        run: |
+          TITLE=$(echo "${{ github.event.issue.title }}" | sed -E 's/[^a-zA-Z0-9 ]//g')
+          SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed -E 's/[ ]+/-/g')
+          DATE=$(date -u +"%Y-%m-%d")
+          FILENAME="_posts/$DATE-$SLUG.md"
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+
+      - name: Extract body fields
+        id: body
+        run: |
+          # Assuming the issue template fields are like Title:, Tags:, Content: etc.
+          BODY=$(printf "%s" "${{ github.event.issue.body }}")
+          AUTHOR=$(echo "$BODY" | grep -E "^Author:" | sed -E 's/^Author:[ ]*//')
+          TAGS=$(echo "$BODY" | grep -E "^Tags:" | sed -E 's/^Tags:[ ]*//')
+          SUMMARY=$(echo "$BODY" | grep -E "^Summary:" | sed -E 's/^Summary:[ ]*//')
+          CONTENT=$(echo "$BODY" | sed -n '/^Content:/,$p' | sed '1d')
+          echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+          echo "tags=$TAGS" >> $GITHUB_OUTPUT
+          echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
+          # store content in a file for later
+          printf "%s" "$CONTENT" > content.txt
+
+      - name: Create markdown file
+        run: |
+          FILE="${{ steps.vars.outputs.filename }}"
+          echo "---" > "$FILE"
+          echo "layout: post" >> "$FILE"
+          echo "title: \"${{ steps.vars.outputs.title }}\"" >> "$FILE"
+          echo "date: ${{ steps.vars.outputs.date || github.event.issue.created_at }}" >> "$FILE"
+          echo "author: \"${{ steps.body.outputs.author }}\"" >> "$FILE"
+          echo "tags: [${{ steps.body.outputs.tags }}]" >> "$FILE"
+          echo "summary: >-" >> "$FILE"
+          echo "  ${{ steps.body.outputs.summary }}" >> "$FILE"
+          echo "---" >> "$FILE"
+          cat content.txt >> "$FILE"
+
+      - name: Commit new post in draft branch
+        run: |
+          BRANCH="blogpost-${{ steps.vars.outputs.slug }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add "${{ steps.vars.outputs.filename }}"
+          git commit -m "chore: add draft blog post ${{ steps.vars.outputs.title }}"
+          git push -u origin "$BRANCH"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: add draft blog post"
+          branch: ${{ github.head_ref }}
+          title: "Draft Blog Post: ${{ steps.vars.outputs.title }}"
+          body: |
+            This PR was automatically generated from issue #${{ github.event.issue.number }}.
+            Review, suggest edits, and merge when ready to publish.
+          draft: true
