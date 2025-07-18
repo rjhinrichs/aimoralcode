@@ -5,6 +5,8 @@ baseurl: "" # Deployed at root
 timezone: America/Los_Angeles
 future: true
 
+collections_dir: blog-ai  # <- This line is required for your setup
+
 collections:
   posts:
     output: true
