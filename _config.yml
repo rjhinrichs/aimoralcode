@@ -1,7 +1,7 @@
 title: The AI Moral Code
 description: A Publishing Platform for Ethical AI Evaluation
 url: "https://aimoralcode.org"
-baseurl: ""  # Deployed at root
+baseurl: "" # Deployed at root
 timezone: America/Los_Angeles
 future: true
 
@@ -26,7 +26,7 @@ defaults:
       author: "Randy J. Hinrichs"
 
 markdown: kramdown
-permalink: /:categories/:year/:month/:day/:title.html
+permalink: pretty
 
 plugins:
   - jekyll-feed
