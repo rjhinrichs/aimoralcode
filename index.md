@@ -10,9 +10,15 @@ description: "A Publishing Platform for Evaluating and Debating AI Ethics"
     The AI Moral Code has been reframed as a <strong>Gregorian Moral Tool</strong>—a culturally inherited scaffold for synthetic moral infrastructure, inspired by Daniel Dennett’s evolutionary cognitive model.
   </p>
   <p>
-    <a href="{{ site.posts | where: 'title', 'The AI Moral Code as a Gregorian Tool' | first.url }}" class="button">📘 Read Full Post</a>
+    {% assign gregorian_post = site.posts | where: "title", "The AI Moral Code as a Gregorian Tool" | first %}
+    {% if gregorian_post %}
+      <a href="{{ gregorian_post.url | relative_url }}" class="button">📘 Read Full Post</a>
+    {% else %}
+      <span style="color: red;">Blog post not found. Please check title or publish date.</span>
+    {% endif %}
   </p>
 </section>
+
 <section style="display: flex; align-items: center; justify-content: space-between;">
   <div>
     <h1 style="margin-bottom: 0.5rem;">The AI Moral Code</h1>
