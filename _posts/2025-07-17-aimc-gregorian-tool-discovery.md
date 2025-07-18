@@ -1,3 +1,21 @@
+---
+layout: post
+title: "The AI Moral Code as a Gregorian Tool"
+date: 2025-07-17
+categories: [discovery, ethics, aimc]
+---
+
+# The AI Moral Code as a Gregorian Tool  
+### Establishing the Foundations of Synthetic Moral Infrastructure
+...
+---
+layout: post
+title: "The AI Moral Code as a Gregorian Tool"
+date: 2025-07-17
+categories: discovery alignment theory
+tags: [AIMC, Gregorian Tools, AI Ethics, Daniel Dennett]
+---
+
 # The AI Moral Code as a Gregorian Tool  
 ### Establishing the Foundations of Synthetic Moral Infrastructure
 
