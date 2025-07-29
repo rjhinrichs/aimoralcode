@@ -1,0 +1,11 @@
+main:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Blog
+    url: /blog/
+  - title: Values
+    url: /values/
+  - title: Contribute
+    url: /contribute/
