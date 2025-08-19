@@ -4,16 +4,6 @@ title: "The AI Moral Code"
 description: "A Publishing Platform for Evaluating and Debating AI Ethics"
 ---
 
-## 🔆 Spotlight: Back to the Beginning
-[**Back to the Beginning: Dewey, Malik, and the Rebirth of AI Morality**](/blog-ai/2025-07-29-back-to-the-beginning-dewey-malik-ai-morality)
-
-*July 29, 2025*
-
-Explore how John Dewey’s pragmatism, Kenan Malik’s historical insights, and the AI Moral Code architecture converge in a shared vision of moral evolution. This post reflects on ethical origins, survivor metaphors, and the power of pattern recognition in shaping our collective AI future.
-
----
-
-
 <section style="background-color: #f9f9f9; padding: 1rem; border-left: 4px solid #555; margin-bottom: 2rem;">
   <h3>Latest Breakthrough: AIMC as a Gregorian Tool</h3>
   <p>
@@ -91,9 +81,6 @@ Explore how John Dewey’s pragmatism, Kenan Malik’s historical insights, and 
   <p>
     Want to contribute? You can submit a blog post using the AI Moral Code template and it will be auto-published to our platform:
     <a href="https://github.com/rjhinrichs/aimoralcode/issues/new?template=new-blogpost.yml">Submit a New Blog Post</a>
-  </p>
-  <p>
-    Or, visit our full <a href="/contribute">Contribution Page</a> for detailed instructions and FAQs.
   </p>
 </section>
 
