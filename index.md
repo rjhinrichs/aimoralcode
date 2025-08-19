@@ -11,7 +11,7 @@ A living initiative to define, simulate, and operationalize ethical reasoning in
 
 ## 🌟 Spotlight: Toward a Conscious Partnership with AI
 
-### [Toward a Conscious Partnership with AI](/blog-ai/2025-08-18-toward-a-conscious-partnership)
+### [Toward a Conscious Partnership with AI](/blog-ai/2025-08-18-conscious-partnership-ai)
 *August 18, 2025*
 
 This post explores how human rational interpretation and AI’s statistical pattern recognition can form a conscious partnership. By combining rigorous analysis with intuitive judgment, the AI Moral Code evolves toward a sustainable model of shared ethical intelligence.
@@ -31,27 +31,21 @@ This post explores how human rational interpretation and AI’s statistical patt
 
 ## 📘 White Papers and Drafts
 
-- [AI Moral Code: Draft White Paper](whitepapers/aimoralcode_draft.pdf)
-- [Integrated Framework for Taxonomy Evaluation](whitepapers/framework_taxonomy.pdf)
+- [AI Moral Code: Draft White Paper](/docs/draft-white-paper)
+- [Integrated Framework for Taxonomy Evaluation](/docs/intersect-framework)
+- [Simulation Methodology Overview](/docs/simulation-methodology)
+- [Canonical Values Reference Guide](/docs/canonical-values)
 
 ---
 
-## 🏛 Governance and Oversight
+## 📖 Learn More
 
-- [Policy Guidelines](governance/policy_guidelines.pdf)
-- [Ethical Enforcement Stack](governance/ethical_enforcement.pdf)
-
----
-
-## 📡 Diagrams and Architecture
-
-- [Value Taxonomy Map](diagrams/value_taxonomy_map.png)
-- [AI Governance Architecture](diagrams/governance_architecture.png)
+- [Canonical Values](/canonical-values) — Explore the 12 core ethical anchors of the AI Moral Code.  
+- [Value Browser](/value-browser) — Navigate the moral architecture and its applied domains.  
+- [Simulation Methodology](/simulation-methodology) — Understand how we test AI ethical decision-making.  
+- [Glossary](/glossary) — Key terms for AI ethics and moral reasoning.  
+- [Cognates Requirements](/cognates-requirements) — Supporting structures for contextual moral application.  
 
 ---
 
-## 🔗 QR Access
-
-Scan below for quick mobile access:
-
-![QR Code](assets/qr_code.png)
+© {{ site.time | date: "%Y" }} The AI Moral Code Project. All rights reserved.
