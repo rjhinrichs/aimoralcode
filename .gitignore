@@ -1,29 +1,64 @@
-# Jekyll output
-_site/
+# ===============================
+#  AI Moral Code Project
+#  Clean .gitignore for Decap CMS + Netlify
+# ===============================
 
-# Node modules
-node_modules/
-
-# Bundler and vendor dependencies
-.bundle/
-vendor/
-vendor/bundle/
-
-# Environment files
-.env
-.env.*
-
-# Project-specific paths
-assets/.gitkeep
-blog-ai/.env
-
-# Redundant or unnecessary
-# .envblog-ai/.env — this looks like a typo or duplicated path. Use blog-ai/.env if correct.
-
-# VSCode / Editor folders (optional)
+# --- System / Editor ---
+.DS_Store
 .vscode/
 *.code-workspace
 
-# Mac system files (optional)
-.DS_Store
-assets/img/Designing a Moral Equilibrium Diagram.pptx
+# --- Node / Build ---
+node_modules/
+dist/
+build/
+.cache/
+npm-debug.log*
+yarn-error.log*
+
+# --- Ruby / Jekyll legacy ---
+_site/
+.bundle/
+vendor/
+vendor/bundle/
+.ruby-version
+Gemfile
+Gemfile.lock
+_config.yml
+_includes/
+_layouts/
+_posts/
+
+# --- Environment & API Keys ---
+.env
+.env.*
+
+# --- Local Scripts / Dev Utilities ---
+scripts/
+features/
+*.sh
+
+# --- Local Reference / Non-Deploy Docs ---
+docs/
+legacy/
+*.zip
+*.pptx
+*.bak
+*.tmp
+
+# --- Task Management Files ---
+# Keep AIMC core task list tracked, ignore website version
+AIMC_Website_TASK_LIST.md
+
+# --- CMS uploads (handled via Git) ---
+# Keep image assets tracked
+!assets/img/
+
+# --- Exclusions ---
+# Do NOT ignore important site content:
+!content/**
+!admin/**
+!index.html
+!CNAME
+!citation.cff
+!AIMC_TASK_LIST.md

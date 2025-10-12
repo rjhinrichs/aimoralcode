@@ -1,0 +1,202 @@
+---
+layout: page
+title: "Values Browser"
+permalink: /value-browser/
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/values.css' | relative_url }}">
+
+<h1>Explore Canonical Values</h1>
+
+<div id="filters" style="margin-bottom: 2rem;">
+  <fieldset style="margin-bottom: 1.5rem;">
+    <legend><strong>Keyword Search</strong></legend>
+    <input type="text" id="searchBox" placeholder="Search values..." style="width: 100%; padding: 0.5rem;">
+  </fieldset>
+
+  <fieldset style="margin-bottom: 1.5rem;">
+    <legend><strong>Sort By</strong></legend>
+    <select id="sortSelect" style="padding: 0.5rem;">
+      <option value="default">Default Order</option>
+      <option value="score">Score (High to Low)</option>
+      <option value="weight">Weight (High to Low)</option>
+      <option value="title">Alphabetical (A–Z)</option>
+    </select>
+  </fieldset>
+
+  <div style="margin-bottom: 1.5rem;">
+    <button id="clearFiltersBtn">Clear All Filters</button>
+    <button id="exportJsonBtn">Export JSON</button>
+    <button id="exportCsvBtn">Export CSV</button>
+  </div>
+</div>
+
+<div id="analytics" style="margin-bottom: 2rem; padding: 1rem; background: #f0f4f8; border-left: 4px solid #007acc;">
+  <h2>Analytics Summary</h2>
+  <p><strong>Average Score:</strong> <span id="avgScore">–</span></p>
+  <p><strong>Average Weight:</strong> <span id="avgWeight">–</span></p>
+  <p><strong>NRBC Distribution:</strong></p>
+  <ul id="nrbcCounts"></ul>
+</div>
+
+<div id="heatmap" style="margin-bottom: 2rem;">
+  <h2>Compositive Score Heatmap</h2>
+  <div id="heatmap-bars" style="display: flex; gap: 6px; flex-wrap: wrap;"></div>
+</div>
+
+<div id="sector-cluster" style="margin-bottom: 2rem;">
+  <h2>Sector Clustering</h2>
+  <div id="sector-bars" style="display: flex; flex-direction: column; gap: 6px;"></div>
+</div>
+
+<div id="value-results"></div>
+
+<script>
+async function loadValues() {
+  const response = await fetch('/assets/data/canonical-values.json');
+  let values = await response.json();
+  let filtered = [...values];
+
+  const resultsContainer = document.getElementById('value-results');
+  const searchBox = document.getElementById('searchBox');
+  const sortSelect = document.getElementById('sortSelect');
+  const avgScore = document.getElementById('avgScore');
+  const avgWeight = document.getElementById('avgWeight');
+  const nrbcCounts = document.getElementById('nrbcCounts');
+  const heatmapContainer = document.getElementById('heatmap-bars');
+  const sectorBars = document.getElementById('sector-bars');
+
+  function render(data) {
+    resultsContainer.innerHTML = '';
+    heatmapContainer.innerHTML = '';
+    sectorBars.innerHTML = '';
+    if (data.length === 0) {
+      resultsContainer.innerHTML = '<p>No matching values found.</p>';
+      avgScore.textContent = '–';
+      avgWeight.textContent = '–';
+      nrbcCounts.innerHTML = '';
+      return;
+    }
+
+    const maxScore = Math.max(...data.map(d => d.score));
+    data.sort((a, b) => b.score - a.score);
+
+    let totalScore = 0;
+    let totalWeight = 0;
+    const nrbcMap = {};
+    const sectorMap = {};
+
+    data.forEach(val => {
+      totalScore += val.score;
+      totalWeight += val.weight;
+      nrbcMap[val.nrbc] = (nrbcMap[val.nrbc] || 0) + 1;
+
+      val.sectors.forEach(sector => {
+        sectorMap[sector] = (sectorMap[sector] || 0) + 1;
+      });
+
+      const card = document.createElement('div');
+      card.className = 'value-card';
+      card.innerHTML = `
+        <h2>${val.title}</h2>
+        <p><strong>NRBC:</strong> ${val.nrbc} | <strong>Core:</strong> ${val.core_values.join(', ')} | <strong>Sectors:</strong> ${val.sectors.join(', ')}</p>
+        <p>${val.summary}</p>
+        <p><strong>Score:</strong> ${val.score} | <strong>Weight:</strong> ${val.weight}</p>
+        <div class="score-bar-container">
+          <div class="score-bar" style="width: ${val.score * 45}%"></div>
+        </div>
+        <p><a href="${val.url}">Read More</a></p>
+      `;
+      resultsContainer.appendChild(card);
+    });
+
+    avgScore.textContent = (totalScore / data.length).toFixed(2);
+    avgWeight.textContent = (totalWeight / data.length).toFixed(2);
+    nrbcCounts.innerHTML = '';
+    Object.entries(nrbcMap).sort().forEach(([key, count]) => {
+      const li = document.createElement('li');
+      li.textContent = `${key}: ${count}`;
+      nrbcCounts.appendChild(li);
+    });
+
+    data.forEach(val => {
+      const bar = document.createElement('div');
+      const intensity = Math.round((val.score / maxScore) * 255);
+      bar.title = `${val.title} (Score: ${val.score}, Weight: ${val.weight})`;
+      bar.style.cssText = `
+        width: 40px;
+        height: 20px;
+        background-color: rgb(0, ${intensity}, ${255 - intensity});
+        border-radius: 3px;
+        cursor: help;
+      `;
+      heatmapContainer.appendChild(bar);
+    });
+
+    const maxSector = Math.max(...Object.values(sectorMap));
+    Object.entries(sectorMap).sort((a, b) => b[1] - a[1]).forEach(([sector, count]) => {
+      const bar = document.createElement('div');
+      bar.innerHTML = `
+        <div style="font-weight: 500;">${sector}</div>
+        <div style="background: #007acc; height: 10px; width: ${(count / maxSector) * 100}%; margin: 4px 0; border-radius: 3px;"></div>
+        <div style="font-size: 0.9rem; color: #555;">${count} value(s)</div>
+      `;
+      sectorBars.appendChild(bar);
+    });
+  }
+
+  function applyFiltersAndSort() {
+    const keyword = searchBox.value.toLowerCase().trim();
+    filtered = values.filter(val =>
+      val.title.toLowerCase().includes(keyword) ||
+      val.summary.toLowerCase().includes(keyword) ||
+      val.nrbc.toLowerCase().includes(keyword) ||
+      val.core_values.some(cv => cv.toLowerCase().includes(keyword)) ||
+      val.sectors.some(sc => sc.toLowerCase().includes(keyword))
+    );
+
+    const sortOption = sortSelect.value;
+    if (sortOption === 'score') filtered.sort((a, b) => b.score - a.score);
+    else if (sortOption === 'weight') filtered.sort((a, b) => b.weight - a.weight);
+    else if (sortOption === 'title') filtered.sort((a, b) => a.title.localeCompare(b.title));
+
+    render(filtered);
+  }
+
+  searchBox.addEventListener('input', applyFiltersAndSort);
+  sortSelect.addEventListener('change', applyFiltersAndSort);
+
+  document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+    searchBox.value = '';
+    sortSelect.value = 'default';
+    applyFiltersAndSort();
+  });
+
+  document.getElementById('exportJsonBtn').addEventListener('click', () => {
+    const blob = new Blob([JSON.stringify(filtered, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'canonical-values.json';
+    a.click();
+  });
+
+  document.getElementById('exportCsvBtn').addEventListener('click', () => {
+    const headers = Object.keys(filtered[0]).join(',');
+    const rows = filtered.map(obj => Object.values(obj).map(v =>
+      Array.isArray(v) ? `"${v.join('; ')}"` : `"${String(v).replace(/"/g, '""')}"`
+    ).join(','));
+    const csv = [headers, ...rows].join('\\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'canonical-values.csv';
+    a.click();
+  });
+
+  render(values);
+}
+
+document.addEventListener('DOMContentLoaded', loadValues);
+</script>

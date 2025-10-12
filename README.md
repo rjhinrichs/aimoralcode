@@ -3,11 +3,14 @@
 
 [![Release](https://img.shields.io/github/v/release/rjhinrichs/aimoralcode)](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.3)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15362376.svg)](https://doi.org/10.5281/zenodo.15362376)
-[![HTTPS Secured](https://img.shields.io/badge/secure-https-green.svg)](https://aimoralcode.org)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/61d28b90-d884-4d25-9ff1-4f799a2b66b3/deploy-status.svg)](https://app.netlify.com/sites/sparkly-malabi-a53638/deploys)
 
-**AI Moral Code** is a research-driven governance framework designed to embed **ethical architecture into artificial intelligence systems**. It introduces the **NRBC model**—**Normative, Regulatory, Behavioral, and Computational**—which provides an empirically grounded, technically actionable structure for AI moral alignment.
+---
 
-This framework was developed through a **semantic synthesis of 291+ global AI ethics documents (2006–2025)** and is governed by **15 canonical ethical values**:
+**AI Moral Code** is a research-driven governance framework designed to embed **ethical architecture into artificial-intelligence systems**.  
+It introduces the **NRBC model**—**Normative, Regulatory, Behavioral, and Conceptual**—which provides an empirically grounded, technically actionable structure for AI moral alignment.
+
+This framework was developed through a **semantic synthesis of 291 + global AI-ethics documents (2006–2025)** and is governed by **15 canonical ethical values**:
 
 - Justice  
 - Transparency  
@@ -25,14 +28,16 @@ This framework was developed through a **semantic synthesis of 291+ global AI et
 - Human Rights  
 - Beneficence  
 
-These values inform sector-specific modeling practices for education, healthcare, digital governance, and autonomous systems. The framework prioritizes **practical alignment**, **cross-cultural adaptability**, and **long-term ethical accountability**.
+These values inform sector-specific modeling practices for education, healthcare, digital governance, and autonomous systems.  
+The framework prioritizes **practical alignment**, **cross-cultural adaptability**, and **long-term ethical accountability**.
 
 ---
 
 ## 🔗 Live Site
 
 Explore the live deployment:  
-👉 [https://aimoralcode.org](https://aimoralcode.org)
+👉 [https://aimoralcode.org](https://aimoralcode.org)  
+🧭 Admin Interface (Decap CMS): [https://aimoralcode.org/admin](https://aimoralcode.org/admin)
 
 ---
 
@@ -40,21 +45,29 @@ Explore the live deployment:
 
 **Current Release – v1.0.3** includes:
 
-- Full HTML site (index, about, blog, contact)
-- Six published blog essays grounded in AI ethics research
-- Visual architecture diagram of the NRBC model
-- Canonical values archive
-- White paper PDF
+- Full HTML site (index, about, blog, contact)  
+- Six published blog essays grounded in AI ethics research  
+- Visual architecture diagram of the NRBC model  
+- Canonical values archive  
+- White paper PDF  
 - Complete source bundles (`.zip`, `.tar.gz`)
 
 🔖 [View Release v1.0.3](https://github.com/rjhinrichs/aimoralcode/releases/tag/v1.0.3)
+
+💻 **Development Stack**  
+- Static HTML + Decap CMS  
+- Hosted on Netlify (Node 18)  
+- Source licensed under MIT (see LICENSE)
 
 ---
 
 ## 📖 Citation
 
 **APA**  
-Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based on the NRBC framework (Version 1.0.3)* [Software]. Zenodo. https://doi.org/10.5281/zenodo.15362376
+Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based on the NRBC framework (Version 1.0.3)* [Software]. Zenodo. https://doi.org/10.5281/zenodo.15362376  
+
+**Preferred short citation**  
+Hinrichs, R. (2025). *AI Moral Code v1.0.3.* Zenodo. https://doi.org/10.5281/zenodo.15362376  
 
 **BibTeX**
 ```bibtex
@@ -67,3 +80,20 @@ Hinrichs, R. (2025). *AI Moral Code: Ethical architecture for AI systems based o
   doi          = {10.5281/zenodo.15362376},
   url          = {https://doi.org/10.5281/zenodo.15362376}
 }
+content/
+├── pages/        # About, Contact, Values
+├── posts/        # Blog entries
+├── docs/         # Public-facing PDFs and white papers
+└── templates/    # Post creation templates
+admin/            # Decap CMS configuration
+assets/img/       # Static media
+legacy/           # Archived Jekyll content
+scripts/          # Developer utilities
+features/         # Future functionality (e.g., index spotlight)
+
+---
+
+🔖 License
+
+MIT © 2025 Randy J. Hinrichs
+AI Moral Code Project | Center for ETHICS*, University of Idaho
