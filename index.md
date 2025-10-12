@@ -72,7 +72,7 @@ This post explores how human rational interpretation and AI’s statistical patt
   <span style="font-size: 0.9em; color: gray;"> – July 17, 2025</span>
 </li>
 
-    {% assign recent_posts = site.posts | sort: 'date' | reverse | slice: 0, 3 %}
+    {% assign recent_posts = site.posts | sort: 'date' | reverse %}
     {% for post in recent_posts %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>

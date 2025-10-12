@@ -1,7 +1,7 @@
----
-title: "The Ethical Thermostat: Where AI and Humanity Meet"
+---layout: post
 layout: post
-date: 2025-10-12
+title: "The Ethical Thermostat: Where AI and Humanity Meet"
+date: 2025-10-12T12:00:00Z
 author: "Randy J. Hinrichs"
 description: "A visual and philosophical exploration of how AI and human physiology co-regulate meaning through moral equilibrium."
 image: /assets/img/the_ethical_thermostat.png
