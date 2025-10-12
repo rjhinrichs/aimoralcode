@@ -1,30 +1,33 @@
-name: Create New Blog Post
+name: Automate Blog Post Creation
+
+permissions:
+  contents: write
 
 on:
   workflow_dispatch:
     inputs:
       title:
-        description: 'Post title'
+        description: "Post title"
         required: true
         type: string
       date:
-        description: 'Publish date in ISO format (e.g., 2025-07-05T12:00:00Z)'
+        description: "Publish date in ISO format (e.g., 2025-10-12T12:00:00Z)"
         required: true
         type: string
       author:
-        description: 'Author name'
+        description: "Author name"
         required: true
         type: string
       tags:
-        description: 'Comma-separated list of tags (no brackets)'
+        description: "Comma-separated list of tags (no brackets)"
         required: true
         type: string
       summary:
-        description: 'Short post summary'
+        description: "Short post summary"
         required: true
         type: string
       content:
-        description: 'Full Markdown body content'
+        description: "Full Markdown body content"
         required: true
         type: string
 
@@ -50,11 +53,11 @@ jobs:
           mkdir -p "$(dirname "$FILE")"
           echo "---" > "$FILE"
           echo "title: \"${{ github.event.inputs.title }}\"" >> "$FILE"
-          echo "layout: post" >> "$FILE"
           echo "date: ${{ github.event.inputs.date }}" >> "$FILE"
           echo "author: \"${{ github.event.inputs.author }}\"" >> "$FILE"
           echo "tags: [${{ github.event.inputs.tags }}]" >> "$FILE"
-          echo "description: \"${{ github.event.inputs.summary }}\"" >> "$FILE"
+          echo "layout: post" >> "$FILE"
+          echo "summary: \"${{ github.event.inputs.summary }}\"" >> "$FILE"
           echo "---" >> "$FILE"
           echo "" >> "$FILE"
           echo "${{ github.event.inputs.content }}" >> "$FILE"
@@ -64,5 +67,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add blog-ai/_posts/
-          git commit -m "New blog post: ${{ github.event.inputs.title }}" || echo "No changes to commit."
+          git commit -m "New blog post: ${{ github.event.inputs.title }}"
           git push
