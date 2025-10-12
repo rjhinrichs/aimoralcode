@@ -43,7 +43,8 @@ jobs:
         id: vars
         run: |
           SLUG=$(echo "${{ github.event.inputs.title }}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -dc '[:alnum:]-')
-          FILENAME="blog-ai/_posts/${{ github.event.inputs.date | cut -c1-10 }}-${SLUG}.md"
+          DATE_PART=$(echo "${{ github.event.inputs.date }}" | cut -c1-10)
+          FILENAME="blog-ai/_posts/${DATE_PART}-${SLUG}.md"
           echo "slug=${SLUG}" >> $GITHUB_OUTPUT
           echo "filename=${FILENAME}" >> $GITHUB_OUTPUT
 
@@ -67,5 +68,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add blog-ai/_posts/
-          git commit -m "New blog post: ${{ github.event.inputs.title }}"
+          git commit -m "New blog post: ${{ github.event.inputs.title }}" || echo "No changes to commit"
           git push
