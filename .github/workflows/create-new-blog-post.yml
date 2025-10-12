@@ -40,27 +40,29 @@ jobs:
         id: vars
         run: |
           SLUG=$(echo "${{ github.event.inputs.title }}" | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | tr -dc '[:alnum:]-')
-          FILENAME="_posts/${{ github.event.inputs.date | cut -c1-10 }}-${SLUG}.md"
+          FILENAME="blog-ai/_posts/${{ github.event.inputs.date | cut -c1-10 }}-${SLUG}.md"
           echo "slug=${SLUG}" >> $GITHUB_OUTPUT
           echo "filename=${FILENAME}" >> $GITHUB_OUTPUT
 
       - name: Create blog post file
         run: |
           FILE="${{ steps.vars.outputs.filename }}"
+          mkdir -p "$(dirname "$FILE")"
           echo "---" > "$FILE"
           echo "title: \"${{ github.event.inputs.title }}\"" >> "$FILE"
-          echo "date: ${{ github.event.inputs.date }}" >> "$FILE"
-          echo "author: ${{ github.event.inputs.author }}" >> "$FILE"
-          echo "tags: [${{ github.event.inputs.tags }}]" >> "$FILE"
           echo "layout: post" >> "$FILE"
-          echo "summary: \"${{ github.event.inputs.summary }}\"" >> "$FILE"
+          echo "date: ${{ github.event.inputs.date }}" >> "$FILE"
+          echo "author: \"${{ github.event.inputs.author }}\"" >> "$FILE"
+          echo "tags: [${{ github.event.inputs.tags }}]" >> "$FILE"
+          echo "description: \"${{ github.event.inputs.summary }}\"" >> "$FILE"
           echo "---" >> "$FILE"
+          echo "" >> "$FILE"
           echo "${{ github.event.inputs.content }}" >> "$FILE"
 
       - name: Commit and push blog post
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add _posts/
-          git commit -m "New blog post: ${{ github.event.inputs.title }}"
+          git add blog-ai/_posts/
+          git commit -m "New blog post: ${{ github.event.inputs.title }}" || echo "No changes to commit."
           git push
