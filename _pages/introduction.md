@@ -1,64 +1,58 @@
 ---
-layout: page
 title: "Introduction"
+layout: page
+order: 1
 permalink: /introduction/
+description: "An overview of the AI Moral Code’s origin, goals, and ethical foundations."
 ---
 
-## Canonical Values: A Three-Tier Ethical Structure
+<section>
+  <h1>Why an AI Moral Code?</h1>
+  <p>
+  Welcome to the AI Moral Code—a research-driven framework designed to embed ethical architecture into artificial intelligence systems. Our mission is to ensure that AI technologies are not only powerful, but principled—guided by values that reflect our shared humanity.
 
-The AI Moral Code is rooted in twelve empirically derived values, stratified through cross-sectoral analysis of over 291 global AI ethics documents (2006–2025). These values are not aspirational slogans—they are semantically grounded, statistically weighted, and designed to evolve alongside technology and society.
+  </p>
+</section>
 
-We organize them into three concentric tiers, each with a distinct ethical function.
+<section>
+  <h2>The Problem</h2>
+  <p>
+    Existing ethical frameworks are fragmented across disciplines. Developers lack operational tools.
+    Regulators lag behind innovation. Philosophers warn of existential risks, while users face algorithmic opacity.
+    We need a unifying moral architecture—one that is rigorous, adaptive, and machine-readable.
+  </p>
+</section>
 
----
+<section>
+  <h2>The Solution: NRBC Architecture</h2>
+  <p>
+    The AI Moral Code offers a multi-layered framework rooted in four ethical domains:
+  </p>
+  <ul>
+    <li><strong>Normative:</strong> moral imperatives, duties, and universal values</li>
+    <li><strong>Regulatory:</strong> law, compliance, governance mechanisms</li>
+    <li><strong>Behavioral:</strong> expected norms in social and cultural contexts</li>
+    <li><strong>Conceptual:</strong> adaptive logic for AI development and iteration</li>
+  </ul>
+  <p>
+    Together, these layers support ethical alignment across design, deployment, and system evolution.
+  </p>
+</section>
 
-### 1. Moral Core Values
+<section>
+  <h2>How to Use This Site</h2>
+  <ul>
+    <li>📊 <a href="/value-browser/">Canonical Values Browser</a> — Explore and filter ethical values</li>
+    <li>📚 <a href="/values/">NRBC Taxonomy</a> — See the structural diagrams</li>
+    <li>🧠 <a href="/simulation-methodology/">Simulation Methodology</a> — Understand how values are tested</li>
+    <li>🔍 <a href="/glossary/">Glossary</a> — Define key ethical and AI terms</li>
+  </ul>
+</section>
 
-These are foundational, intrinsic commitments that appear consistently across all sectors. They represent non-negotiable ethical imperatives in the design and governance of AI.
-
-- **Justice** – Procedural fairness and distributive integrity  
-- **Dignity** – Recognition of inherent human worth  
-- **Responsibility** – Ownership of outcomes, intentions, and impacts  
-- **Trust** – A social contract for safe and transparent systems  
-- **Fairness** – Equity across individuals and groups  
-- **Beneficence** – Proactive promotion of well-being  
-
-These values form the gravitational center of ethical AI—an inner compass through which all other values must align.
-
----
-
-### 2. Instrumental Values
-
-These values activate the Core—making ethics not only meaningful, but actionable. They are the engineering principles of moral resilience.
-
-- **Innovation** – Responsible creativity for long-term societal benefit  
-- **Sustainability** – Commitment to environmental and systemic longevity  
-
-They are not merely extensions of efficiency or performance, but reflect value-sensitive design that scales across time, ecosystems, and generations.
-
----
-
-### 3. Conditional Values
-
-These values are context-sensitive. They rise in relevance depending on the domain, risk profile, use case, or sociocultural conditions.
-
-- **Accountability** – Enforcement, traceability, and recourse  
-- **Autonomy** – Protection of agency and informed consent  
-- **Privacy** – Control over data, identity, and personal boundaries  
-- **Inclusivity** – Representational and procedural equity  
-
-These values adapt the Code to dynamic real-world conditions.
-
----
-
-### Derivation Methodology
-
-Values were selected using stratified semantic analysis, weighted by Term Frequency-Inverse Document Frequency (TF-IDF), Sector Weighting Index, and a Contextual Multiplier (CM). These factors formed the Composite Value Score (CVS) for each candidate, filtering those with high ethical salience.
-
----
-
-### Toward a Living Framework
-
-The AI Moral Code includes the Ethical Salience Tracker (EST), a model that captures change over time. It detects shifts in value prominence through new laws, semantic drift, and contextual relevance across sectors. The framework evolves without abandoning foundational commitments.
-
-The canonical set thus functions not as a static creed but as a recalibrating compass for AI ethics in motion.
+<section>
+  <h2>Who This Is For</h2>
+  <p>
+    The AI Moral Code serves developers, ethicists, researchers, policy architects, and educators.
+    It is especially relevant for those working in autonomous systems, AGI alignment, cybersecurity, and applied AI governance.
+  </p>
+</section>
