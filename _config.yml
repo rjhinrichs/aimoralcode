@@ -5,11 +5,13 @@ baseurl: "" # Deployed at root
 timezone: America/Los_Angeles
 future: true
 
-collections_dir: blog-ai  # <- This line is required for your setup
+# Keep posts under blog-ai/_posts
+collections_dir: blog-ai
 
 collections:
   posts:
     output: true
+    permalink: /blog-ai/:year-:month-:day-:title/
   pages:
     output: true
 
@@ -29,6 +31,8 @@ defaults:
 
 markdown: kramdown
 permalink: pretty
+
+email: hinr6383@vandals.uidaho.edu
 
 plugins:
   - jekyll-feed
