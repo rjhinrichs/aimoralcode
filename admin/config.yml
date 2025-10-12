@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: rjhinrichs/aimoralcode
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+  site_domain: aimoralcode.org
+  commit_messages:
+    create: "New post created: {{slug}}"
+    update: "Post updated: {{slug}}"
+    delete: "Post deleted: {{slug}}"
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "blog-ai/_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Randy J. Hinrichs" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
