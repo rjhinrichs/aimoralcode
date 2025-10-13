@@ -7,29 +7,57 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>AI Moral Code</h1>
-    <p>Ethically Governed. Human Authored. AI Partnered.</p>
+    <p class="tagline">Ethically Governed. Human Authored. AI Partnered.</p>
     <nav>
-      <a href="/content/pages/about.html">About</a> |
-      <a href="/content/pages/contact.html">Contact</a> |
-      <a href="/admin">Admin</a>
+      <a href="/content/pages/about.html">About</a>
+      <a href="/content/pages/values.html">Values</a>
+      <a href="/content/pages/contact.html">Contact</a>
+      <a href="/admin">CMS Login</a>
     </nav>
   </header>
+
   <main>
-    <h2>Recent Posts</h2>
-    <div id="posts"></div>
+    <section class="intro">
+      <h2>The Framework</h2>
+      <p>
+        The <strong>AI Moral Code</strong> is a research-driven governance framework 
+        embedding ethical architecture into artificial intelligence systems.
+        It translates canonical moral values into measurable, operational principles.
+      </p>
+      <a class="button" href="/content/docs/AI_Moral_Code_White_Paper.pdf" target="_blank">Read the White Paper</a>
+    </section>
+
+    <section class="posts">
+      <h2>Recent Posts</h2>
+      <div id="post-list"><em>Loading posts...</em></div>
+    </section>
   </main>
 
+  <footer>
+    <p>© 2025 Randy J. Hinrichs · Center for ETHICS*, University of Idaho</p>
+  </footer>
+
   <script>
-    // Fetch markdown posts dynamically
+    // Minimal dynamic loader for post summaries
     fetch('/content/posts/')
-      .then(response => response.text())
+      .then(r => r.text())
       .then(text => {
-        document.getElementById('posts').innerHTML =
-          "<p>Content managed via Decap CMS. View in admin.</p>";
+        const postList = document.getElementById('post-list');
+        if (text.includes('.md')) {
+          postList.innerHTML =
+            '<p>Blog posts are managed through Decap CMS.</p>' +
+            '<p><a href="/admin">Login to view or publish new work.</a></p>';
+        } else {
+          postList.innerHTML =
+            '<p>No posts available yet. Use Decap CMS to publish your first entry.</p>';
+        }
+      })
+      .catch(() => {
+        document.getElementById('post-list').innerHTML =
+          '<p>Unable to load posts. Please try again later.</p>';
       });
   </script>
 </body>
 </html>
-
