@@ -3,20 +3,17 @@
 # ===============================
 
 [build]
-  # There is no true build step; this site is static.
   command = "echo 'Static build complete'"
   publish = "aimoralcode"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "18.20.3"
   JEKYLL_ENV = "disabled"
 
-# Optional: automatically deploy previews for branches
 [context.deploy-preview]
   command = "echo 'Deploy preview build complete'"
   publish = "aimoralcode"
 
-# Optional headers (can be customized later)
 [[headers]]
   for = "/*"
   [headers.values]
