@@ -3,18 +3,13 @@
 # ===============================
 
 [build]
-  # For now, there is no true build step. You can change this to "npm run build" later.
+  # There is no true build step; this site is static.
   command = "echo 'Static build complete'"
-  # Publish the root folder (where index.html lives)
   publish = "/"
 
 [build.environment]
   NODE_VERSION = "18"
   JEKYLL_ENV = "disabled"
-
-# Disable automatic Ruby/Jekyll detection
-[context.production.environment]
-  RUBY_VERSION = "none"
 
 # Optional: automatically deploy previews for branches
 [context.deploy-preview]
