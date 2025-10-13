@@ -14,7 +14,7 @@
 # Optional: automatically deploy previews for branches
 [context.deploy-preview]
   command = "echo 'Deploy preview build complete'"
-  publish = "/"
+  publish = "aimoralcode"
 
 # Optional headers (can be customized later)
 [[headers]]
