@@ -5,7 +5,7 @@
 [build]
   # There is no true build step; this site is static.
   command = "echo 'Static build complete'"
-  publish = "/"
+  publish = "aimoralcode"
 
 [build.environment]
   NODE_VERSION = "18"
