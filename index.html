@@ -1,11 +1,35 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Moral Code CMS</title>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </head>
-  <body>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Moral Code</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>AI Moral Code</h1>
+    <p>Ethically Governed. Human Authored. AI Partnered.</p>
+    <nav>
+      <a href="/content/pages/about.html">About</a> |
+      <a href="/content/pages/contact.html">Contact</a> |
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Recent Posts</h2>
+    <div id="posts"></div>
+  </main>
+
+  <script>
+    // Fetch markdown posts dynamically
+    fetch('/content/posts/')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('posts').innerHTML =
+          "<p>Content managed via Decap CMS. View in admin.</p>";
+      });
+  </script>
+</body>
 </html>
+
