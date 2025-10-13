@@ -4,7 +4,7 @@
 
 [build]
   command = "echo 'Static build complete'"
-  publish = "aimoralcode"
+  publish = "."
 
 [build.environment]
   NODE_VERSION = "18.20.3"
