@@ -1,3 +1,4 @@
+/* ---------- Global ---------- */
 body {
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
   margin: 0;
@@ -7,27 +8,29 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- Header ---------- */
 .hero {
-  background: linear-gradient(135deg, #001f3f, #004080);
+  background: linear-gradient(135deg, #00264d, #004080);
   color: white;
   text-align: center;
   padding: 3rem 1rem;
 }
 
 .hero h1 {
-  margin-bottom: 0.2rem;
-  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 2.6rem;
+  letter-spacing: 0.02em;
 }
 
 .tagline {
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 0.8rem;
+  margin: 0 0.9rem;
   font-weight: 500;
 }
 
@@ -35,6 +38,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* ---------- Main Content ---------- */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -56,15 +60,17 @@ main {
 }
 
 .button:hover {
-  background: #0055aa;
+  background: #0059b3;
 }
 
+/* ---------- Posts ---------- */
 .posts h2 {
   border-bottom: 2px solid #004080;
   padding-bottom: 0.5rem;
   margin-top: 3rem;
 }
 
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
   font-size: 0.9rem;
