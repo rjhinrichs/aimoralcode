@@ -1,0 +1,29 @@
+# ===============================
+#  Netlify configuration for AI Moral Code (Decap CMS)
+# ===============================
+
+[build]
+  # For now, there is no true build step. You can change this to "npm run build" later.
+  command = "echo 'Static build complete'"
+  # Publish the root folder (where index.html lives)
+  publish = "/"
+
+[build.environment]
+  NODE_VERSION = "18"
+  JEKYLL_ENV = "disabled"
+
+# Disable automatic Ruby/Jekyll detection
+[context.production.environment]
+  RUBY_VERSION = "none"
+
+# Optional: automatically deploy previews for branches
+[context.deploy-preview]
+  command = "echo 'Deploy preview build complete'"
+  publish = "/"
+
+# Optional headers (can be customized later)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
